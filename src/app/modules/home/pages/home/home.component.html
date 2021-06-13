@@ -1,33 +1,30 @@
 
-
-  <div class="container">
-  
-    <ul class="slider">
-      <li id="slide1">
-        <img src="https://www.casamarmol.com.co/wp-content/uploads/2018/10/Islas.jpg"/>
-      </li>
-      <li id="slide2">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/sunset.jpg"/>
-      </li>
-      <li id="slide3">
-        <h1>Ejemplo con otros elementos</h1>
-        <p>Esto es un párrafo de ejemplo para comprobar que podemos meter cualquier tipo de elementos en el slider</p>
-        <a href="https://kikopalomares.com/">¡Corre a mi web para más contenido!</a>
-      </li>
-    </ul>
-    
-    <ul class="menu">
-      <li>
-        <a href="#slide1">1</a>
-      </li>
-      <li>
-        <a href="#slide2">2</a>
-      </li>
-       <li>
-        <a href="#slide3">3</a>
-      </li>
-    </ul>
-    
-  </div>
-
-
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[0]" alt="Random first slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[1]" alt="Random second slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[2]" alt="Random third slide">
+    </div>
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

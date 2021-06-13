@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
     
+
+
+
+ngOnInit(){}
+ 
+  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
 }
