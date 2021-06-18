@@ -4,10 +4,11 @@ import { HomeComponent } from './modules/home/pages/home/home.component';
 import { Routes } from "@angular/router";
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: '',   redirectTo: '/home', pathMatch: 'full' },
+    { path: 'inicio', component: HomeComponent },
+    { path: '',   redirectTo: '/inicio', pathMatch: 'full' },
     { path: 'list-products', component: ListProductsComponent },    
-    { path: 'products', component: ProductsComponent },
+    { path: 'productos/:categoria', component: ProductsComponent },
+    
   ]
   ;
     

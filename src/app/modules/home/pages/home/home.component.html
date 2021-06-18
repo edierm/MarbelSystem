@@ -1,30 +1,81 @@
-
-<ngb-carousel *ngIf="images">
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img [src]="images[0]" alt="Random first slide">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <carousel>
+        <slide>
+          <img
+            src="https://media.home-design.schmidt/-/media/adam/schmidt/7/9/79ff4de111464a469452acaf00ae5862/1920-x-1080-16x9.ashx?as=1&w=1920&rev=5aae1d2ab9914a09a747186abd2edf6a&hash=C48B294FE3CCFBA1B9FA8547339E966C"
+            alt="first slide"
+            style="display: block; width: 100%"
+          />
+        </slide>
+        <slide>
+          <img
+            src="https://gramablack.com/wp-content/uploads/2019/09/Portada_Decoraci%C3%B3n-m%C3%A1rmol-negro.jpeg"
+            alt="second slide"
+            style="display: block; width: 100%"
+          />
+        </slide>
+        <slide>
+          <img
+            src="https://www.gramar.com/wp-content/uploads/2018/11/imagen-blog-2.jpg"
+            alt="third slide"
+            style="display: block; width: 100%"
+          />
+          <br>
+        </slide>
+      </carousel>
     </div>
-    <div class="carousel-caption">
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12"> <h1>CONTACTANOS</h1></div>
+    <div class="col-12 col-md-8 mx-auto">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="Phone">Telefono</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Telefono">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="Name">Nombre</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+          <label for="Adress"> Direccion </label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="crra,calle....">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="Ciudad">Ciudad</label>
+            <input type="text" class="form-control" id="Ciudad">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="Department">Departamento</label>
+            <select id="inputState" class="form-control">
+              <option selected>Selecciona...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="Date">Archivos</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+               /n Acepto que quiero recibir notificaciones de marmoles mendoza
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
     </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img [src]="images[1]" alt="Random second slide">
-    </div>
-    <div class="carousel-caption">
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="picsum-img-wrapper">
-      <img [src]="images[2]" alt="Random third slide">
-    </div>
-    <div class="carousel-caption">
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
-  </ng-template>
-</ngb-carousel>
+  </div>
+</div>

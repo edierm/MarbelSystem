@@ -1,13 +1,12 @@
-.container-fluid{
-    position: relative;
-
+.container-fluid {
+  position: relative;
+  .items {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-
-.barra img{
-    
-    width: 150px;
-
-    display:block;
-margin:auto;
+.logo {
+  width: 110px;
+  cursor: pointer;
 }
