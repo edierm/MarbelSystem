@@ -1,3 +1,4 @@
+import { RegisterComponent } from './modules/register/pages/register.component';
 import { SaleComponent } from './modules/sale/pages/sale.component';
 import { QuoteComponent } from './modules/quote/pages/quote.component';
 import { LoginComponent } from './modules/login/pages/login.component';
@@ -26,6 +27,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     LoginComponent,
     QuoteComponent,
     SaleComponent,
+    RegisterComponent,
 
   ],
   imports: [
