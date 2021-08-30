@@ -27,10 +27,15 @@ body {
 .product-img {
     overflow: hidden;
     position: relative;
+    width: 250px; height: 200px;
+    border: silver; 
+    
+
+  text-align: justify; 
 }
 
 .mb-45 {
-    margin-bottom: 80px
+    margin: 15px 0px;
 }
 
 .product-action {
