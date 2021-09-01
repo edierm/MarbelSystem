@@ -19,8 +19,10 @@
             <ul id="basic-link-dropdown" *dropdownMenu class="dropdown-menu"
                 role="menu" aria-labelledby="basic-link">
               <li *ngFor="let choice of items">
-                <a class="dropdown-item" href="#" [routerLink]="['/productos', choice]">{{choice}}</a>
+                <a class="dropdown-item" href="#" routerLink="{{choice.route}}">{{choice.text}}</a>
+                
               </li>
+              
             </ul>
           </span>
       </li>

@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-    items: string[] = [
-        'Cocinas',
-        'Baños',
-        'Mesones'
+    items: object[] = [
+        {route: ['/productos/kitchens'], text: 'Cocina'},
+        {route: ['/productos/table'], text: 'Mesones'},
+        {route: ['/productos/bathrooms'], text: 'Baños'}
       ];
 
       onHidden(): void {

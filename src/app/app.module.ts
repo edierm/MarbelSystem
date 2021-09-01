@@ -3,7 +3,7 @@ import { SaleComponent } from './modules/sale/pages/sale.component';
 import { QuoteComponent } from './modules/quote/pages/quote.component';
 import { LoginComponent } from './modules/login/pages/login.component';
 import { ProductsComponent } from './modules/products/pages/products.component';
-import { ListProductsComponent } from './modules/list-products/pages/list-products/list-products.component';
+import { ListProductsComponent } from './modules/list-products/pages/list-products.component';
 import { HomeComponent } from './modules/home/pages/home/home.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { HeaderComponent } from './core/header/header.component';
