@@ -1,3 +1,8 @@
+import { InfoComponent } from './modules/info/pages/info.component';
+import { TableComponent } from './modules/table/pages/table.component';
+import { BathroomsComponent } from './modules/bathrooms/pages/bathrooms.component';
+import { KitchensComponent } from './modules/kitchens/pages/kitchens.component';
+import { MantenenceComponent } from './modules/mantenence/pages/mantenence.component';
 import { RegisterComponent } from './modules/register/pages/register.component';
 import { SaleComponent } from './modules/sale/pages/sale.component';
 import { QuoteComponent } from './modules/quote/pages/quote.component';
@@ -28,6 +33,12 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     QuoteComponent,
     SaleComponent,
     RegisterComponent,
+    MantenenceComponent,
+    KitchensComponent,
+    BathroomsComponent,
+    TableComponent,
+    InfoComponent,
+
 
   ],
   imports: [

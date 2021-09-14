@@ -1,3 +1,6 @@
+import { InfoComponent } from './modules/info/pages/info.component';
+import { MantenenceComponent } from './modules/mantenence/pages/mantenence.component';
+import { Component } from '@angular/core';
 import { TableComponent } from './modules/table/pages/table.component';
 import { BathroomsComponent } from './modules/bathrooms/pages/bathrooms.component';
 import { RegisterComponent } from './modules/register/pages/register.component';
@@ -22,6 +25,7 @@ export const routes: Routes = [
   { path: 'sale', component: SaleComponent },
   { path: 'quote', component: QuoteComponent },
   { path: 'registro', component: RegisterComponent },
+  { path: 'mantenence', component: MantenenceComponent },
   {
     path: 'productos/kitchens',
     component: KitchensComponent
@@ -31,4 +35,5 @@ export const routes: Routes = [
     component: BathroomsComponent
   },
   { path: 'productos/table', component: TableComponent },
+  { path: 'info', component: InfoComponent },
 ];

@@ -2,7 +2,13 @@ body{
     background-color: lightgrey;
     font-family: sans-serif;
   }
- 
+  .col{
+    text-align: center;
+    align-items:center;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px ;
+    
+  }
 
   .container{
     margin: auto;
@@ -79,12 +85,13 @@ body{
     position: relative;
   }
 
-  .mt-5 {
-    background-color: whitesmoke;
-  }
+ 
 
   .col-12{
     h1{
       text-align: center;
     }
+  }
+  .title{
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
   }
