@@ -8,22 +8,79 @@
       </div>
   
       <!-- Login Form -->
-      <form>
-        <input type="text" id="name" class="fadeIn one" name="login" placeholder="Nombre">
+      <form [formGroup]="RegisterForm" >
+        <input type="text"
+         id="name"
+          class="fadeIn one"
+           name="login"
+            placeholder="Nombre"
+            
+            >
         
-        <input type="text" id="login" class="fadeIn two" name="login" placeholder="Correo">
-        <input type="text" id="password" class="fadeIn three" name="login" placeholder="Contraseña">
+        <input type="text"
+         id="login"
+          class="fadeIn two"
+           name="login" 
+           placeholder="Correo"
+           formControlName="email"
+           >
+        <input type="password"
+         id="password"
+          class="fadeIn three"
+           name="login" 
+           placeholder="Contraseña"
+           formControlName="email"
+           >
         <br> 
-        <input type="text" id="passwordreapeat" class="fadeIn  fourth" name="login" placeholder="Ingrese de nuevo la Contraseña">
-        <input type="text" id="cedula" class="fadeIn  five" name="login" placeholder="Cedula">
-        <input type="text" id="celular" class="fadeIn  six" name="login" placeholder="Celular">
-        <input type="text" id="direccion" class="fadeIn  seven" name="login" placeholder="Direccion">
-        <input type="text" id="ciudad" class="fadeIn  eight" name="login" placeholder="Ciudad">
-        <input type="text" id="postal" class="fadeIn  nine" name="login" placeholder="Numero Postal" minlength="4" maxlength="10">
+        <input type="password"
+         id="passwordreapeat" 
+         class="fadeIn  fourth" 
+         name="login" 
+         placeholder="Ingrese de nuevo la Contraseña"
+         formControlName="password"
+         >
+        <input type="text"
+         id="cedula"
+         class="fadeIn  five"  
+         name="login"
+         placeholder="Cedula"
+         formControlName="id"
+            
+          >
+        <input type="text"
+        id="phone"
+        class="fadeIn  six"
+        name="login"
+        placeholder="Celular"
+        formControlName="phone"
+        >
+        <input type="text"
+         id="direccion"
+         class="fadeIn  seven"
+         name="login" 
+         placeholder="Direccion"
+         formControlName="adress"
+         >
+        <input type="text" 
+        id="ciudad" 
+        class="fadeIn  eight" 
+        name="login" 
+        placeholder="Ciudad"
+        formControlName="city"
+        >
+        <input type="text"
+         id="postal" 
+         class="fadeIn  nine" 
+         name="login" 
+         placeholder="Numero Postal" 
+         minlength="4" 
+         maxlength="10"
+         formControlName="idCity"
+         >
         
         
         
-        <input type="submit" class="fadeIn  ten" value="Registrarse">
+        <button type="button" class="fadeIn  ten" (click)="register()" [disabled]="RegisterForm.invalid">REGISTRARSE</button>
       </form>
   
       <!-- Remind Passowrd -->

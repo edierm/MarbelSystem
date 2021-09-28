@@ -8,13 +8,36 @@
       </div>
   
       <!-- Login Form -->
-      <form>
-        <input type="text"  id="login" class="fadeIn second" name="login" placeholder="Correo">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
-        <input type="submit" class="fadeIn fourth" value="Iniciar seccion">
+     
+
+      <form [formGroup]="loginForm">
+        <input 
+          type="text"  
+          id="login" 
+          class="fadeIn second" 
+          name="login" 
+          placeholder="Correo"
+          formControlName="email"
+          required >
+       
+        <input 
+          type="password" 
+          id="password" 
+          class="fadeIn third" 
+          name="login" 
+          placeholder="Contraseña"
+          formControlName="password"
+          >
+      
+          
+       <!--validaciones js-->
+      
+        <button type="button" class="btn btn-outline-primary" (click)="loguear()" [disabled]="loginForm.invalid">Iniciar sesion</button>
         <button type="button" class="btn btn-outline-primary" routerLink="/registro" >Registro</button>
       </form>
   
+     
+
       <!-- Remind Passowrd -->
       <div id="formFooter">
         <a class="underlineHover" href="#">Olvidaste tu Contraseña</a>

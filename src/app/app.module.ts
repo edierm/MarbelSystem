@@ -20,6 +20,8 @@ import { routes } from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     RouterModule.forRoot(routes),
     CarouselModule.forRoot(),
     BrowserAnimationsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
