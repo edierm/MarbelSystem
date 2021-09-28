@@ -14,7 +14,7 @@
           class="fadeIn one"
            name="login"
             placeholder="Nombre"
-            
+            formControlName="name"
             >
         
         <input type="text"
@@ -29,7 +29,7 @@
           class="fadeIn three"
            name="login" 
            placeholder="Contraseña"
-           formControlName="email"
+           formControlName="password"
            >
         <br> 
         <input type="password"
@@ -80,7 +80,7 @@
         
         
         
-        <button type="button" class="fadeIn  ten" (click)="register()" [disabled]="RegisterForm.invalid">REGISTRARSE</button>
+        <button type="button" class="btn btn-outline-primary" (click)="register()" [disabled]="RegisterForm.invalid">REGISTRARSE</button>
       </form>
   
       <!-- Remind Passowrd -->
