@@ -9,7 +9,18 @@ body{
     padding: 20px ;
     
   }
+  .img.zoom{
+    width: 600px;
+    height: 300px;
+    
+  }
 
+  .transition {
+    -webkit-transform: scale(1.8); 
+    -moz-transform: scale(1.8);
+    -o-transform: scale(1.8);
+    transform: scale(1.8);
+}
   .container{
     margin: auto;
     
