@@ -66,7 +66,7 @@
                       </div>
                       <div class="form-group col-md-4">
                         <label for="Department">Departamento</label>
-                        <select id="inputState" class="form-control" formControlName="idCity">
+                        <select id="inputState" class="form-control" >
 
                           <option>Antioquia</option>
                           <option>Santander </option>
@@ -82,12 +82,14 @@
                         class="form-control"
                          id="inputZip"
                          
+                         
                          >
                       </div>
                       <div class="form-group col-md-6">
                           <label for="Department">Fabricado Por</label>
-                          <select id="inputState" class="form-control" formControlName="made">
-                            <option selected>Marmoles Mendoza</option>
+                          <select id="inputState" class="form-control"  >
+                            <option ></option>
+                            <option >Marmoles Mendoza</option>
                             <option >Otra Entidad</option>
                             
                           </select>
@@ -95,8 +97,9 @@
                         </div>
                         <div class="form-group col-md-6">
                           <label for="Department">Material</label>
-                          <select id="inputState" class="form-control">
-                            <option selected>Quartztone</option>
+                          <select id="inputState" class="form-control" >
+                            <option ></option>
+                            <option >Quartztone</option>
                             <option>Marmol </option>
                             <option>Granito </option>
                             <option>Otro</option>
@@ -111,19 +114,19 @@
                        class="form-control"
                         id="inputAddress"
                          placeholder="Algun quemon o daño"
-                         
+                        
                          >
                     </div>
                    
                     <div class="form-group">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck"   >
                         <label class="form-check-label" for="gridCheck" >
                             Acepto que quiero recibir notificaciones de marmoles mendoza
                         </label>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" (click)="mantenence()" [disabled]="MantenenceForm.invalid">Solicitar Mantenimiento</button>
+                    <button type="submit" class="btn btn-primary" (click)="mantenence()" [disabled]="MantenenceForm.valid">Solicitar Mantenimiento</button>
                   </form>
                 </div>
               </div>

@@ -12,11 +12,10 @@ export class SaleComponent {
         name:['',[Validators.required, Validators.minLength(3)]],
         email: ['', [Validators.required, Validators.email]],
         check: ['',[Validators.required]],
-        made:['',[Validators.required ]],
+       
         phone:['',[Validators.required, Validators.minLength(3)]],
         adress:['',[Validators.required, Validators.minLength(5)]],
         city:['',[Validators.required, Validators.minLength(5)]],
-        select:['',[Validators.required]],
        
     })
     

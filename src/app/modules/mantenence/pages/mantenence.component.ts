@@ -9,17 +9,17 @@ import { Component } from '@angular/core';
 })
 export class MantenenceComponent {
 
-    MantenenceForm = this.fb.group({
+    MantenenceForm = this.mf.group({
         name:['',[Validators.required, Validators.minLength(3)]],
-        email: ['', [Validators.required, Validators.email]],
-        check: ['',[Validators.required]],
-        made:['',[Validators.required ]],
         phone:['',[Validators.required, Validators.minLength(3)]],
+        email: ['', [Validators.required, Validators.email]],
         adress:['',[Validators.required, Validators.minLength(5)]],
         city:['',[Validators.required, Validators.minLength(5)]],
-        idCity:['',[Validators.required]]
+     
+        
+      
     })
-    constructor(private fb: FormBuilder) { }
+    constructor(private mf: FormBuilder) { }
 
     mantenence(){
         console.log(this.MantenenceForm.value);

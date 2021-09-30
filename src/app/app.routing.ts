@@ -1,3 +1,4 @@
+import { LostComponent } from './modules/lostpassword/pages/lostpassword.component';
 import { InfoComponent } from './modules/info/pages/info.component';
 import { MantenenceComponent } from './modules/mantenence/pages/mantenence.component';
 import { Component } from '@angular/core';
@@ -36,4 +37,5 @@ export const routes: Routes = [
   },
   { path: 'productos/table', component: TableComponent },
   { path: 'info', component: InfoComponent },
+  { path: 'lost', component: LostComponent },
 ];

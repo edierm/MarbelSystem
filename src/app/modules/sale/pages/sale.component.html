@@ -98,7 +98,7 @@
                       </div>
                       <div class="form-group col-md-4">
                         <label for="Department">Departamento</label>
-                        <select id="inputState" class="form-control" formControl="made">
+                        <select id="inputState" class="form-control" >
                          
                           <option>Antioquia</option>
                           <option>Santander </option>
@@ -109,7 +109,7 @@
                      
                       <div class="form-group col-md-6">
                           <label for="Department">Color</label>
-                          <select id="inputState" class="form-control" formControl="made">
+                          <select id="inputState" class="form-control" >
                             <option >blanco polar</option>
                             <option >negro espacial</option>
                             
@@ -118,7 +118,7 @@
                         </div>
                         <div class="form-group col-md-6">
                           <label for="Department">Material</label>
-                          <select id="inputState" class="form-control" formControl="made">
+                          <select id="inputState" class="form-control" >
                             <option>Quartztone</option>
                             <option>Marmol </option>
                             <option>Granito </option>
@@ -145,7 +145,7 @@
                         </label>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" (click)="sale()" [disabled]="SaleForm.invalid" >Solicitar </button>
+                    <button type="submit" class="btn btn-primary" (click)="sale()" [disabled]="SaleForm.valid" >Solicitar </button>
                     <button type=”button” class="btn btn-primary" value=”Imprimir” onclick=javascript:window.print()   >
                       IMPRIMIR COTIZACION </button>
                 

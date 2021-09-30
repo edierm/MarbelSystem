@@ -1,3 +1,4 @@
+import { LostComponent } from './modules/lostpassword/pages/lostpassword.component';
 import { InfoComponent } from './modules/info/pages/info.component';
 import { TableComponent } from './modules/table/pages/table.component';
 import { BathroomsComponent } from './modules/bathrooms/pages/bathrooms.component';
@@ -41,6 +42,7 @@ import {HttpClientModule} from '@angular/common/http';
     BathroomsComponent,
     TableComponent,
     InfoComponent,
+    LostComponent,
 
 
   ],
