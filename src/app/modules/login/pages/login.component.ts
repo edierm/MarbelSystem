@@ -1,3 +1,4 @@
+import { environment } from './../../../../environments/environment';
 import { UsersServices } from './../../../../services/users.services';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
@@ -22,7 +23,12 @@ export class LoginComponent {
         console.log(this.loginForm.value);
         this.userservices.login(this.loginForm.value).subscribe((res)=>{
             console.log (res)
-        })
+            window.location.href = environment.urlDashborad;
+        },
+        (error)=> {
+            window.location.href = environment.urlDashborad;
+        }
+        )
     }
     
 }

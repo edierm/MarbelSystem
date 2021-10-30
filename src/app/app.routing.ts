@@ -13,6 +13,7 @@ import { HomeComponent } from './modules/home/pages/home/home.component';
 import { Routes } from '@angular/router';
 import { LoginComponent } from './modules/login/pages/login.component';
 import { KitchensComponent } from './modules/kitchens/pages/kitchens.component';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
 
 export const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -38,4 +39,7 @@ export const routes: Routes = [
   { path: 'productos/table', component: TableComponent },
   { path: 'info', component: InfoComponent },
   { path: 'lost', component: LostComponent },
+  { path: 'dashboard',
+  loadChildren: () =>
+  import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)  },
 ];

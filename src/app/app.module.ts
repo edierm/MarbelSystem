@@ -1,3 +1,6 @@
+import { NavbarModule } from './modules/dashboard/pages/components/navbar/navbar.module';
+import { SidebarModule } from './modules/dashboard/pages/components/sidebar/sidebar.module';
+import { FooterModule } from './modules/dashboard/pages/components/footer/footer.module';
 import { LostComponent } from './modules/lostpassword/pages/lostpassword.component';
 import { InfoComponent } from './modules/info/pages/info.component';
 import { TableComponent } from './modules/table/pages/table.component';
@@ -13,7 +16,7 @@ import { ListProductsComponent } from './modules/list-products/pages/list-produc
 import { HomeComponent } from './modules/home/pages/home/home.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { HeaderComponent } from './core/header/header.component';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -54,8 +57,12 @@ import {HttpClientModule} from '@angular/common/http';
     BsDropdownModule.forRoot(),
     ReactiveFormsModule,
     HttpClientModule,
+    // FooterModule,
+    // SidebarModule,
+    // NavbarModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

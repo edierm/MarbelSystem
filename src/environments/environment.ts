@@ -5,7 +5,8 @@
 
 export const environment = {
   production: false,
-  apis:{
+  urlDashborad: 'http://localhost:4201',
+  apis: {
     userLogin: 'http://localhost:3000/api/usuarios/login'
   }
 };
