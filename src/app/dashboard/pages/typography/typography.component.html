@@ -1,0 +1,60 @@
+<div class="row mt-5">
+  <div class="col-12"> <h1>AGREGAR VENDEDOR</h1></div>
+  <div class="col-12 col-md-8 mx-auto">
+    <form [formGroup]="RegisterForm">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email" formControlName="email"
+          pattern=".+@globex\.com">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="Phone">Telefono</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Telefono" formControlName="phone">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Name">Nombre</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Nombre" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="Adress"> Cedula </label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="" formControlName="id">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="Ciudad">Ciudad</label>
+          <input type="text" class="form-control" id="Ciudad" formControlName="city">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="Department">Departamento</label>
+          <select id="inputState" class="form-control" formControlName="idCity">
+            <option selected>Selecciona...</option>
+            <option>Antioquia</option>
+            <option>Cundinamarca</option>
+            <option>Santander</option>
+          </select>
+        </div>
+        <div class="form-group c">
+          <label for="product">Tipo de servicio</label>
+          <select id="inputState" class="form-control" formControlName="idCity">
+            <option selected>Selecciona...</option>
+            <option>Venta de piedra</option>
+            <option>Envios</option>
+            <option>Carpinteria</option>
+            <option> instalciones </option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="check">
+          <label class="form-check-label" for="gridCheck">
+              Acepta  recibir notificaciones de marmoles mendoza
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="register()" [disabled]="RegisterForm.invalid">Registrar</button>
+    </form>
+  </div>
+</div>
