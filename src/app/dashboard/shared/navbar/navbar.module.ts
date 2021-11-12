@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DashboardRouting } from '../../dashboard-routing.module';
 
 @NgModule({
-    imports: [ RouterModule, CommonModule, NgbModule ],
+    imports: [ RouterModule, CommonModule, DashboardRouting ],
     declarations: [ NavbarComponent ],
     exports: [ NavbarComponent ]
 })

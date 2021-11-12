@@ -1,3 +1,5 @@
+import { ReactiveFormsModule } from '@angular/forms';
+import { FixedPluginModule } from './dashboard/shared/fixedplugin/fixedplugin.module';
 
 import { ClientModule } from './client/client.module';
 import { FooterComponent } from './core/footer/footer.component';
@@ -7,11 +9,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+
+import { DashboardModule } from './dashboard/dashboard.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
@@ -19,8 +21,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     RouterModule.forRoot(routes),
     ClientModule,
+    DashboardModule,
+    ToastrModule.forRoot(),
     BsDropdownModule.forRoot(),
- 
+    FixedPluginModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
