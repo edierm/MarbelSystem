@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Location} from '@angular/common';
 
 @Component({
-    moduleId: module.id,
+   
     selector: 'navbar-cmp',
     templateUrl: 'navbar.component.html'
 })
