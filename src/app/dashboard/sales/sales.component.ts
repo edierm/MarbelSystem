@@ -6,12 +6,13 @@ declare interface TableData {
 }
 
 @Component({
-    selector: 'table-cmp',
-    moduleId: module.id,
-    templateUrl: 'table.component.html'
+    selector: 'sales-cmp',
+
+    templateUrl: 'sales.component.html',
+    styleUrls : ['./sales.component.scss']
 })
 
-export class TableComponent implements OnInit{
+export class SalesComponent implements OnInit{
     public tableData1: TableData;
     public tableData2: TableData;
     ngOnInit(){

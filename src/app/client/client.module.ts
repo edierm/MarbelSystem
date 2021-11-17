@@ -1,4 +1,4 @@
-import { HeaderComponent } from './../core/header/header.component';
+import { HeaderComponent } from './core/header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -22,7 +22,7 @@ import { ProductsComponent } from './products/pages/products.component';
 import { ListProductsComponent } from './list-products/pages/list-products.component';
 import { HomeComponent } from './home/pages/home/home.component';
 import { ClientRoutingModule } from './client-routing.module';
-import { FooterComponent } from '../core/footer/footer.component';
+import { FooterComponent } from './core/footer/footer.component';
 
 @NgModule({
   declarations: [

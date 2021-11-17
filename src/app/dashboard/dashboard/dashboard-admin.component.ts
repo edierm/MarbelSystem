@@ -4,11 +4,12 @@ import Chart from 'chart.js';
 
 @Component({
     selector: 'dashboard-cmp',
-    moduleId: module.id,
-    templateUrl: 'dashboard.component.html'
+   
+    templateUrl: 'dashboard-admin.component.html',
+    styleUrls: ['./dashboard-admin.component.scss']
 })
 
-export class DashboardComponent implements OnInit{
+export class DashboardAdminComponent implements OnInit{
 
   public canvas : any;
   public ctx;

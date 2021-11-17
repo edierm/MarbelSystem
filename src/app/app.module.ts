@@ -1,9 +1,9 @@
 import { ReactiveFormsModule } from '@angular/forms';
-import { FixedPluginModule } from './dashboard/shared/fixedplugin/fixedplugin.module';
+
 
 import { ClientModule } from './client/client.module';
-import { FooterComponent } from './core/footer/footer.component';
-import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './client/core/footer/footer.component';
+import { HeaderComponent } from './client/core/header/header.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -24,7 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
     DashboardModule,
     ToastrModule.forRoot(),
     BsDropdownModule.forRoot(),
-    FixedPluginModule,
+ 
     ReactiveFormsModule
   ],
   providers: [],
