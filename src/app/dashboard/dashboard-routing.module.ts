@@ -8,13 +8,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 
 export const  DashboardRouting : Routes = [ 
-{ path: 'dashboard',      component: DashboardComponent },
-{ path: 'user',           component: UsersComponent },
-{ path: 'product',          component: ProductsComponent },
-{ path: 'sales',     component: SalesComponent },
-{ path: 'reports',          component: ReportsComponent },
-
-
+  { path: '', redirectTo: 'dashboard' , pathMatch:'full'     },
+{ path: 'dashboard',      component: DashboardComponent,children:[
+  { path: 'user',           component: UsersComponent },
+  { path: 'product',          component: ProductsComponent },
+  { path: 'sales',     component: SalesComponent },
+  { path: 'reports',          component: ReportsComponent }
+] },
 
 ];
 

@@ -1,4 +1,6 @@
-import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { ClientModule } from './client/client.module';
@@ -9,8 +11,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routing';
-
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ToastrModule } from 'ngx-toastr';
@@ -19,13 +21,16 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
     ClientModule,
     DashboardModule,
     ToastrModule.forRoot(),
     BsDropdownModule.forRoot(),
- 
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

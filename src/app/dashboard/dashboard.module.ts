@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { FixedPluginModule } from './shared/fixedplugin/fixedplugin.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { ToastrModule } from 'ngx-toastr';
@@ -30,15 +31,14 @@ import { UsersComponent } from './users/users.component';
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(DashboardRouting),
-    FormsModule,
+    CommonModule,
     DashboardRoutingModule,
     SidebarModule,
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,
-    ReactiveFormsModule
+    
   ],
   declarations: [
     DashboardAdminComponent,

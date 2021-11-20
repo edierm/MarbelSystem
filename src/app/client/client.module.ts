@@ -1,10 +1,12 @@
+import { LayoutComponent } from './layout/layout.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HeaderComponent } from './core/header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -22,7 +24,7 @@ import { ProductsComponent } from './products/pages/products.component';
 import { ListProductsComponent } from './list-products/pages/list-products.component';
 import { HomeComponent } from './home/pages/home/home.component';
 import { ClientRoutingModule } from './client-routing.module';
-import { FooterComponent } from './core/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -38,17 +40,16 @@ import { FooterComponent } from './core/footer/footer.component';
     BathroomsComponent,
     TableComponent,
     InfoComponent,
-    LostComponent
-   
+    LostComponent,
+    LayoutComponent
   ],
   imports: [
     CommonModule,
     ClientRoutingModule,
     CarouselModule.forRoot(),
-    BrowserAnimationsModule,
-   
-    ReactiveFormsModule,
-    HttpClientModule,
+  
+    BsDropdownModule,
+    ReactiveFormsModule
   ],
 })
 export class ClientModule {}
