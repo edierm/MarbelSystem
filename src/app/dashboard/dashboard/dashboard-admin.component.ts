@@ -3,7 +3,7 @@ import Chart from 'chart.js';
 
 
 @Component({
-    selector: 'dashboard-cmp',
+    selector: 'dashboardAdmin-cmp',
    
     templateUrl: 'dashboard-admin.component.html',
     styleUrls: ['./dashboard-admin.component.scss']

@@ -1,3 +1,5 @@
+import { SidebarModule } from './dashboard/sidebar/sidebar.module';
+import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';

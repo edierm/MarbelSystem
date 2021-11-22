@@ -1,3 +1,4 @@
+import { DashboardAdminComponent } from './../dashboard/dashboard-admin.component';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -9,11 +10,11 @@ export interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard',     title: 'Dashboard',         icon:'nc-bank',       class: '' },
-    { path: '/users',         title: 'Usuarios',             icon:'nc-diamond',    class: '' },
-    { path: '/products',          title: 'Productos',              icon:'nc-pin-3',      class: '' },
-    { path: '/sales', title: 'Ventas',     icon:'nc-bell-55',    class: '' },
-    { path: '/reports',          title: 'Reports',      icon:'nc-tag-content',  class: '' },
+    { path: 'dashadmin',     title: 'Dashboard',         icon:'nc-bank',       class: '' },
+    { path: 'user',         title: 'Usuarios',             icon:'nc-diamond',    class: '' },
+    { path: 'product',          title: 'Productos',              icon:'nc-pin-3',      class: '' },
+    { path: 'sales', title: 'Ventas',     icon:'nc-bell-55',    class: '' },
+    { path: 'reports',          title: 'Reportes',      icon:'nc-tag-content',  class: '' },
     
 ];
 

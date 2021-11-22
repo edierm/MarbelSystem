@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
     items: object[] = [
-        {route: ['/productos/kitchens'], text: 'Cocina'},
-        {route: ['/productos/table'], text: 'Mesones'},
-        {route: ['/productos/bathrooms'], text: 'Baños'}
+        {route: ['client/productos/kitchens'], text: 'Cocina'},
+        {route: ['client/productos/table'], text: 'Mesones'},
+        {route: ['client/productos/bathrooms'], text: 'Baños'}
       ];
 
       onHidden(): void {

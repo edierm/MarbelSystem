@@ -1,5 +1,7 @@
+import { DashboardAdminComponent } from './dashboard/dashboard-admin.component';
+import { ProductsDashComponent } from './products/products.component';
 import { ReportsComponent } from './reports/reports.component';
-import { ProductsComponent } from './../client/products/pages/products.component';
+
 import { SalesComponent } from './sales/sales.component';
 import { DashboardComponent } from './dashboard.component';
 
@@ -8,10 +10,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 
 export const  DashboardRouting : Routes = [ 
-  { path: '', redirectTo: 'dashboard' , pathMatch:'full'     },
+  { path: '', redirectTo: 'dashboard/dashadmin' , pathMatch:'full'     },
 { path: 'dashboard',      component: DashboardComponent,children:[
+  { path: 'dashadmin',           component: DashboardAdminComponent },
   { path: 'user',           component: UsersComponent },
-  { path: 'product',          component: ProductsComponent },
+  { path: 'product',          component: ProductsDashComponent },
   { path: 'sales',     component: SalesComponent },
   { path: 'reports',          component: ReportsComponent }
 ] },
