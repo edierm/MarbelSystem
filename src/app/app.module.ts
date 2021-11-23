@@ -1,5 +1,4 @@
-import { SidebarModule } from './dashboard/sidebar/sidebar.module';
-import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
+import { LoginClientModule } from './login-client/login-client.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,7 +19,12 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+     HeaderComponent, 
+     FooterComponent,
+     
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -32,6 +36,8 @@ import { ToastrModule } from 'ngx-toastr';
     BsDropdownModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
+    LoginClientModule,
+
     
   ],
   providers: [],

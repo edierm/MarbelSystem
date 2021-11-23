@@ -1,0 +1,22 @@
+.container-fluid {
+  position: relative;
+  .items {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.logo {
+  width: 110px;
+  cursor: pointer;
+}
+
+.user{
+  width: 30px;
+  cursor: pointer;
+}
+
+.carro{
+  width: 30px;
+  cursor: pointer;
+}

@@ -17,6 +17,11 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
+  {
+    path: 'loginclient',
+    loadChildren: () =>
+    import('./login-client/login-client.module').then((m) => m.LoginClientModule)
+  },
   // {
   //   path: "",
   //   redirectTo:"",
