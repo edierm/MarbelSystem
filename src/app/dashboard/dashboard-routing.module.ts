@@ -1,3 +1,5 @@
+import { AddRentComponent } from './addrent/addrent.component';
+import { AddSailComponent } from './addsail/addsail.component';
 import { DashboardAdminComponent } from './dashboard/dashboard-admin.component';
 import { ProductsDashComponent } from './products/products.component';
 import { ReportsComponent } from './reports/reports.component';
@@ -16,7 +18,9 @@ export const  DashboardRouting : Routes = [
   { path: 'user',           component: UsersComponent },
   { path: 'product',          component: ProductsDashComponent },
   { path: 'sales',     component: SalesComponent },
-  { path: 'reports',          component: ReportsComponent }
+  { path: 'reports',          component: ReportsComponent },
+  { path: 'addsail',          component: AddSailComponent },
+  { path: 'addrent',          component: AddRentComponent }
 ] },
 
 ];

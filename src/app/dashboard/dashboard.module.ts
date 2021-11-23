@@ -1,3 +1,4 @@
+import { AddSailComponent } from './addsail/addsail.component';
 import { CommonModule } from '@angular/common';
 import { FixedPluginModule } from './shared/fixedplugin/fixedplugin.module';
 import { FooterModule } from './shared/footer/footer.module';
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DashboardRouting, DashboardRoutingModule } from './dashboard-routing.module';
 import { UsersComponent } from './users/users.component';
+import { AddRentComponent } from './addrent/addrent.component';
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import { UsersComponent } from './users/users.component';
     SalesComponent,
     ReportsComponent,
     DashboardComponent,
-    
+    AddSailComponent,
+    AddRentComponent,
   ]
 })
 export class DashboardModule { }
