@@ -2,7 +2,7 @@ import { HomeComponent } from './home/pages/home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LostComponent } from './lostpassword/pages/lostpassword.component';
+import { LostComponent } from '../login/lostpassword/pages/lostpassword.component';
 import { InfoComponent } from './info/pages/info.component';
 import { MantenenceComponent } from './mantenence/pages/mantenence.component';
 import { Component } from '@angular/core';
@@ -15,7 +15,7 @@ import { ProductsComponent } from './products/pages/products.component';
 import { ListProductsComponent } from './list-products/pages/list-products.component';
 
 
-import { LoginComponent } from './login/pages/login.component';
+
 import { KitchensComponent } from './kitchens/pages/kitchens.component';
 
 export const routes: Routes = [
@@ -28,14 +28,12 @@ export const routes: Routes = [
         path: 'home',
         component: HomeComponent,
        
-      },
-      
+      },      
       {
         path: 'productos',
         component: ProductsComponent,
        
-      },
-      { path: 'login', component: LoginComponent },
+      },      
       { path: 'sale', component: SaleComponent },
       { path: 'quote', component: QuoteComponent },
       { path: 'registro', component: RegisterComponent },

@@ -1,4 +1,4 @@
-import { LoginClientModule } from './login-client/login-client.module';
+
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -36,7 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
     BsDropdownModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    LoginClientModule,
+    
 
     
   ],

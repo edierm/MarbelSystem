@@ -1,3 +1,4 @@
+import { LoginGuard } from './../guards/login/login.guard';
 import { ListProductComponent } from './listproduct/listproduct.component';
 import { AddRentComponent } from './addrent/addrent.component';
 import { AddSailComponent } from './addsail/addsail.component';
@@ -13,24 +14,28 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './adduser/adduser.component';
 
-export const  DashboardRouting : Routes = [ 
-  { path: '', redirectTo: 'dashboard/dashadmin' , pathMatch:'full'     },
-{ path: 'dashboard',      component: DashboardComponent,children:[
-  { path: 'dashadmin',           component: DashboardAdminComponent },
-  { path: 'user',           component: UsersComponent },
-  { path: 'product',          component: ProductsDashComponent },
-  { path: 'sales',     component: SalesComponent },
-  { path: 'reports',          component: ReportsComponent },
-  { path: 'addsail',          component: AddSailComponent },
-  { path: 'addrent',          component: AddRentComponent },
-  { path: 'adduser',          component: AddUserComponent },
-  { path: 'listproduct',          component: ListProductComponent }
-] },
-
+export const DashboardRouting: Routes = [
+  { path: '', redirectTo: 'dashboard/dashadmin', pathMatch: 'full' },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      { path: 'dashadmin', component: DashboardAdminComponent },
+      { path: 'user', component: UsersComponent },
+      { path: 'product', component: ProductsDashComponent },
+      { path: 'sales', component: SalesComponent },
+      { path: 'reports', component: ReportsComponent },
+      { path: 'addsail', component: AddSailComponent },
+      { path: 'addrent', component: AddRentComponent },
+      { path: 'adduser', component: AddUserComponent },
+      { path: 'listproduct', component: ListProductComponent },
+    ],
+    canActivate: [LoginGuard]
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(DashboardRouting)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {}

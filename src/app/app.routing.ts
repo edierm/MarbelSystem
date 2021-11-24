@@ -18,10 +18,11 @@ export const routes: Routes = [
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
   {
-    path: 'loginclient',
+    path: 'login',
     loadChildren: () =>
-    import('./login-client/login-client.module').then((m) => m.LoginClientModule)
-  },
+    import('./login/login.module').then(m => m.ClientModule)
+  }
+ 
   // {
   //   path: "",
   //   redirectTo:"",

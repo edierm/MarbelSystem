@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LostComponent } from './lostpassword/pages/lostpassword.component';
 import { InfoComponent } from './info/pages/info.component';
 import { TableComponent } from './table/pages/table.component';
 import { BathroomsComponent } from './bathrooms/pages/bathrooms.component';
@@ -19,7 +18,6 @@ import { MantenenceComponent } from './mantenence/pages/mantenence.component';
 import { RegisterComponent } from './register/pages/register.component';
 import { SaleComponent } from './sale/pages/sale.component';
 import { QuoteComponent } from './quote/pages/quote.component';
-import { LoginComponent } from './login/pages/login.component';
 import { ProductsComponent } from './products/pages/products.component';
 import { ListProductsComponent } from './list-products/pages/list-products.component';
 import { HomeComponent } from './home/pages/home/home.component';
@@ -31,7 +29,6 @@ import { ClientRoutingModule } from './client-routing.module';
     HomeComponent,
     ListProductsComponent,
     ProductsComponent,
-    LoginComponent,
     QuoteComponent,
     SaleComponent,
     RegisterComponent,
@@ -40,7 +37,6 @@ import { ClientRoutingModule } from './client-routing.module';
     BathroomsComponent,
     TableComponent,
     InfoComponent,
-    LostComponent,
     LayoutComponent
   ],
   imports: [
