@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-    items: object[] = [
+   /*  items: object[] = [
         {route: ['client/productos/kitchens'], text: 'Cocina'},
         {route: ['client/productos/table'], text: 'Mesones'},
         {route: ['client/productos/bathrooms'], text: 'Baños'}
@@ -21,5 +21,5 @@ export class HeaderComponent {
       }
       isOpenChange(): void {
         console.log('Dropdown state is changed');
-      }
+      } */
 }

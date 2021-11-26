@@ -6,34 +6,27 @@
       routerLink="client/home"
     />
     <ul class="navbar-nav items">
-      <li class="nav-item dropdown">
-        
-       
-        <span dropdown (onShown)="onShown()" (onHidden)="onHidden()" (isOpenChange)="isOpenChange()">
-            <a href id="basic-link" dropdownToggle (click)="false"
-               aria-controls="basic-link-dropdown" class="nav-link dropdown-toggle"
-               id="navbarDropdownMenuLink"
-               data-toggle="dropdown"
-               aria-haspopup="true"
-               aria-expanded="false">PRODUCTOS</a>
-            <ul id="basic-link-dropdown" *dropdownMenu class="dropdown-menu"
-                role="menu" aria-labelledby="basic-link">
-              <li *ngFor="let choice of items">
-                <a class="dropdown-item" href="#" routerLink="{{choice.route}}">{{choice.text}}</a>
-                
-              </li>
-              
-            </ul>
-          </span>
+      <li class="nav-item"></li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="client/kitchens">COCINA </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="client/bathrooms">BAÑOS </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="client/table">MESONES </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" routerLink="client/mantenence"
+          >MANTENIMIENTO
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"   routerLink="client/mantenence">MANTENIMIENTO  </a>
-      
+        <a class="nav-link" href="#" routerLink="client/info">SOBRE NOSOTROS</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerLink="client/info" >SOBRE NOSOTROS</a>
-      </li>
-      
     </ul>
     <form class="form-inline ml-auto">
       <input
@@ -46,11 +39,7 @@
         Buscar
       </button>
     </form>
-    <img  class="user"
-    src="assets/img/usuario.png" 
-    routerLink="login"
-    >
-   
+    <img class="user" src="assets/img/usuario.png" routerLink="login" />
   </nav>
 
   <!-- <div class="nav">

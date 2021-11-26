@@ -1,3 +1,4 @@
+import { SaleComponent } from './sale/pages/sale.component';
 import { LayoutComponent } from './layout/layout.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HeaderComponent } from './core/header/header.component';
@@ -16,7 +17,7 @@ import { BathroomsComponent } from './bathrooms/pages/bathrooms.component';
 import { KitchensComponent } from './kitchens/pages/kitchens.component';
 import { MantenenceComponent } from './mantenence/pages/mantenence.component';
 
-import { SaleComponent } from './sale/pages/sale.component';
+
 import { QuoteComponent } from './quote/pages/quote.component';
 import { ProductsComponent } from './products/pages/products.component';
 import { ListProductsComponent } from './list-products/pages/list-products.component';

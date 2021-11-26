@@ -34,19 +34,19 @@ export const routes: Routes = [
         component: ProductsComponent,
        
       },      
-      { path: 'sale', component: SaleComponent },
+      { path: './sale', component: SaleComponent },
       { path: 'quote', component: QuoteComponent },
       
       { path: 'mantenence', component: MantenenceComponent },
       {
-        path: 'productos/kitchens',
+        path: 'kitchens',
         component: KitchensComponent,
       },
       {
-        path: 'productos/bathrooms',
+        path: 'bathrooms',
         component: BathroomsComponent,
       },
-      { path: 'productos/table', component: TableComponent },
+      { path: 'table', component: TableComponent },
       { path: 'info', component: InfoComponent },
       { path: 'lost', component: LostComponent },
       { path: 'list-products', component: ListProductsComponent },
