@@ -5,10 +5,11 @@
 
 export const environment = {
   production: false,
-  urlDashborad: 'http://localhost:4201',
+  urlDashborad: 'http://localhost:4200/dashboard',
   apis: {
     userLogin: 'http://localhost:3000/api/usuarios/login',
-    apiUsers: 'http://localhost:3000/api/usuarios'
+    apiUsers: 'http://localhost:3000/api/usuarios',
+    apiReg: 'http://localhost:3000/api/usuarios'
   }
 };
 

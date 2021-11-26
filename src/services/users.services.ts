@@ -18,7 +18,11 @@ export class UsersServices{
     }
     createUser (user: any): Observable<any> {
         const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'});
-        return  this.http.post(environment.apis.apiUsers, user , {headers}  )
+        return  this.http.post(environment.apis.apiUsers, user ,{headers}  )
+    }
+    createClient (user: any): Observable<any> {
+        const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'});
+        return  this.http.post(environment.apis.apiReg, user ,{headers}  )
     }
 }
 
