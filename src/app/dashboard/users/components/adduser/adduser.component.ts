@@ -19,10 +19,7 @@ export class AddUserComponent {
   userForm = this.fb.group({
     name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
-    document: [
-      '',
-      [Validators.required, Validators.minLength(5), Validators.maxLength(15)],
-    ],
+    document: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
     password: ['', [Validators.required, Validators.minLength(3)]],
     phone: ['', [Validators.required, Validators.maxLength(11)]],
     address: ['', [Validators.minLength(3)]],

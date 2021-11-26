@@ -1,3 +1,4 @@
+import { RegisterComponent } from './register/pages/register.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path:'reset',
     component: LostComponent
+  },
+  {
+    path:'register',
+    component: RegisterComponent
   }
 ];
 
