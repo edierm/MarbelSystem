@@ -1,3 +1,4 @@
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { ListProductComponent } from './listproduct/listproduct.component';
 import { AddSailComponent } from './addsail/addsail.component';
 import { CommonModule } from '@angular/common';
@@ -16,33 +17,27 @@ import { DashboardAdminComponent } from './dashboard/dashboard-admin.component';
 import { ProductsDashComponent } from './products/products.component';
 import { ReportsComponent } from './reports/reports.component';
 import { SalesComponent } from './sales/sales.component';
-
-
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-
-
-
-
 import { DashboardRouting, DashboardRoutingModule } from './dashboard-routing.module';
 import { UsersComponent } from './users/users.component';
 import { AddRentComponent } from './addrent/addrent.component';
-import { AddUserComponent } from './adduser/adduser.component';
+import { AddUserComponent } from './users/components/adduser/adduser.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     DashboardRoutingModule,
     SidebarModule,
     NavbarModule,
     ToastrModule.forRoot(),
     FooterModule,
     FixedPluginModule,
-    
+    ModalModule.forRoot()   
   ],
   declarations: [
     DashboardAdminComponent,
@@ -55,6 +50,11 @@ import { AddUserComponent } from './adduser/adduser.component';
     AddRentComponent,
     ListProductComponent,
     AddUserComponent
-  ]
+  
+  ],
+  exports: [
+    ReactiveFormsModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DashboardModule { }

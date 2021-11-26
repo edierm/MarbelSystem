@@ -1,7 +1,5 @@
-import { HttpClientModule } from '@angular/common/http';
+
 import { ReactiveFormsModule } from '@angular/forms';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';

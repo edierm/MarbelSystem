@@ -2,8 +2,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
+import { ModalModule } from 'ngx-bootstrap/modal';
 import { ClientModule } from './client/client.module';
 import { FooterComponent } from './client/core/footer/footer.component';
 import { HeaderComponent } from './client/core/header/header.component';
@@ -35,9 +34,7 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot(),
     BsDropdownModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule,
-    
-
+    ReactiveFormsModule
     
   ],
   providers: [],

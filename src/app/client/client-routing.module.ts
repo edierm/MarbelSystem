@@ -8,7 +8,7 @@ import { MantenenceComponent } from './mantenence/pages/mantenence.component';
 import { Component } from '@angular/core';
 import { TableComponent } from './table/pages/table.component';
 import { BathroomsComponent } from './bathrooms/pages/bathrooms.component';
-import { RegisterComponent } from './register/pages/register.component';
+
 import { QuoteComponent } from './quote/pages/quote.component';
 import { SaleComponent } from './sale/pages/sale.component';
 import { ProductsComponent } from './products/pages/products.component';
@@ -36,7 +36,7 @@ export const routes: Routes = [
       },      
       { path: 'sale', component: SaleComponent },
       { path: 'quote', component: QuoteComponent },
-      { path: 'registro', component: RegisterComponent },
+      
       { path: 'mantenence', component: MantenenceComponent },
       {
         path: 'productos/kitchens',

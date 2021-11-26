@@ -16,6 +16,10 @@ export class UsersServices{
       
         
     }
+    createUser (user: any): Observable<any> {
+        const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'});
+        return  this.http.post(environment.apis.apiUsers, user , {headers}  )
+    }
 }
 
 //si no me suscribo al observable nunca va ir al backend//

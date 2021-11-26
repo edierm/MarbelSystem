@@ -15,7 +15,7 @@ import { TableComponent } from './table/pages/table.component';
 import { BathroomsComponent } from './bathrooms/pages/bathrooms.component';
 import { KitchensComponent } from './kitchens/pages/kitchens.component';
 import { MantenenceComponent } from './mantenence/pages/mantenence.component';
-import { RegisterComponent } from './register/pages/register.component';
+
 import { SaleComponent } from './sale/pages/sale.component';
 import { QuoteComponent } from './quote/pages/quote.component';
 import { ProductsComponent } from './products/pages/products.component';
@@ -31,7 +31,7 @@ import { ClientRoutingModule } from './client-routing.module';
     ProductsComponent,
     QuoteComponent,
     SaleComponent,
-    RegisterComponent,
+
     MantenenceComponent,
     KitchensComponent,
     BathroomsComponent,
