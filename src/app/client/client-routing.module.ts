@@ -34,7 +34,7 @@ export const routes: Routes = [
         component: ProductsComponent,
        
       },      
-      { path: './sale', component: SaleComponent },
+      { path: 'sale', component: SaleComponent },
       { path: 'quote', component: QuoteComponent },
       
       { path: 'mantenence', component: MantenenceComponent },
