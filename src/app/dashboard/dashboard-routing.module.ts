@@ -1,7 +1,7 @@
 import { LoginGuard } from './../guards/login/login.guard';
 import { ListProductComponent } from './listproduct/listproduct.component';
 import { AddRentComponent } from './addrent/addrent.component';
-import { AddSailComponent } from './addsail/addsail.component';
+import { AddSailComponent } from './sales/components/addsail/addsail.component';
 import { DashboardAdminComponent } from './dashboard/dashboard-admin.component';
 import { ProductsDashComponent } from './products/products.component';
 import { ReportsComponent } from './reports/reports.component';
