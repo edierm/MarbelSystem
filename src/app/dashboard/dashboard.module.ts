@@ -18,7 +18,7 @@ import { SalesComponent } from './sales/sales.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
-import { AddRentComponent } from './addrent/addrent.component';
+import { AddRentComponent } from './sales/components/addrent/addrent.component';
 import { AddUserComponent } from './users/components/adduser/adduser.component';
 import { AddSailComponent } from './sales/components/addsail/addsail.component';
 

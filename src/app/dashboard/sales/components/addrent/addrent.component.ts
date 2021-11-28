@@ -1,28 +1,29 @@
-import { SailService } from './../../../../../services/sail.services';
+import { RentService } from './../../../../../services/rent.services';
 import { BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
+
 import { FormBuilder, Validators } from '@angular/forms';
 import { Component, ViewChild } from '@angular/core';
 
 @Component({
-    selector: 'addsail-cmp',
+    selector: 'addrent-cmp',
     
-    templateUrl: 'addsail.component.html',
-    styleUrls : ['./addsail.component.scss']
+    templateUrl: 'addrent.component.html',
+    styleUrls : ['./addrent.component.scss']
 })
 
-export class AddSailComponent{
+export class AddRentComponent{
     constructor(
         private fb: FormBuilder,
-        private sailService : SailService,
+        private rentService : RentService,
         private modalService: BsModalService
     ){}
 
     @ViewChild('modalSucces') public modalRef: ModalDirective;
-    saleForm = this.fb.group({
+    rentForm = this.fb.group({
         name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
     document: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
-    price: ['', [Validators.required, Validators.minLength(3)]],
+    rent: ['', [Validators.required, Validators.minLength(3)]],
     city: ['', [Validators.required, Validators.maxLength(11)]],
     product: ['', [Validators.minLength(3)]],
 
@@ -39,9 +40,9 @@ export class AddSailComponent{
       this.modalRef.show();
     }
   
-    saveSale() {  
-      console.log(this.saleForm);
-      this.sailService.createSail(this.saleForm.value).subscribe((res) => {
+    saveRent() {  
+      console.log(this.rentForm);
+      this.rentService.createRent(this.rentForm.value).subscribe((res) => {
           console.log('Respuesta del back: ', res);
           this.dataModal.title = 'Usuario agregado';
           this.dataModal.body = 'El usuario ha sido agregado con exito.';
@@ -53,4 +54,5 @@ export class AddSailComponent{
           this.openModal();
       });
     }
+
 }

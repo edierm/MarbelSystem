@@ -1,6 +1,6 @@
-<h1 class="h1">AGREGAR VENTA</h1>
+<h1 class="h1">AGREGAR ABONO</h1>
 
-<form [formGroup]="saleForm">
+<form [formGroup]="rentForm" >
   <div class="form-group">
     <label for="exampleInputEmail1">Nombre</label>
     <input
@@ -21,7 +21,7 @@
       aria-describedby="emailHelp"
       placeholder="Ingresar email"
       formControlName="email"
-    />
+      />
   </div>
 
   <div class="form-group">
@@ -39,13 +39,13 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Precio</label>
+    <label for="exampleInputPassword1">Abono</label>
     <input
       type="text"
       class="form-control"
       id="exampleInputPassword1"
-      placeholder="Precio "
-      formControlName="price"
+      placeholder="Abono "
+      formControlName="rent"
     />
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado ingrese el valor correcto.</small
@@ -66,7 +66,7 @@
   <div class="form-group">
     <label for="Ciudad">Seleccione tipo de producto </label>
 
-    <select id="inputState" class="form-control" formControlName="product">
+    <select id="inputState" class="form-control" formControlName="product" >
       <option selected>Selecciona...</option>
       <option>Meson</option>
       <option>Cocina</option>
@@ -80,33 +80,20 @@
       >Rectifique bien los datos antes de registar la venta
     </label>
   </div>
-  <button type="submit" class="btn btn-primary">Agregar venta</button>
+  <button type="submit" class="btn btn-primary">Agregar Abono</button>
 </form>
-<div
-  bsModal
-  #modalSuccess="bs-modal"
-  class="modal fade"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="dialog-static-name"
->
+
+<div bsModal #modalSuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 id="dialog-static-name" class="modal-title pull-left">
-          {{ dataModal.title }}
-        </h4>
-        <button
-          type="button"
-          class="btn-close close pull-right"
-          aria-label="Close"
-          (click)="modalSuccess.hide()"
-        >
+        <h4 id="dialog-static-name" class="modal-title pull-left">{{dataModal.title}}</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalSuccess.hide()">
           <span aria-hidden="true" class="visually-hidden">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        {{ dataModal.body }}
+       {{dataModal.body}}
       </div>
     </div>
   </div>

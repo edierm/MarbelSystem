@@ -9,7 +9,9 @@ export const environment = {
   apis: {
     userLogin: 'http://localhost:3000/api/usuarios/login',
     apiUsers: 'http://localhost:3000/api/usuarios',
-    apiReg: 'http://localhost:3000/api/usuarios'
+    apiReg: 'http://localhost:3000/api/usuarios',
+    apiSail: 'http://localhost:3000/api/addSail',
+    apiRent: 'http://localhost:3000/api/addRent'
   }
 };
 
