@@ -31,112 +31,46 @@
                 Nombre
               </th>
               <th>
-                Ciudad
+                Email
               </th>
               <th>
-                Producto
+                Documento
               </th>
               <th class="text-right">
-                Costo
+                Cuidad
+              </th>
+              <th class="text-right">
+                Dirección
+              </th>
+              <th class="text-right">
+                Rol
+              </th>
+              <th>
+                Acciones
               </th>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let user of usersClients">
                 <td>
-                  Dakota Rice
+                  {{user.name}}
                 </td>
                 <td>
-                  Niger
+                  {{user.email}}
                 </td>
                 <td>
-                  Oud-Turnhout
+                  {{user.document}}
                 </td>
                 <td class="text-right">
-                  $36,738
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Minerva Hooper
-                </td>
-                <td>
-                  Curaçao
-                </td>
-                <td>
-                  Sinaai-Waas
+                  {{user.city}}
                 </td>
                 <td class="text-right">
-                  $23,789
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Sage Rodriguez
-                </td>
-                <td>
-                  Netherlands
-                </td>
-                <td>
-                  Baileux
+                  {{user.address}}
                 </td>
                 <td class="text-right">
-                  $56,142
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Philip Chaney
-                </td>
-                <td>
-                  Korea, South
-                </td>
-                <td>
-                  Overland Park
+                  {{user.role}}
                 </td>
                 <td class="text-right">
-                  $38,735
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Doris Greene
-                </td>
-                <td>
-                  Malawi
-                </td>
-                <td>
-                  Feldkirchen in Kärnten
-                </td>
-                <td class="text-right">
-                  $63,542
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Mason Porter
-                </td>
-                <td>
-                  Chile
-                </td>
-                <td>
-                  Gloucester
-                </td>
-                <td class="text-right">
-                  $78,615
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Jon Porter
-                </td>
-                <td>
-                  Portugal
-                </td>
-                <td>
-                  Gloucester
-                </td>
-                <td class="text-right">
-                  $98,615
+                  <div></div>
                 </td>
               </tr>
             </tbody>
@@ -177,112 +111,46 @@
                 Nombre
               </th>
               <th>
-                Ciudad
+                Email
               </th>
               <th>
-                Producto
+                Documento
               </th>
               <th class="text-right">
-                Debe
+                Cuidad
+              </th>
+              <th class="text-right">
+                Dirección
+              </th>
+              <th class="text-right">
+                Rol
+              </th>
+              <th>
+                Acciones
               </th>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let user of usersAdmin">
                 <td>
-                  Dakota Rice
+                  {{user.name}}
                 </td>
                 <td>
-                  Niger
+                  {{user.email}}
                 </td>
                 <td>
-                  Oud-Turnhout
+                  {{user.document}}
                 </td>
                 <td class="text-right">
-                  $36,738
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Minerva Hooper
-                </td>
-                <td>
-                  Curaçao
-                </td>
-                <td>
-                  Sinaai-Waas
+                  {{user.city}}
                 </td>
                 <td class="text-right">
-                  $23,789
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Sage Rodriguez
-                </td>
-                <td>
-                  Netherlands
-                </td>
-                <td>
-                  Baileux
+                  {{user.address}}
                 </td>
                 <td class="text-right">
-                  $56,142
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Philip Chaney
-                </td>
-                <td>
-                  Korea, South
-                </td>
-                <td>
-                  Overland Park
+                  {{user.role}}
                 </td>
                 <td class="text-right">
-                  $38,735
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Doris Greene
-                </td>
-                <td>
-                  Malawi
-                </td>
-                <td>
-                  Feldkirchen in Kärnten
-                </td>
-                <td class="text-right">
-                  $63,542
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Mason Porter
-                </td>
-                <td>
-                  Chile
-                </td>
-                <td>
-                  Gloucester
-                </td>
-                <td class="text-right">
-                  $78,615
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Jon Porter
-                </td>
-                <td>
-                  Portugal
-                </td>
-                <td>
-                  Gloucester
-                </td>
-                <td class="text-right">
-                  $98,615
+                  <div></div>
                 </td>
               </tr>
             </tbody>

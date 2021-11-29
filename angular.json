@@ -28,9 +28,12 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/scss/paper-dashboard.scss"
+              "src/assets/scss/paper-dashboard.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+            ]
           },
           "configurations": {
             "production": {
