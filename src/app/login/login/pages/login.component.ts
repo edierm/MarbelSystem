@@ -1,6 +1,6 @@
+import { UsersService } from './../../../../services/users.service';
 import { Router } from '@angular/router';
 import { environment } from './../../../../environments/environment';
-import { UsersServices } from './../../../../services/users.services';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 
@@ -16,7 +16,7 @@ export class LoginComponent {
   });
   constructor(
     private fb: FormBuilder,
-    private userservices: UsersServices,
+    private userservices: UsersService,
     private router: Router
   ) {}
 

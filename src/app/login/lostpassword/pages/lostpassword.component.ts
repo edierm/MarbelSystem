@@ -1,4 +1,4 @@
-import { UsersServices } from '../../../../services/users.services';
+import { UsersService } from './../../../../services/users.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 
@@ -13,7 +13,7 @@ export class LostComponent {
         email: ['', [Validators.required, Validators.email]],
        
     })
-    constructor(private fb: FormBuilder, private userservices: UsersServices) {
+    constructor(private fb: FormBuilder, private userservices: UsersService) {
 
 
      }

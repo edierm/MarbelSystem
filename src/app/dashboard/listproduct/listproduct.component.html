@@ -37,130 +37,36 @@
                   Color
                 </th>
                 <th>
-                  Estado
+                  Material
                 </th>
                 <th class="text-right">
                   Costo
                 </th>
+                <th class="text-right">
+                  Acciones
+                </th>
               </thead>
               <tbody>
-                <tr>
+                <tr *ngFor="let product of products">
                   <td>
-                    Dakota Rice
+                    {{ product.name }}
                   </td>
                   <td>
-                    Meson
+                    {{ product.category }}
                   </td>
                   <td>
-                    azul cielo
+                    {{ product.color }}
                   </td>
                   <td>
-                    Active
+                    {{ product.material }}
+                  </td>
+                  
+                  <td class="text-right">
+                    {{ product.price }}
                   </td>
                   <td class="text-right">
-                    $36,738
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Minerva Hooper
-                  </td>
-                  <td>
-                    Curaçao
-                  </td>
-                  <td>
-                    Sinaai-Waas
-                  </td>
-                  <td>
-                    Active
-                  </td>
-                  <td class="text-right">
-                    $23,789
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Sage Rodriguez
-                  </td>
-                  <td>
-                    Netherlands
-                  </td>
-                  <td>
-                    Baileux
-                  </td>
-                  <td>
-                    Active
-                  </td>
-                  <td class="text-right">
-                    $56,142
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Philip Chaney
-                  </td>
-                  <td>
-                    Korea, South
-                  </td>
-                  <td>
-                    Overland Park
-                  </td>
-                  <td>
-                    Active
-                  </td>
-                  <td class="text-right">
-                    $38,735
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Doris Greene
-                  </td>
-                  <td>
-                    Malawi
-                  </td>
-                  <td>
-                    Feldkirchen in Kärnten
-                  </td>
-                  <td>
-                    Active
-                  </td>
-                  <td class="text-right">
-                    $63,542
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Mason Porter
-                  </td>
-                  <td>
-                    Chile
-                  </td>
-                  <td>
-                    Gloucester
-                  </td>
-                  <td>
-                    Active
-                  </td>
-                  <td class="text-right">
-                    $78,615
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Jon Porter
-                  </td>
-                  <td>
-                    Portugal
-                  </td>
-                  <td>
-                    Gloucester
-                  </td>
-                  <td>
-                    Active
-                  </td>
-                  <td class="text-right">
-                    $98,615
+                    <span (click)="editProduct(product)"><i class="fas fa-edit"></i> </span>
+                    
                   </td>
                 </tr>
               </tbody>

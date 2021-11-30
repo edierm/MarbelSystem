@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class UsersServices {
+export class UsersService {
   constructor(private http: HttpClient) {}
   login(user: any): Observable<any> {
     const headers = new HttpHeaders({

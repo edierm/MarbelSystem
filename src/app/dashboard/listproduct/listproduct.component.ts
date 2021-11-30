@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { ProductService } from 'src/services/products.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 declare interface TableData {
     headerRow: string[];
     dataRows: string[][];
@@ -10,21 +12,18 @@ declare interface TableData {
     styleUrls : ['./listproduct.component.scss']
 })
 
-export class ListProductComponent{
+export class ListProductComponent implements OnInit{
     public tableData1: TableData;
-   
-    ngOnInit(){
-        this.tableData1 = {
-            headerRow: [ 'ID', 'Name', 'Country', 'City', 'Status','Salary'],
-            dataRows: [
-                ['1', 'Dakota Rice', 'Meson', 'Oud-Turnhout','Activo','$36,738'],
-                ['2', 'Minerva Hooper', 'Curaçao', 'Sinaai-Waas', 'Activo','$23,789'],
-                ['3', 'Sage Rodriguez', 'Netherlands', 'Baileux', 'Activo','$56,142'],
-                ['4', 'Philip Chaney', 'Korea, South', 'Overland Park', 'Activo','$38,735'],
-                ['5', 'Doris Greene', 'Malawi', 'Feldkirchen in Kärnten', 'Activo','$63,542'],
-                ['6', 'Mason Porter', 'Chile', 'Gloucester', 'Activo','$78,615']
-            ]
-        };
-      
+    products: any[];
+    constructor(private productService: ProductService, private router: Router) {
+    }
+    ngOnInit() {
+        this.productService.getAllProducts().subscribe(({products}) => {            
+            this.products = products;
+        });
+    }
+    editProduct(product) {
+        localStorage.setItem('selectProduct', JSON.stringify(product));
+        this.router.navigate([`/dashboard/product/edit/${product._id}`]);
     }
 }

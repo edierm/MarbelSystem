@@ -1,8 +1,72 @@
 <div class="row">
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-header">
-          <h4 class="card-title"> Ventas</h4>
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Ventas</h4>
+        <form class="form-inline ml-auto">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Buscar"
+            aria-label="Buscar"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Buscar
+          </button>
+
+          <button
+            class="btn btn-outline-success my-2 my-sm-0 agregar"
+            type="submit"
+            routerLink="/dashboard/addsail"
+          >
+            +
+          </button>
+        </form>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="text-primary">
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Documento</th>
+
+              <th>Ciudad</th>
+              <th>Producto</th>
+              <th class="text-right">Costo</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let sale of sales">
+                <td>
+                  {{ sale.name }}
+                </td>
+                <td>
+                  {{ sale.email }}
+                </td>
+                <td>
+                  {{ sale.document }}
+                </td>
+                <td>
+                  {{ sale.city }}
+                </td>
+                <td>
+                  {{ sale.product }}
+                </td>
+                <td class="text-right">
+                  {{ sale.price }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="card card-plain">
+      <div class="card-header">
+        <h4 class="card-title">Abonos</h4>
+        <div>
           <form class="form-inline ml-auto">
             <input
               class="form-control mr-sm-2"
@@ -11,283 +75,56 @@
               aria-label="Buscar"
             />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Buscar
+              Consultar
             </button>
-
-            <button class="btn btn-outline-success my-2 my-sm-0 agregar" type="submit" routerLink="/dashboard/addsail"  >
-               +
+            <button
+              class="btn btn-outline-success my-2 my-sm-0 agregar"
+              type="submit"
+              routerLink="/dashboard/addrent"
+            >
+              +
             </button>
-            
-
           </form>
         </div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table">
-              <thead class=" text-primary">
-                <th>
-                  Nombre
-                </th>
-                <th>
-                  Ciudad
-                </th>
-                <th>
-                  Producto
-                </th>
-                <th class="text-right">
-                  Costo
-                </th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Dakota Rice
-                  </td>
-                  <td>
-                    Niger
-                  </td>
-                  <td>
-                    Oud-Turnhout
-                  </td>
-                  <td class="text-right">
-                    $36,738
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Minerva Hooper
-                  </td>
-                  <td>
-                    Curaçao
-                  </td>
-                  <td>
-                    Sinaai-Waas
-                  </td>
-                  <td class="text-right">
-                    $23,789
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Sage Rodriguez
-                  </td>
-                  <td>
-                    Netherlands
-                  </td>
-                  <td>
-                    Baileux
-                  </td>
-                  <td class="text-right">
-                    $56,142
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Philip Chaney
-                  </td>
-                  <td>
-                    Korea, South
-                  </td>
-                  <td>
-                    Overland Park
-                  </td>
-                  <td class="text-right">
-                    $38,735
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Doris Greene
-                  </td>
-                  <td>
-                    Malawi
-                  </td>
-                  <td>
-                    Feldkirchen in Kärnten
-                  </td>
-                  <td class="text-right">
-                    $63,542
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Mason Porter
-                  </td>
-                  <td>
-                    Chile
-                  </td>
-                  <td>
-                    Gloucester
-                  </td>
-                  <td class="text-right">
-                    $78,615
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Jon Porter
-                  </td>
-                  <td>
-                    Portugal
-                  </td>
-                  <td>
-                    Gloucester
-                  </td>
-                  <td class="text-right">
-                    $98,615
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <p class="card-category">Abonos Realizados</p>
       </div>
-    </div>
-    <div class="col-md-12">
-      <div class="card card-plain">
-        <div class="card-header">
-          <h4 class="card-title"> Abonos</h4>
-          <div>
-            <form class="form-inline ml-auto">
-              <input
-                class="form-control mr-sm-2"
-                type="search"
-                placeholder="Buscar"
-                aria-label="Buscar"
-              />
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                Consultar
-              </button>
-              <button class="btn btn-outline-success my-2 my-sm-0 agregar" type="submit" routerLink="/dashboard/addrent"  >
-                +
-             </button>
-            </form>
-          </div>
-          <p class="card-category"> Abonos Realizados </p>
-          
-        </div>
-        
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table">
-              <thead class=" text-primary">
-                <th>
-                  Nombre
-                </th>
-                <th>
-                  Ciudad
-                </th>
-                <th>
-                  Producto
-                </th>
-                <th class="text-right">
-                  Debe
-                </th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Dakota Rice
-                  </td>
-                  <td>
-                    Niger
-                  </td>
-                  <td>
-                    Oud-Turnhout
-                  </td>
-                  <td class="text-right">
-                    $36,738
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Minerva Hooper
-                  </td>
-                  <td>
-                    Curaçao
-                  </td>
-                  <td>
-                    Sinaai-Waas
-                  </td>
-                  <td class="text-right">
-                    $23,789
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Sage Rodriguez
-                  </td>
-                  <td>
-                    Netherlands
-                  </td>
-                  <td>
-                    Baileux
-                  </td>
-                  <td class="text-right">
-                    $56,142
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Philip Chaney
-                  </td>
-                  <td>
-                    Korea, South
-                  </td>
-                  <td>
-                    Overland Park
-                  </td>
-                  <td class="text-right">
-                    $38,735
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Doris Greene
-                  </td>
-                  <td>
-                    Malawi
-                  </td>
-                  <td>
-                    Feldkirchen in Kärnten
-                  </td>
-                  <td class="text-right">
-                    $63,542
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Mason Porter
-                  </td>
-                  <td>
-                    Chile
-                  </td>
-                  <td>
-                    Gloucester
-                  </td>
-                  <td class="text-right">
-                    $78,615
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Jon Porter
-                  </td>
-                  <td>
-                    Portugal
-                  </td>
-                  <td>
-                    Gloucester
-                  </td>
-                  <td class="text-right">
-                    $98,615
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="text-primary">
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Documento</th>
+              <th>Ciudad</th>
+              <th>Producto</th>
+              <th class="text-right">Abonos</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let sale of salesRents">
+                <td>
+                  {{ sale.name }}
+                </td>
+                <td>
+                  {{ sale.email }}
+                </td>
+                <td>
+                  {{ sale.document }}
+                </td>
+                <td>
+                  {{ sale.city }}
+                </td>
+                <td>
+                  {{ sale.product }}
+                </td>
+                <td class="text-right">
+                  {{ sale.rent }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

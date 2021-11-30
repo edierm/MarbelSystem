@@ -23,6 +23,7 @@ export const DashboardRouting: Routes = [
       { path: 'dashadmin', component: DashboardAdminComponent },
       { path: 'user', component: UsersComponent },
       { path: 'product', component: ProductsDashComponent },
+      { path: 'product/edit/:id', component: ProductsDashComponent },
       { path: 'sales', component: SalesComponent },
       { path: 'reports', component: ReportsComponent },
       { path: 'addsail', component: AddSailComponent },

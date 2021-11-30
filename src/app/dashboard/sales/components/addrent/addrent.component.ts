@@ -1,4 +1,5 @@
-import { RentService } from './../../../../../services/rent.services';
+import { RentService } from './../../../../../services/rent.service';
+
 import { BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 
 import { FormBuilder, Validators } from '@angular/forms';
@@ -18,7 +19,7 @@ export class AddRentComponent{
         private modalService: BsModalService
     ){}
 
-    @ViewChild('modalSucces') public modalRef: ModalDirective;
+    @ViewChild('modalSuccess') public modalRef: ModalDirective;
     rentForm = this.fb.group({
         name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
@@ -44,8 +45,8 @@ export class AddRentComponent{
       console.log(this.rentForm);
       this.rentService.createRent(this.rentForm.value).subscribe((res) => {
           console.log('Respuesta del back: ', res);
-          this.dataModal.title = 'Usuario agregado';
-          this.dataModal.body = 'El usuario ha sido agregado con exito.';
+          this.dataModal.title = 'Abono realizado';
+          this.dataModal.body = 'El abono ha sido agregado con exito.';
           this.openModal();
       }, ({error})=> {
           console.log(error);

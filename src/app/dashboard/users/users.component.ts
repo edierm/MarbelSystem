@@ -1,5 +1,6 @@
+import { UsersService } from './../../../services/users.service';
 import { Component, OnInit } from '@angular/core';
-import { UsersServices } from 'src/services/users.services';
+
 
 @Component({
     selector: 'users-cmp',
@@ -12,7 +13,7 @@ export class UsersComponent implements OnInit{
     users: any[]
     usersClients: any[];
     usersAdmin: any[];
-    constructor(private userService: UsersServices) {
+    constructor(private userService: UsersService) {
     }
     
     ngOnInit() {

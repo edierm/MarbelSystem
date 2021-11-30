@@ -1,4 +1,5 @@
-import { UsersServices } from './../../../../../services/users.services';
+import { UsersService } from './../../../../../services/users.service';
+
 import { FormBuilder, Validators } from '@angular/forms';
 import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
 import { BsModalService, BsModalRef, ModalDirective } from 'ngx-bootstrap/modal';
@@ -11,7 +12,7 @@ import { BsModalService, BsModalRef, ModalDirective } from 'ngx-bootstrap/modal'
 export class AddUserComponent {
   constructor(
     private fb: FormBuilder,
-    private usersService: UsersServices,
+    private usersService: UsersService,
     private modalService: BsModalService
   ) {}
 
