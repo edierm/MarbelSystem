@@ -1,4 +1,4 @@
-<h1 class="h1">AGREGAR VENTA</h1>
+<h1 class="h1">{{isUpdate?'EDITAR VENTA': 'AGREGAR VENTA'}}</h1>
 
 <form [formGroup]="saleForm">
   <div class="form-group">
@@ -9,6 +9,16 @@
       id="exampleInputEmail1"
       placeholder="Ingrese nombre completo"
       formControlName="name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Producto</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      placeholder="Ingrese nombre completo"
+      formControlName="nameproduct"
     />
   </div>
 
@@ -32,6 +42,9 @@
       id="exampleInputPassword1"
       placeholder="Cedula"
       formControlName="document"
+      minlength="3"
+      maxlength="13"
+      required
     />
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado con este numero se consulta esta venta.</small
@@ -80,7 +93,7 @@
     </label>
   </div>
   <button type="submit" class="btn btn-primary" (click)="saveSale()">
-    Agregar venta
+    {{isUpdate?'EDITAR VENTA': 'AGREGAR VENTA'}}
   </button>
 </form>
 <div bsModal #modalSuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">

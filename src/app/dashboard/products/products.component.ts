@@ -79,6 +79,6 @@ export class ProductsDashComponent implements OnInit {
     }
   }
 
-  sales: any[];
-  salesRents: any[];
+ /*  sales: any[];
+  salesRents: any[]; */
 }

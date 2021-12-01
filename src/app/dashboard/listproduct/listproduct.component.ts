@@ -1,10 +1,7 @@
 import { ProductService } from 'src/services/products.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-declare interface TableData {
-    headerRow: string[];
-    dataRows: string[][];
-}
+
 @Component({
     selector: 'listpro-cmp',
     
@@ -13,7 +10,7 @@ declare interface TableData {
 })
 
 export class ListProductComponent implements OnInit{
-    public tableData1: TableData;
+    
     products: any[];
     constructor(private productService: ProductService, private router: Router) {
     }

@@ -15,4 +15,14 @@ export class RentService{
         const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'})
         return this.http.post(environment.apis.apiRent, rent, {headers} )
     }
+    getAllRents(): Observable<any> {
+        const headers = new HttpHeaders({
+          'Content-Type': 'application/json; charset=utf-8',
+        });
+        return this.http.get(environment.apis.apiRent, { headers });
+      }    
+    updateRent (rent:any) :Observable<any>{
+        const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'})
+        return this.http.post(environment.apis.apiRentUpdate , rent , {headers} )
+    }
 }

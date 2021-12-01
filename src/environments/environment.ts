@@ -9,12 +9,15 @@ export const environment = {
   apis: {
     userLogin: 'http://localhost:3000/api/usuarios/login',
     apiUsers: 'http://localhost:3000/api/usuarios',
+    apiUsersUpdate: 'http://localhost:3000/api/usuarios/update',
     apiReg: 'http://localhost:3000/api/usuarios',
     apiSale: 'http://localhost:3000/api/sales',
-    apiNewSale: 'http://localhost:3000/api/addsale/ventas',
+    
+    apiSaleUpdate: 'http://localhost:3000/api/sales/update',
     apiRent: 'http://localhost:3000/api/rents',
     apiProducts: 'http://localhost:3000/api/products',
     apiProductUpdate: 'http://localhost:3000/api/products/update',
+    apiRentUpdate: 'http://localhost:3000/api/rents/update'
   }
 };
 

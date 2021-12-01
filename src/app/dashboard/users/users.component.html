@@ -70,7 +70,8 @@
                   {{user.role}}
                 </td>
                 <td class="text-right">
-                  <div></div>
+                  <span (click)="updateClient(user)"><i class="fas fa-address-card"></i> </span>
+                  
                 </td>
               </tr>
             </tbody>
@@ -125,9 +126,7 @@
               <th class="text-right">
                 Rol
               </th>
-              <th>
-                Acciones
-              </th>
+              
             </thead>
             <tbody>
               <tr *ngFor="let user of usersAdmin">
@@ -149,9 +148,7 @@
                 <td class="text-right">
                   {{user.role}}
                 </td>
-                <td class="text-right">
-                  <div></div>
-                </td>
+                
               </tr>
             </tbody>
           </table>

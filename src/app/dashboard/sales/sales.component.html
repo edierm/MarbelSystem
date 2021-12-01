@@ -34,6 +34,7 @@
               <th>Ciudad</th>
               <th>Producto</th>
               <th class="text-right">Costo</th>
+              <th class="text-right">Editar</th>
             </thead>
             <tbody>
               <tr *ngFor="let sale of sales">
@@ -54,6 +55,10 @@
                 </td>
                 <td class="text-right">
                   {{ sale.price }}
+                </td>
+                <td class="text-right">
+                  <span (click)="editSale(sale)"><i class="fas fa-donate"></i> </span>
+                  
                 </td>
               </tr>
             </tbody>
@@ -98,28 +103,39 @@
               <th>Documento</th>
               <th>Ciudad</th>
               <th>Producto</th>
-              <th class="text-right">Abonos</th>
+              <th>Abonos</th>
+              <th class="text-right">Abonar</th>
+              <th class="text-right">Precio</th>
             </thead>
             <tbody>
-              <tr *ngFor="let sale of salesRents">
+              <tr *ngFor="let rent of rents">
                 <td>
-                  {{ sale.name }}
+                  {{ rent.name }}
                 </td>
                 <td>
-                  {{ sale.email }}
+                  {{ rent.email }}
                 </td>
                 <td>
-                  {{ sale.document }}
+                  {{ rent.document }}
                 </td>
                 <td>
-                  {{ sale.city }}
+                  {{ rent.city }}
                 </td>
                 <td>
-                  {{ sale.product }}
+                  {{ rent.product }}
+                </td>
+                <td>
+                  {{ rent.rent }}
                 </td>
                 <td class="text-right">
-                  {{ sale.rent }}
+                  <span (click)="editRent(rent)"><i class="fas fa-donate"></i> </span>
+                  
                 </td>
+
+                <td class="text-right">
+                  {{ rent.price }}
+                </td>
+               
               </tr>
             </tbody>
           </table>

@@ -23,4 +23,9 @@ export class SaleService{
         });
         return this.http.get(environment.apis.apiSale, { headers });
       }    
+
+      updateSales (sales:any) :Observable<any>{
+        const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'})
+        return this.http.post(environment.apis.apiSaleUpdate , sales , {headers} )
+    }
 }

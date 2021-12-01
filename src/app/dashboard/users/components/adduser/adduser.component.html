@@ -1,4 +1,4 @@
-<h1 class="h1">AGREGAR USUARIOS</h1>
+<h1 class="h1">{{isUpdate?'EDITAR USUARIO': 'AGREGAR USUARIO'}}</h1>
 
 <form [formGroup]="userForm">
   <div class="form-group">
@@ -111,7 +111,7 @@
       >Rectifique bien los datos antes de agregar el usuario
     </label>
   </div>
-  <button type="submit" class="btn btn-primary" (click)="saveUser()">Agregar usuario</button>
+  <button type="submit" class="btn btn-primary" (click)="saveUser()">{{isUpdate?'EDITAR USUARIO': 'AGREGAR USUARIO'}}</button>
 </form>
 
 <div bsModal #modalSuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">

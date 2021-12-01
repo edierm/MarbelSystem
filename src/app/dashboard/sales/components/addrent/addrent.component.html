@@ -1,4 +1,4 @@
-<h1 class="h1">AGREGAR ABONO</h1>
+<h1 class="h1">{{isUpdate?'AGREGAR ABONO': 'AGREGAR CREDITO'}}</h1>
 
 <form [formGroup]="rentForm" >
   <div class="form-group">
@@ -51,6 +51,19 @@
       >Cuidado ingrese el valor correcto.</small
     >
   </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Precio</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Precio total "
+      formControlName="price"
+    />
+    <small id="emailHelp" class="form-text text-muted"
+      >Cuidado ingrese el valor correcto.</small
+    >
+  </div>
 
   <div class="form-group">
     <label for="Ciudad">Seleccione la ciudad </label>
@@ -80,7 +93,8 @@
       >Rectifique bien los datos antes de registar la venta
     </label>
   </div>
-  <button type="submit" class="btn btn-primary" (click)="saveRent()">Agregar Abono</button>
+  <button type="submit" class="btn btn-primary" (click)="saveRent()">{{isUpdate?'Agregar Abono': 'Agregar Credito'}}</button>
+   
 </form>
 
 <div bsModal #modalSuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">

@@ -1,20 +1,37 @@
 import { UsersService } from './../../../../../services/users.service';
 
 import { FormBuilder, Validators } from '@angular/forms';
-import { AfterViewInit, Component, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, TemplateRef, ViewChild, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef, ModalDirective } from 'ngx-bootstrap/modal';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-adduser',
   templateUrl: './adduser.component.html',
   styleUrls: ['./adduser.component.scss'],
 })
-export class AddUserComponent {
+export class AddUserComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private usersService: UsersService,
+    private router: Router,
+    private route: ActivatedRoute,
     private modalService: BsModalService
   ) {}
+  selectClient = localStorage.getItem('selectClient');
+  dataLocal: any;
+  isUpdate = false;
+
+  ngOnInit(): void {
+    if (this.router.url.includes('edit')) {
+      this.dataLocal = JSON.parse(localStorage.getItem('selectClient'));
+      if (this.dataLocal) {
+        this.userForm.patchValue(this.dataLocal);
+        this.isUpdate = true;
+      }
+    }
+    console.log(this.router.url);
+  }
 
   @ViewChild('modalSuccess') public modalRef: ModalDirective;
   userForm = this.fb.group({
@@ -27,28 +44,30 @@ export class AddUserComponent {
     role: ['', [Validators.required]],
     city: ['', [Validators.required]],
   });
-  dataModal = {
-      title: '',
-      body: ''
+   dataModal = {
+    title: '',
+    body: '',
   };
   openModal() {
     this.modalRef.hide();
     this.modalRef.show();
   }
 
-  saveUser() {  
-    console.log(this.userForm);
-    this.usersService.createUser(this.userForm.value).subscribe((res) => {
-        console.log('Respuesta del back: ', res);
-        this.dataModal.title = 'Usuario agregado';
-        this.dataModal.body = 'El usuario ha sido agregado con exito.';
-        this.openModal();
-    }, ({error})=> {
-        console.log(error);
-        this.dataModal.title = 'Error';
-        this.dataModal.body = error.errorMessage;
-        this.openModal();
-    });
+  saveUser() {
+    console.log(this.userForm.value);
+    
+    const data = this.userForm.value;
+    if (this.isUpdate) {
+        Object.assign(data, {_id: this.route.snapshot.params.id})
+        console.log(this.route);
+        this.usersService.updateClient(data).subscribe((res) => {
+            console.log('Actualizado', res);
+        });
+    } else {
+      console.log('Data Producto: ', data);
+      this.usersService.createUser(data).subscribe((res) => {
+        console.log('Usuario creado', res);
+      });
+    }
   }
-
 }

@@ -1,9 +1,10 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { RentService } from './../../../../../services/rent.service';
 
 import { BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 
 import { FormBuilder, Validators } from '@angular/forms';
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 
 @Component({
     selector: 'addrent-cmp',
@@ -12,12 +13,28 @@ import { Component, ViewChild } from '@angular/core';
     styleUrls : ['./addrent.component.scss']
 })
 
-export class AddRentComponent{
+export class AddRentComponent implements OnInit{
     constructor(
         private fb: FormBuilder,
         private rentService : RentService,
+        private router: Router,
+        private route: ActivatedRoute,
         private modalService: BsModalService
     ){}
+    selectRent = localStorage.getItem('selectRent');
+  dataLocal: any;
+  isUpdate = false;
+  
+  ngOnInit(): void {
+    if (this.router.url.includes('edit')) {
+      this.dataLocal = JSON.parse(localStorage.getItem('selectRent'));
+      if (this.dataLocal) {
+        this.rentForm.patchValue(this.dataLocal);
+        this.isUpdate = true;
+      }
+    }
+    console.log(this.router.url);
+  }
 
     @ViewChild('modalSuccess') public modalRef: ModalDirective;
     rentForm = this.fb.group({
@@ -27,6 +44,7 @@ export class AddRentComponent{
     rent: ['', [Validators.required, Validators.minLength(3)]],
     city: ['', [Validators.required, Validators.maxLength(11)]],
     product: ['', [Validators.minLength(3)]],
+    price: ['', [Validators.required, Validators.minLength(3)]],
 
 
     });
@@ -40,20 +58,21 @@ export class AddRentComponent{
       this.modalRef.hide();
       this.modalRef.show();
     }
-  
-    saveRent() {  
-      console.log(this.rentForm);
-      this.rentService.createRent(this.rentForm.value).subscribe((res) => {
-          console.log('Respuesta del back: ', res);
-          this.dataModal.title = 'Abono realizado';
-          this.dataModal.body = 'El abono ha sido agregado con exito.';
-          this.openModal();
-      }, ({error})=> {
-          console.log(error);
-          this.dataModal.title = 'Error';
-          this.dataModal.body = error.errorMessage;
-          this.openModal();
-      });
-    }
-
+    saveRent() {
+        console.log(this.rentForm.value);
+        
+        const data = this.rentForm.value;
+        if (this.isUpdate) {
+            Object.assign(data, {_id: this.route.snapshot.params.id})
+            console.log(this.route);
+            this.rentService.updateRent(data).subscribe((res) => {
+                console.log('Actualizado abono', res);
+            });
+        } else {
+          console.log('Data Producto: ', data);
+          this.rentService.createRent(data).subscribe((res) => {
+            console.log('Credito  producto', res);
+          });
+        }
+      }
 }

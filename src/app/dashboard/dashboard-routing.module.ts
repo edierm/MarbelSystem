@@ -1,7 +1,8 @@
+import { AddSaleComponent } from './sales/components/addsale/addsale.component';
 import { LoginGuard } from './../guards/login/login.guard';
 import { ListProductComponent } from './listproduct/listproduct.component';
 import { AddRentComponent } from './sales/components/addrent/addrent.component';
-import { AddSailComponent } from './sales/components/addsail/addsail.component';
+
 import { DashboardAdminComponent } from './dashboard/dashboard-admin.component';
 import { ProductsDashComponent } from './products/products.component';
 import { ReportsComponent } from './reports/reports.component';
@@ -25,8 +26,11 @@ export const DashboardRouting: Routes = [
       { path: 'product', component: ProductsDashComponent },
       { path: 'product/edit/:id', component: ProductsDashComponent },
       { path: 'sales', component: SalesComponent },
+      { path: 'sales/edit/:id', component: AddSaleComponent },
+      { path: 'rent/edit/:id', component: AddRentComponent },
+      { path: 'user/edit/:id', component: AddUserComponent},
       { path: 'reports', component: ReportsComponent },
-      { path: 'addsail', component: AddSailComponent },
+      { path: 'addsail', component: AddSaleComponent },
       { path: 'addrent', component: AddRentComponent },
       { path: 'addUser', component: AddUserComponent},
       { path: 'listproduct', component: ListProductComponent },
