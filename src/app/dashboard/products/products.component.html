@@ -1,17 +1,32 @@
+
+<h1 class="title">AGREGAR PRODUCTOS</h1>
 <div class="container bootdey">
   <div class="col-md-12">
+    
     <section class="panel">
       <div class="panel-body" [formGroup]="productForm">
-        <div class="col-md-6">
-          
-          <div class="pro-img-list">
-            <div class="image-upload">
-              <img [src]="imageSrc" style="max-width:300px;max-height:300px"/>
-              <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
+        <div class="row">
+          <div class="col-md-6,imagenpro">
+            <div class="pro-img-list-1">
+              <div class="image-upload-1" >
+                
+                <img [src]="imageSrc"  style="max-width:300px;max-height:300px" /> 
+              
+                <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
+              
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6,imagenpro">
+            <div class="pro-img-list">
+              <div class="image-upload">
+                <img [src]="imageSrc" style="max-width:300px;max-height:300px"/>
+                <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
+              </div>
             </div>
           </div>
         </div>
-
+        
         <div class="col-md-6">
           <h4 class="pro-d-title">
             <a class="">

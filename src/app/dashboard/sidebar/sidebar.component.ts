@@ -11,10 +11,10 @@ export interface RouteInfo {
 
 export const ROUTES: RouteInfo[] = [
     { path: 'dashadmin',     title: 'Dashboard',         icon:'nc-bank',       class: '' },
-    { path: 'user',         title: 'Usuarios',             icon:'nc-diamond',    class: '' },
-    { path: 'listproduct',          title: 'Productos',              icon:'nc-pin-3',      class: '' },
-    { path: 'sales', title: 'Ventas',     icon:'nc-bell-55',    class: '' },
-    { path: 'reports',          title: 'Reportes',      icon:'nc-tag-content',  class: '' },
+    { path: 'user',         title: 'Usuarios',             icon:'nc-single-02',    class: '' },
+    { path: 'listproduct',          title: 'Productos',              icon:'nc-bag-16',      class: '' },
+    { path: 'sales', title: 'Ventas ',     icon:'nc-shop',    class: '' },
+    { path: 'reports',          title: 'Reportes',      icon:'nc-paper',  class: '' },
     
 ];
 

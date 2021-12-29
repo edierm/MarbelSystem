@@ -146,15 +146,38 @@ body{margin-top:20px;
         margin: 10px 0 0 -15px;
         width: 100%;
         display: inline-block;
+        background-image: url("https://e7.pngegg.com/pngimages/950/521/png-clipart-white-frame-border-art-window-area-pattern-simple-white-frame-frame-white.png");
+    }
+    .pro-img-list-1 {
+        margin: 10px 0 0 -15px;
+        width: 100%;
+        display: inline-block;
+        background-image: url("https://e7.pngegg.com/pngimages/950/521/png-clipart-white-frame-border-art-window-area-pattern-simple-white-frame-frame-white.png");
     }
     
     .pro-img-list a {
         float: left;
         margin-right: 10px;
         margin-bottom: 10px;
+        
     }
     
     .pro-d-head {
         font-size: 18px;
         font-weight: 300;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .pro-img-list {
+        color: #ff2d2d;
+        text-align:left;
+        align-content: center;
+        
+    }
+    .imagenpro{
+        background: #2A3542;
+        
     }
