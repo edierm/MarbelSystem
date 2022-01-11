@@ -7,14 +7,15 @@ export interface RouteInfo {
     title: string;
     icon: string;
     class: string;
+    roles: string;
 }
 
 export const ROUTES: RouteInfo[] = [
-    { path: 'dashadmin',     title: 'Dashboard',         icon:'nc-bank',       class: '' },
-    { path: 'user',         title: 'Usuarios',             icon:'nc-single-02',    class: '' },
-    { path: 'listproduct',          title: 'Productos',              icon:'nc-bag-16',      class: '' },
-    { path: 'sales', title: 'Ventas ',     icon:'nc-shop',    class: '' },
-    { path: 'reports',          title: 'Reportes',      icon:'nc-paper',  class: '' },
+    { path: 'dashadmin',     title: 'Dashboard',         icon:'nc-bank',       class: '', roles: 'admin, client' },
+    { path: 'user',         title: 'Usuarios',             icon:'nc-single-02',    class: '', roles: 'admin' },
+    { path: 'listproduct',          title: 'Productos',              icon:'nc-bag-16',      class: '', roles: 'admin' },
+    { path: 'sales', title: 'Ventas ',     icon:'nc-shop',    class: '', roles: 'admin' },
+    { path: 'reports',          title: 'Reportes',      icon:'nc-paper',  class: '', roles: 'admin' },
     
 ];
 
@@ -26,7 +27,10 @@ export const ROUTES: RouteInfo[] = [
 
 export class SidebarComponent implements OnInit {
     public menuItems: any[];
+    userLogin: any;
     ngOnInit() {
-        this.menuItems = ROUTES.filter(menuItem => menuItem);
+        this.userLogin = JSON.parse(localStorage.getItem('userLogin'));
+        const role = this.userLogin.role.toLowerCase() ;
+        this.menuItems = ROUTES.filter(menuItem => menuItem.roles.includes(role));
     }
 }

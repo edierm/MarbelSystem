@@ -1,3 +1,4 @@
+import { PerfilComponent } from './perfil/perfil.component';
 import { AddSaleComponent } from './sales/components/addsale/addsale.component';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -47,7 +48,8 @@ import { AddUserComponent } from './users/components/adduser/adduser.component';
     AddRentComponent,
     ListProductComponent,
     AddUserComponent,
-    AddSaleComponent
+    AddSaleComponent,
+    PerfilComponent
   
   ],
   exports: [

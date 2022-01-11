@@ -1,3 +1,4 @@
+import { PerfilComponent } from './perfil/perfil.component';
 import { AddSaleComponent } from './sales/components/addsale/addsale.component';
 import { LoginGuard } from './../guards/login/login.guard';
 import { ListProductComponent } from './listproduct/listproduct.component';
@@ -34,6 +35,7 @@ export const DashboardRouting: Routes = [
       { path: 'addrent', component: AddRentComponent },
       { path: 'addUser', component: AddUserComponent},
       { path: 'listproduct', component: ListProductComponent },
+      { path: 'perfil', component: PerfilComponent },
     ],
     canActivate: [LoginGuard]
   },

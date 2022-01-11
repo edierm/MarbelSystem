@@ -6,7 +6,8 @@ import { Location} from '@angular/common';
 @Component({
    
     selector: 'navbar-cmp',
-    templateUrl: 'navbar.component.html'
+    templateUrl: 'navbar.component.html',
+    styleUrls: ['./navbar.component.scss']
 })
 
 export class NavbarComponent implements OnInit{
@@ -90,6 +91,11 @@ export class NavbarComponent implements OnInit{
           navbar.classList.remove('bg-white');
         }
 
+      }
+
+      signOut() {
+        localStorage.setItem('userLogin', null);
+        this.router.navigate(['/']);
       }
 
 }
