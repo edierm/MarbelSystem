@@ -27,18 +27,20 @@
           </div>
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-12">
           <h4 class="pro-d-title">
-            <a class="">
+            
               <input
                 type="text"
                 name="tipro"
                 placeholder="Titulo del producto"
                 formControlName="name"
               />
-            </a>
+           
           </h4>
-          <p>
+          </div>
+          
+            <div class="col-md-12">
             <input
               type="text"
               name="details"
@@ -46,12 +48,13 @@
               placeholder="descripcion del producto "
               formControlName="description"
             />
-          </p>
-          <div class="product_meta">
+          </div>
+          <div class="col-md-12">
+          <div class="product_meta ">
             <label> Seleccione una categoria o agregue otra </label>
             <br />
 
-            <div class="form-group col-md-4">
+            <div class="form-group ">
               <label for="Categoria">Seleccione una categoria </label>
               <select id="inputState" class="form-control" formControlName="category">
                 <option selected>Selecciona...</option>
@@ -62,10 +65,11 @@
               <br />
               <input type="text" name="otro" placeholder="otro" />
             </div>
+          </div>
+        </div>
+            <div class="col-md-12">
 
-            <br />
-
-            <div class="form-group col-md-4">
+            <div class="form-group ">
               <label for="Categoria">Seleccione un material </label>
 
               <select id="inputState" class="form-control" formControlName="material">
@@ -78,26 +82,34 @@
               <input type="text" name="otro" placeholder="otro" />
             </div>
           </div>
-          <br />
+
+          <br>
+        
+          <div class="col-md-12">
+
           <div class="precio">
             Precio :
             <input type="text" name="precio" placeholder="ingrese el precio"  formControlName="price"/>
           </div>
-          <br />
-          
-          <br />
-          <div class="form-group">
-            <div>
+        </div>
+        <br>
+        <div class="col-md-12">
+
+          <div class="form-group ">
+            <label for="Categoria">Seleccione un color </label>
+
+            <select id="inputState" class="form-control" formControlName="color">
+              <option selected>Selecciona...</option>
+              <option>azul</option>
+              <option>blanco chispa</option>
+              <option>hueso</option>
+            </select>
+           
+          </div>
+        </div>
+         
               <br />
-              Tono <br /><input type="color" name="tono" />
-              <input
-                type="text"
-                name="colorexpe"
-                placeholder="ingrese nombre completo del color"
-                formControlName="color"
-              />
-              <br />
-            </div>
+            <div class="col-md-12" > 
             <label>Cantidad</label>
             <input
               type="quantiy"
@@ -112,7 +124,7 @@
             </button>
           </p>
         </div>
-      </div>
+      
     </section>
   </div>
 </div>
