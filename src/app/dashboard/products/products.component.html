@@ -5,43 +5,28 @@
     
     <section class="panel">
       <div class="panel-body" [formGroup]="productForm">
-        <div class="row">
-          <div class="col-md-6,imagenpro">
-            <div class="pro-img-list-1">
-              <div class="image-upload-1" >
-                
-                <img [src]="imageSrc"  style="max-width:300px;max-height:300px" /> 
-              
-                <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
-              
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6,imagenpro">
-            <div class="pro-img-list">
-              <div class="image-upload">
-                <img [src]="imageSrc" style="max-width:300px;max-height:300px"/>
-                <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
-              </div>
-            </div>
-          </div>
-        </div>
+        
         
         <div class="col-md-12">
-          <h4 class="pro-d-title">
-            
-              <input
+        <div class="product_meta">
+          <label>Titulo del producto</label>
+          
+              
+              <input class="form-control"
                 type="text"
                 name="tipro"
                 placeholder="Titulo del producto"
                 formControlName="name"
               />
            
-          </h4>
-          </div>
           
+          </div>
+          </div>
+          <br>
             <div class="col-md-12">
+              <label>Titulo del producto</label>
             <input
+              class="form-control"
               type="text"
               name="details"
               size=" 80px"
@@ -51,7 +36,6 @@
           </div>
           <div class="col-md-12">
           <div class="product_meta ">
-            <label> Seleccione una categoria o agregue otra </label>
             <br />
 
             <div class="form-group ">
@@ -63,7 +47,7 @@
                 <option>Baños</option>
               </select>
               <br />
-              <input type="text" name="otro" placeholder="otro" />
+              <input class="form-control" type="text" name="otro" placeholder="Otro" />
             </div>
           </div>
         </div>
@@ -79,7 +63,7 @@
                 <option>granito</option>
               </select>
               <br />
-              <input type="text" name="otro" placeholder="otro" />
+              <input class="form-control" type="text" name="otro" placeholder="Otro" />
             </div>
           </div>
 
@@ -88,8 +72,9 @@
           <div class="col-md-12">
 
           <div class="precio">
-            Precio :
-            <input type="text" name="precio" placeholder="ingrese el precio"  formControlName="price"/>
+            <label>Precio</label>
+            <br>
+            <input class="form-control" type="text" name="precio" placeholder="Ingrese el precio"  formControlName="price"/>
           </div>
         </div>
         <br>
@@ -112,18 +97,37 @@
             <div class="col-md-12" > 
             <label>Cantidad</label>
             <input
+              class="form-control"
               type="quantiy"
               placeholder="1"
               class="form-control quantity"
               formControlName="amount"
             />
           </div>
+          <br>
+          <div class="col-md-12">
+            <div class="col-md-6,imagenpro">
+              <div class="pro-img-list-1">
+                <div class="image-upload-1" >
+                  
+                  <img [src]="imageSrc"  style="max-width:300px;max-height:300px" /> 
+                
+                  <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
+                
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          <div class="col-md-12">
           <p>
             <button class="btn btn-round btn-danger" type="button" (click)="saveProduct()">
               <i class="fa fa-shopping-cart"></i> {{isUpdate?'Actualizar': 'Agregar'}}
             </button>
           </p>
         </div>
+        </div>
+        
       
     </section>
   </div>
