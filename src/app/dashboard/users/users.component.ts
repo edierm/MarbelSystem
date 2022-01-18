@@ -1,3 +1,4 @@
+import { filter } from 'rxjs/operators';
 import { UsersService } from './../../../services/users.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 
 export class UsersComponent implements OnInit{
     users: any[]
+    name: any;
     usersClients: any[];
     usersAdmin: any[];
     constructor(private userService: UsersService, private router: Router) {
@@ -27,5 +29,27 @@ export class UsersComponent implements OnInit{
     updateClient(user) {
         localStorage.setItem('selectClient', JSON.stringify(user));
         this.router.navigate([`/dashboard/user/edit/${user._id}`]);
+    }
+    SearchClient(){
+        if(this.name == ""){
+        this.ngOnInit();
+
+    }else{
+        this.usersClients= this.usersClients.filter(res =>{
+            return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+        });
+    }
+
+    }
+    SearchAdmin(){
+        if(this.name == ""){
+        this.ngOnInit();
+
+    }else{
+        this.usersAdmin= this.usersAdmin.filter(res =>{
+            return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+        });
+    }
+
     }
 }

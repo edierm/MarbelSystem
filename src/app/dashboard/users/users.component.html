@@ -6,16 +6,20 @@
       <div class="card-header">
         <h4 class="card-title"> Clientes</h4>
         <form class="form-inline ml-auto">
+         
           <input
-            class="form-control mr-sm-2"
-            type="search"
+            class="form-control "
+            type="text"
+            name="Nombre"
+            [(ngModel)]="name"
+            (ngModelChange)="SearchClient()" 
             placeholder="Buscar"
             aria-label="Buscar"
           />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Buscar
           </button>
-
+      
           <button class="btn btn-outline-success my-2 my-sm-0 agregar" type="submit" routerLink="/dashboard/addUser"  >
              +
           </button>
@@ -87,8 +91,11 @@
         <div>
           <form class="form-inline ml-auto">
             <input
-              class="form-control mr-sm-2"
-              type="search"
+            class="form-control "
+            type="text"
+            name="Nombre"
+            [(ngModel)]="name"
+            (ngModelChange)="SearchAdmin()" 
               placeholder="Buscar"
               aria-label="Buscar"
             />
