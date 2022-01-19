@@ -16,7 +16,8 @@ import {  Router } from '@angular/router';
 
 export class SalesComponent  implements OnInit{
     sales: any[];
-    rents: any[]
+    rents: any[];
+    name: any
 
     constructor(private saleService: SaleService, private router: Router, private rentService: RentService) {
     }
@@ -40,6 +41,26 @@ export class SalesComponent  implements OnInit{
     editRent(rent) {
         localStorage.setItem('selectRent', JSON.stringify(rent));
         this.router.navigate([`/dashboard/rent/edit/${rent._id}`]);
+    }
+
+    Search(){
+        if(this.name == ""){
+            this.ngOnInit();
+        }else{
+            this.sales = this.sales.filter(res =>{
+                return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+            })
+        }
+    }
+
+    SearchRents(){
+        if(this.name == ""){
+            this.ngOnInit();
+        }else{
+            this.rents = this.rents.filter(res =>{
+                return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+            })
+        }
     }
     
 }

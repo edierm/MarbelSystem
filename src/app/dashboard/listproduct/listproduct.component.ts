@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class ListProductComponent implements OnInit{
     
     products: any[];
+    name: any
     constructor(private productService: ProductService, private router: Router) {
     }
     ngOnInit() {
@@ -22,5 +23,15 @@ export class ListProductComponent implements OnInit{
     editProduct(product) {
         localStorage.setItem('selectProduct', JSON.stringify(product));
         this.router.navigate([`/dashboard/product/edit/${product._id}`]);
+    }
+
+    Search(){
+        if(this.name == ""){
+            this.ngOnInit();
+        }else{
+            this.products = this.products.filter(res =>{
+                return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+            })
+        }
     }
 }

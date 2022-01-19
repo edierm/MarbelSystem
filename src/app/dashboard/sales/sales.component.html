@@ -6,7 +6,10 @@
         <form class="form-inline ml-auto">
           <input
             class="form-control mr-sm-2"
-            type="search"
+            type="text"
+            name="Nombre"
+            [(ngModel)]="name"
+            (ngModelChange)="Search()"
             placeholder="Buscar"
             aria-label="Buscar"
           />
@@ -75,7 +78,11 @@
           <form class="form-inline ml-auto">
             <input
               class="form-control mr-sm-2"
-              type="search"
+              type="text"
+              name="Nombre"
+              [(ngModel)]="name"
+              (ngModelChange)="SearchRents()"
+  
               placeholder="Buscar"
               aria-label="Buscar"
             />
