@@ -17,7 +17,8 @@ export const environment = {
     apiRent: 'http://localhost:3000/api/rents',
     apiProducts: 'http://localhost:3000/api/products',
     apiProductUpdate: 'http://localhost:3000/api/products/update',
-    apiRentUpdate: 'http://localhost:3000/api/rents/update'
+    apiRentUpdate: 'http://localhost:3000/api/rents/update',
+    apiProductsCategory: 'http://localhost:3000/api/products/productsCategory',
   }
 };
 
