@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ProductService } from './../../../../services/products.service';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
     templateUrl: './bathrooms.component.html',
     styleUrls: ['./bathrooms.component.scss']
 })
-export class BathroomsComponent {
-    
+export class BathroomsComponent implements OnInit {
+    constructor(private productsService: ProductService) {}
+    productos: [];
+    ngOnInit() {
+        this.productos = JSON.parse(sessionStorage.getItem('dataBathrooms'));
+        this.productsService.getProductsCategory('Baños').subscribe((res) => {
+            this.productos = res.productsCategory;
+            sessionStorage.setItem(
+             'dataBathrooms',
+        JSON.stringify(res.productsCategory)
+        );
+    });
+  }
 }

@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
+import {InfiniteScrollModule} from 'ngx-infinite-scroll';
 
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ToastrModule } from 'ngx-toastr';
@@ -28,6 +29,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    InfiniteScrollModule,
     RouterModule.forRoot(routes),
     ClientModule,
     DashboardModule,
