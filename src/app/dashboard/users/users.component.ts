@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 
+
 @Component({
     selector: 'users-cmp',
   
@@ -16,7 +17,12 @@ export class UsersComponent implements OnInit{
     name: any;
     usersClients: any[];
     usersAdmin: any[];
-    constructor(private userService: UsersService, private router: Router) {
+
+    
+    private finishPage = 5;
+    private actualPage: number;    
+    constructor(private userService: UsersService, private router: Router, ) {
+        this.actualPage = 1;
     }
     
     ngOnInit() {
@@ -25,6 +31,8 @@ export class UsersComponent implements OnInit{
             this.usersClients = users.filter((user) => user.role == 'CLIENT');
             this.usersAdmin = users.filter((user) => user.role == 'ADMIN');
         });
+
+        this.infiniti();
     }
     updateClient(user) {
         localStorage.setItem('selectClient', JSON.stringify(user));
@@ -52,4 +60,22 @@ export class UsersComponent implements OnInit{
     }
 
     }
+
+    infiniti(){
+        const user = 'Another new line --' ;
+        let lineCounter = this.usersClients.length;
+        for (let i = 0; i < 7 ; i ++) {
+            this.usersClients.push(user + lineCounter);
+            lineCounter ++;
+        }
+    }
+
+    onScroll() {
+        if (this.actualPage < this.finishPage) {
+          this.infiniti();
+          this.actualPage ++;
+        } else {
+          console.log('No more lines. Finish page!');
+        }
+      }
 }

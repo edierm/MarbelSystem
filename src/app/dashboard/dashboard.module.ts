@@ -49,7 +49,8 @@ import { AddUserComponent } from './users/components/adduser/adduser.component';
     ListProductComponent,
     AddUserComponent,
     AddSaleComponent,
-    PerfilComponent
+    PerfilComponent,
+    
   
   ],
   exports: [

@@ -27,6 +27,7 @@
 
         </form>
       </div>
+      <div class="container" infiniteScroll   (scrolled)="onScroll()">
       <div class="card-body">
         <div class="table-responsive">
           <table class="table">
@@ -54,7 +55,7 @@
               </th>
             </thead>
             <tbody>
-              <tr *ngFor="let user of usersClients">
+              <tr *ngFor="let user of usersClients; index as i">
                 <td>
                   {{user.name}}
                 </td>
@@ -84,6 +85,8 @@
       </div>
     </div>
   </div>
+</div>
+
   <div class="col-md-12">
     <div class="card card-plain">
       <div class="card-header">
