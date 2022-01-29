@@ -37,7 +37,7 @@
               <th>Ciudad</th>
               <th>Producto</th>
               <th class="text-right">Costo</th>
-              <th class="text-right">Editar</th>
+              <th class="text-right">Ver o editar</th>
             </thead>
             <tbody>
               <tr *ngFor="let sale of sales">
@@ -61,6 +61,7 @@
                 </td>
                 <td class="text-right">
                   <span (click)="editSale(sale)"><i class="fas fa-donate"></i> </span>
+                  
                   
                 </td>
               </tr>
