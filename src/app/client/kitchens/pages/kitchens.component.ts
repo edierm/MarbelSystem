@@ -1,5 +1,6 @@
 import { ProductService } from 'src/services/products.service';
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-kitchens',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kitchens.component.scss'],
 })
 export class KitchensComponent implements OnInit {
-  constructor(private productsService: ProductService) {}
-  productos: [];
+  constructor(private productsService: ProductService, private router: Router, private route: ActivatedRoute) {}
+  productos = [];
   ngOnInit() {
     this.productos = JSON.parse(sessionStorage.getItem('dataKitchen'));
     this.productsService.getProductsCategory('Cocinas').subscribe((res) => {
@@ -18,5 +19,10 @@ export class KitchensComponent implements OnInit {
         JSON.stringify(res.productsCategory)
       );
     });
+  }
+
+  selectProduct(product) {
+    localStorage.setItem('selectSale', JSON.stringify(product));
+    this.router.navigate(['/client'], { relativeTo: this.route });
   }
 }

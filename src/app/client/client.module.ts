@@ -23,7 +23,7 @@ import { ProductsComponent } from './products/pages/products.component';
 import { ListProductsComponent } from './list-products/pages/list-products.component';
 import { HomeComponent } from './home/pages/home/home.component';
 import { ClientRoutingModule } from './client-routing.module';
-
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { ClientRoutingModule } from './client-routing.module';
     ProductsComponent,
     QuoteComponent,
     SaleComponent,
-
+    SpinnerComponent,
     MantenenceComponent,
     KitchensComponent,
     BathroomsComponent,

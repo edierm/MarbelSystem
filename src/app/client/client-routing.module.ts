@@ -19,7 +19,6 @@ import { ListProductsComponent } from './list-products/pages/list-products.compo
 import { KitchensComponent } from './kitchens/pages/kitchens.component';
 
 export const routes: Routes = [
-  {path: '', redirectTo:'client/home',pathMatch:'full'},
   {
     path: 'client',
     component: LayoutComponent,
@@ -32,9 +31,9 @@ export const routes: Routes = [
       {
         path: 'productos',
         component: ProductsComponent,
-       
+        
       },      
-      { path: 'sale', component: SaleComponent },
+      { path: 'sale', component: SaleComponent, },
       { path: 'quote', component: QuoteComponent },
       
       { path: 'mantenence', component: MantenenceComponent },
@@ -52,6 +51,7 @@ export const routes: Routes = [
       { path: 'list-products', component: ListProductsComponent },
     ],
   },
+  {path: '', redirectTo:'client/home',pathMatch:'full'}
 ];
 
 @NgModule({
