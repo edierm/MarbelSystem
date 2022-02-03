@@ -25,4 +25,11 @@ export class RentService{
         const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'})
         return this.http.post(environment.apis.apiRentUpdate , rent , {headers} )
     }
+    rentsByUser(email: string): Observable<any> {
+        const headers = new HttpHeaders({
+          'Content-Type': 'application/json; charset=utf-8',
+        });
+        const url = `${environment.apis.apiRentsByUser}?email=${email}`;
+        return this.http.get(url, { headers });
+      }
 }

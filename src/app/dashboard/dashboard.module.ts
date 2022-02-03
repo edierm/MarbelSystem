@@ -1,3 +1,5 @@
+import { ClientRentComponent } from './clientrent/client-rent.component';
+import { ClientSaleComponent } from './clientsale/client-sale.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AddSaleComponent } from './sales/components/addsale/addsale.component';
 
@@ -50,6 +52,8 @@ import { AddUserComponent } from './users/components/adduser/adduser.component';
     AddUserComponent,
     AddSaleComponent,
     PerfilComponent,
+    ClientSaleComponent,
+    ClientRentComponent
     
   
   ],

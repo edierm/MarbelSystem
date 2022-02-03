@@ -16,7 +16,8 @@ export const ROUTES: RouteInfo[] = [
     { path: 'listproduct',          title: 'Productos',              icon:'nc-bag-16',      class: '', roles: 'admin' },
     { path: 'sales', title: 'Ventas ',     icon:'nc-shop',    class: '', roles: 'admin' },
     { path: 'reports',          title: 'Reportes',      icon:'nc-paper',  class: '', roles: 'admin' },
-    
+    { path: 'clientsale',          title: 'Compras',      icon:'nc-paper',  class: '', roles: 'client' },
+    { path: 'clientrent',          title: 'Abonos',      icon:'nc-paper',  class: '', roles: 'client' },
 ];
 
 @Component({

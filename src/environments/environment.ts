@@ -12,7 +12,8 @@ export const environment = {
     apiUsersUpdate: 'http://localhost:3000/api/usuarios/update',
     apiReg: 'http://localhost:3000/api/usuarios',
     apiSale: 'http://localhost:3000/api/sales',
-    
+    apiSalesByUser: 'http://localhost:3000/api/sales/salesByUser',
+    apiRentsByUser: 'http://localhost:3000/api/rents/rentsByUser',
     apiSaleUpdate: 'http://localhost:3000/api/sales/update',
     apiRent: 'http://localhost:3000/api/rents',
     apiProducts: 'http://localhost:3000/api/products',

@@ -1,7 +1,7 @@
 <h1 class="h1">{{isUpdate?'EDITAR VENTA': 'AGREGAR VENTA'}}</h1>
 
-<form [formGroup]="saleForm">
-  <div class="form-group">
+<form [formGroup]="saleForm" >
+  <div class="form-group" id="page">
     <label for="exampleInputEmail1">Nombre</label>
     <input
       type="text"
@@ -95,9 +95,7 @@
   <button type="submit" class="btn btn-primary" (click)="saveSale()">
     {{isUpdate?'EDITAR VENTA': 'AGREGAR VENTA'}}
   </button><br>
-  <button type=”button” class="btn btn-primary" value=”Imprimir” onclick=javascript:window.print()   >
-    Ver factura </button>
-</form>
+  <input type="button" onclick="printDiv('page')" value="Ver factura" />
 <div bsModal #modalSuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
