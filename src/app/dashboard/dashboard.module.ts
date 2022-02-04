@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { ClientRentComponent } from './clientrent/client-rent.component';
 import { ClientSaleComponent } from './clientsale/client-sale.component';
 import { PerfilComponent } from './perfil/perfil.component';
@@ -58,6 +59,8 @@ import { AddUserComponent } from './users/components/adduser/adduser.component';
   
   ],
   exports: [
+    BrowserModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
