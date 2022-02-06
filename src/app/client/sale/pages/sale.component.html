@@ -35,117 +35,117 @@
               </div>
         </div>
          
-        <div class="col-6 title">
-            <div class="row mt-6">
-               
-                <div class="col-12 col-md-8 mx-auto">
-                  <form [formGroup]="SaleForm">
-                    <div class="col">
-                      <h1>COCINA EUROPEA EN MARMOL</h1> 
-                     </div>
-                     <div class="col">
-                      <h2> COTIZA YA! </h2>
-                     </div>
-                    <div class="form-row" >
-                      
+     <!--    <div class="col-6 title">
+          <div class="row mt-6">
+             
+              <div class="col-12 col-md-8 mx-auto">
+                <form [formGroup]="SaleForm">
+                  <div class="col">
+                    <h1>COCINA EUROPEA EN MARMOL</h1> 
+                   </div>
+                   <div class="col">
+                    <h2> COTIZA YA! </h2>
+                   </div>
+                  <div class="form-row" >
+                    
 
-                      <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" 
-                        class="form-control"
-                         id="inputEmail4"
-                          placeholder="Email"
-                          formControlName="email"
-                          pattern=".+@globex\.com"
-                          >
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="Phone">Telefono</label>
-                        <input type="text"
-                         class="form-control"
-                          id="inputPassword4"
-                           placeholder="Telefono"
-                           formControlName="phone"
-                           >
-                      </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputEmail4">Email</label>
+                      <input type="email" 
+                      class="form-control"
+                       id="inputEmail4"
+                        placeholder="Email"
+                        formControlName="email"
+                        pattern=".+@globex\.com"
+                        >
                     </div>
-                    <div class="form-group">
-                      <label for="Name">Nombre</label>
+                    <div class="form-group col-md-6">
+                      <label for="Phone">Telefono</label>
                       <input type="text"
                        class="form-control"
-                        id="inputAddress"
-                         placeholder="Nombre"
-                         formControlName="name"
+                        id="inputPassword4"
+                         placeholder="Telefono"
+                         formControlName="phone"
                          >
                     </div>
-                    <div class="form-group">
-                      <label for="Adress"> Direccion </label>
+                  </div>
+                  <div class="form-group">
+                    <label for="Name">Nombre</label>
+                    <input type="text"
+                     class="form-control"
+                      id="inputAddress"
+                       placeholder="Nombre"
+                       formControlName="name"
+                       >
+                  </div>
+                  <div class="form-group">
+                    <label for="Adress"> Direccion </label>
+                    <input type="text"
+                     class="form-control"
+                      id="inputAddress2"
+                       placeholder="crra,calle...."
+                       formControlName="adress"
+                       >
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="Ciudad">Ciudad</label>
                       <input type="text"
                        class="form-control"
-                        id="inputAddress2"
-                         placeholder="crra,calle...."
-                         formControlName="adress"
-                         >
+                        id="Ciudad"
+                        formControlName="city"
+                        >
                     </div>
-                    <div class="form-row">
-                      <div class="form-group col-md-4">
-                        <label for="Ciudad">Ciudad</label>
-                        <input type="text"
-                         class="form-control"
-                          id="Ciudad"
-                          formControlName="city"
-                          >
-                      </div>
-                      <div class="form-group col-md-4">
-                        <label for="Department">Departamento</label>
+                    <div class="form-group col-md-4">
+                      <label for="Department">Departamento</label>
+                      <select id="inputState" class="form-control" >
+                       
+                        <option>Antioquia</option>
+                        <option>Santander </option>
+                        <option>Cundinamarca</option>
+                        <option>Atlantico </option>
+                      </select>
+                    </div>
+                   
+                    <div class="form-group col-md-6">
+                        <label for="Department">Color</label>
                         <select id="inputState" class="form-control" >
+                          <option >blanco polar</option>
+                          <option >negro espacial</option>
+                          
+                        </select>
+        
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="Department">Material</label>
+                        <select id="material" class="form-control" >
+                          <option>Quartztone</option>
+                          <option>Marmol </option>
+                          <option>Granito </option>
+                          <option>Otro</option>
                          
-                          <option>Antioquia</option>
-                          <option>Santander </option>
-                          <option>Cundinamarca</option>
-                          <option>Atlantico </option>
                         </select>
                       </div>
-                     
-                      <div class="form-group col-md-6">
-                          <label for="Department">Color</label>
-                          <select id="inputState" class="form-control" >
-                            <option >blanco polar</option>
-                            <option >negro espacial</option>
-                            
-                          </select>
-          
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="Department">Material</label>
-                          <select id="material" class="form-control" >
-                            <option>Quartztone</option>
-                            <option>Marmol </option>
-                            <option>Granito </option>
-                            <option>Otro</option>
-                           
-                          </select>
-                        </div>
-                        
+                      
+                  </div>
+                                    
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="check">
+                      <label class="form-check-label" for="gridCheck">
+                          Acepto que quiero recibir notificaciones de marmoles mendoza
+                      </label>
                     </div>
-                                      
-                    <div class="form-group">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="check">
-                        <label class="form-check-label" for="gridCheck">
-                            Acepto que quiero recibir notificaciones de marmoles mendoza
-                        </label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" (click)="sale()" [disabled]="SaleForm.valid" >Solicitar </button>
-                    <button type=”button” class="btn btn-primary" value=”Imprimir” onclick=javascript:window.print()   >
-                      IMPRIMIR COTIZACION </button>
-                
-                    
-                  </form>
-                </div> 
-              </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary" (click)="sale()" [disabled]="SaleForm.valid" >Solicitar </button>
+                  <button type=”button” class="btn btn-primary" value=”Imprimir” onclick=javascript:window.print()   >
+                    IMPRIMIR COTIZACION </button>
+              
+                  
+                </form>
+              </div> 
             </div>
+          </div> -->
         </div>
         
     </div>

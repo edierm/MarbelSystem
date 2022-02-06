@@ -1,5 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { ValueComponent } from './value/value.component';
 import { ClientRentComponent } from './clientrent/client-rent.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { ClientSaleComponent } from './clientsale/client-sale.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AddSaleComponent } from './sales/components/addsale/addsale.component';
@@ -25,22 +26,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsersComponent } from './users/users.component';
 import { AddRentComponent } from './sales/components/addrent/addrent.component';
 import { AddUserComponent } from './users/components/adduser/adduser.component';
+import { ClientAddRentComponent } from './clientrent/components/clientadd-rent.component';
 
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    DashboardRoutingModule,
-    SidebarModule,
-    NavbarModule,
-    ToastrModule.forRoot(),
-    FooterModule,
-    FixedPluginModule,
-    ModalModule.forRoot()   
-  ],
+ 
   declarations: [
     DashboardAdminComponent,
     UsersComponent,
@@ -54,14 +45,28 @@ import { AddUserComponent } from './users/components/adduser/adduser.component';
     AddSaleComponent,
     PerfilComponent,
     ClientSaleComponent,
-    ClientRentComponent
+    ClientRentComponent,
+    ClientAddRentComponent,
+    ValueComponent
+
     
   
   ],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    DashboardRoutingModule,
+    SidebarModule,
+    NavbarModule,
+    ToastrModule.forRoot(),
+    FooterModule,
+    FixedPluginModule,
+    ModalModule.forRoot()   
+  ],
   exports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule
+  
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

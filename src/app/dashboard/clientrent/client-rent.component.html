@@ -33,12 +33,16 @@
           <table class="table">
             <thead class="text-primary">
               <th>Producto</th>
+              <th>Tipo</th>
               <th>Abonos</th>
               <th class="text-right">Abonar</th>
               <th class="text-right">Precio</th>
             </thead>
             <tbody>
               <tr *ngFor="let rent of rent">
+                <td>
+                    {{ rent.nameproduct }}
+                  </td>
                 <td>
                   {{ rent.product }}
                 </td>

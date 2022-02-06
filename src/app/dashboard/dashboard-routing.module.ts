@@ -1,4 +1,5 @@
-import { ClientAddRentComponent } from './clientrent/components/clientaddrent/client-addrent.component';
+import { ValueComponent } from './value/value.component';
+import { ClientAddRentComponent } from './clientrent/components/clientadd-rent.component';
 import { ClientRentComponent } from './clientrent/client-rent.component';
 import { ClientSaleComponent } from './clientsale/client-sale.component';
 import { PerfilComponent } from './perfil/perfil.component';
@@ -42,6 +43,7 @@ export const DashboardRouting: Routes = [
       { path: 'clientsale', component: ClientSaleComponent },
       { path: 'clientrent', component: ClientRentComponent },
       { path: 'clientaddrent', component: ClientAddRentComponent },
+      { path: 'value', component: ValueComponent },
 
     ],
     canActivate: [LoginGuard]
