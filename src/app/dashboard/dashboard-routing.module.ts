@@ -20,6 +20,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './users/components/adduser/adduser.component';
 
+
+
 export const DashboardRouting: Routes = [
   { path: '', redirectTo: 'dashboard/dashadmin', pathMatch: 'full' },
   {
@@ -44,6 +46,9 @@ export const DashboardRouting: Routes = [
       { path: 'clientrent', component: ClientRentComponent },
       { path: 'clientaddrent', component: ClientAddRentComponent },
       { path: 'value', component: ValueComponent },
+      
+      
+    
 
     ],
     canActivate: [LoginGuard]
