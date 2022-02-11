@@ -20,6 +20,9 @@ export const environment = {
     apiProductUpdate: 'http://localhost:3000/api/products/update',
     apiRentUpdate: 'http://localhost:3000/api/rents/update',
     apiProductsCategory: 'http://localhost:3000/api/products/productsCategory',
+    apiValue: 'http://localhost:3000/api/value',
+    apiValueByUser: 'http://localhost:3000/api/value/valueByUser',
+
   }
 };
 

@@ -19,6 +19,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './users/components/adduser/adduser.component';
+import { ValueAddComponent } from './value/components/value-add.component';
 
 
 
@@ -46,6 +47,7 @@ export const DashboardRouting: Routes = [
       { path: 'clientrent', component: ClientRentComponent },
       { path: 'clientaddrent', component: ClientAddRentComponent },
       { path: 'value', component: ValueComponent },
+      { path: 'value-add', component: ValueAddComponent },
       
       
     

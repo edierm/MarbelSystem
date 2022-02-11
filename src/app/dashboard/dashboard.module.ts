@@ -1,3 +1,4 @@
+import { ValueAddComponent } from './value/components/value-add.component';
 import { ValueComponent } from './value/value.component';
 import { ClientRentComponent } from './clientrent/client-rent.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -47,7 +48,8 @@ import { ClientAddRentComponent } from './clientrent/components/clientadd-rent.c
     ClientSaleComponent,
     ClientRentComponent,
     ClientAddRentComponent,
-    ValueComponent
+    ValueComponent,
+    ValueAddComponent
 
     
   
