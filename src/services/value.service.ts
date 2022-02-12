@@ -15,14 +15,16 @@ export class ValueService {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
     });
-    return this.http.post(environment.apis.apiSale, ventas, { headers });
+    return this.http.post(environment.apis.apiValue , { headers });
   }
 
   getAllValue(): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
     });
-    return this.http.get(environment.apis.apiSale, { headers });
+    return this.http.get(environment.apis.apiValue,  { headers });
+
+    
   }
 
   
@@ -31,7 +33,7 @@ export class ValueService {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
     });
-    const url = `${environment.apis.apiSalesByUser}?email=${email}`;
+    const url = `${environment.apis.apiValueByUser}?email=${email}`;
     return this.http.get(url, { headers });
   }
 }

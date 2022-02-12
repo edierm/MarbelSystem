@@ -41,11 +41,17 @@ export class ValueAddComponent implements OnInit{
     valueAddForm = this.fb.group({
         name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
-    document: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
-    rent: ['', [Validators.required, Validators.minLength(3)]],
-    city: ['', [Validators.required, Validators.maxLength(11)]],
+    phone: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
+    addres: ['', [Validators.required, Validators.minLength(3)]],
+    city: ['', [Validators.required, Validators.minLength(3)]],
     product: ['', [Validators.minLength(3)]],
-    price: ['', [Validators.required, Validators.minLength(3)]],
+    color: ['', [Validators.required, Validators.minLength(3)]],
+    material: ['', [Validators.required, Validators.minLength(3)]],
+    size: ['', [Validators.required, Validators.minLength(3)]],
+
+      
+
+
 
 
     });

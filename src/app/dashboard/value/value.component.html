@@ -9,7 +9,7 @@
           <input
             class="form-control mr-sm-2"
             type="text"
-            name="Nombre"
+            product="Producto"
             [(ngModel)]="nameproduct"
             (ngModelChange)="Search()"
             placeholder="Buscar"
@@ -33,31 +33,29 @@
           <table class="table">
             <thead class="text-primary">
               <th>Producto</th>
-              <th>Tipo</th>
-              <th>Abonos</th>
-              <th class="text-right">Abonar</th>
-              <th class="text-right">Precio</th>
+              <th>Color</th>
+              <th>Material</th>
+              <th class="text-right">Direccion</th>
+              <th class="text-right">Ciudad</th>
             </thead>
             <tbody>
-              <tr *ngFor="let value">
+              <tr *ngFor="let value of value">
                 <td>
-                    {{ value.nameproduct }}
+                    {{ value.product }}
                   </td>
                 <td>
-                  {{ value.product }}
+                  {{ value.color }}
                 </td>
                 <td>
-                  {{ value.value }}
+                  {{ value.material }}
                 </td>
 
                 <td class="text-right">
-                  <span (click)="editRent(rent)"
-                    ><i class="fas fa-donate"></i>
-                  </span>
+                  {{ value.addres }}
                 </td>
 
                 <td class="text-right">
-                  {{ value.price }}
+                  {{ value.city }}
                 </td>
               </tr>
             </tbody>
