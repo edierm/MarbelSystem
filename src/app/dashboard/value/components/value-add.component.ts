@@ -55,6 +55,7 @@ export class ValueAddComponent implements OnInit{
 
 
     });
+    
 
 
     dataModal = {
@@ -98,5 +99,36 @@ export class ValueAddComponent implements OnInit{
         let reader = e.target;
         this.imageSrc = reader.result;
         console.log(this.imageSrc);
+      }
+      clicksub() {
+        console.log(this.valueAddForm.value);
+        this.valueAddForm.reset();
+      }
+      get name() {
+        return this.valueAddForm.get('name');
+      }
+      get email() {
+        return this.valueAddForm.get('email');
+      }
+      get phone() {
+        return this.valueAddForm.get('phone');
+      }
+      get addres() {
+        return this.valueAddForm.get('addres');
+      }
+      get city() {
+        return this.valueAddForm.get('city');
+      }
+      get product() {
+        return this.valueAddForm.get('product');
+      }
+      get color() {
+        return this.valueAddForm.get('color');
+      }
+      get material() {
+        return this.valueAddForm.get('material');
+      }
+      get size(){
+        return this.valueAddForm.get('size');
       }
 }
