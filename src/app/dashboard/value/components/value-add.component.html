@@ -13,7 +13,7 @@
       maxlength="15"
       minlength="5"
     >
-    <small *ngIf="valueAddForm.get('name').invalid && valueAddForm.get('name').touched" class="text-danger">Name is Required</small>
+    <small *ngIf="valueAddForm.get('name').invalid && valueAddForm.get('name').touched" class="text-danger">El nombre es requerido</small>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email</label>
@@ -25,6 +25,7 @@
       placeholder="Ingresar email"
       formControlName="email"
     />
+    <small *ngIf="valueAddForm.get('email').invalid && valueAddForm.get('email').touched" class="text-danger">El email es requerido</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Telefono</label>
@@ -35,8 +36,7 @@
       placeholder="Cedula"
       formControlName="phone"
     />
-    
-    
+    <small *ngIf="valueAddForm.get('phone').invalid && valueAddForm.get('phone').touched" class="text-danger">El telefono es requerido</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Direccion</label>
@@ -47,22 +47,20 @@
       placeholder="Direccion "
       formControlName="addres"
     />
-    
+    <small *ngIf="valueAddForm.get('addres').invalid && valueAddForm.get('addres').touched" class="text-danger">La direccion es obligatorio</small>
   </div>
   
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado ingrese el valor correcto.</small
-    >
+      >Cuidado ingrese el valor correcto.</small>
     <div class="form-group">
       <label for="Ciudad">Ciudad </label>
-  
       <select id="inputState" class="form-control"  formControlName="city">
         <option selected>Selecciona...</option>
         <option>Medellin</option>
         <option>Cali</option>
         <option>Bogota</option>
       </select>
-    
+      <small *ngIf="valueAddForm.get('city').invalid && valueAddForm.get('city').touched" class="text-danger">La ciudad es requerida</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Medidas</label>
@@ -74,8 +72,8 @@
       formControlName="size"
     />
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado ingrese el valor correcto.</small
-    >
+      >Cuidado ingrese el valor correcto.</small>
+      <small *ngIf="valueAddForm.get('size').invalid && valueAddForm.get('size').touched" class="text-danger">Las medidas son requeridas</small>
   </div>
   
   <div class="form-group">
@@ -87,6 +85,7 @@
       <option>Cocina</option>
       <option>Baño</option>
     </select>
+    <small *ngIf="valueAddForm.get('product').invalid && valueAddForm.get('product').touched" class="text-danger">El tipo de producto es requerido</small>
   </div>
 
   <div class="form-group">
@@ -98,6 +97,7 @@
       <option>Marmol</option>
       <option>Cuarstone</option>
     </select>
+    <small *ngIf="valueAddForm.get('material').invalid && valueAddForm.get('material').touched" class="text-danger">El tipo de material es requerido</small>
   </div>
   <br />
   
@@ -110,6 +110,7 @@
       <option>Negro</option>
       <option>Verdoso</option>
     </select>
+    <small *ngIf="valueAddForm.get('color').invalid && valueAddForm.get('color').touched" class="text-danger">El tipo de tono es requerido</small>
   </div>
   <br />
   
