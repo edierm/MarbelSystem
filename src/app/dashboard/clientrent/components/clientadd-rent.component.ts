@@ -45,7 +45,7 @@ export class ClientAddRentComponent implements OnInit{
     city: ['', [Validators.required, Validators.maxLength(11)]],
     product: ['', [Validators.minLength(3)]],
     price: ['', [Validators.required, Validators.minLength(3)]],
-
+    imageSrc:['',[Validators.required]]
 
     });
 
@@ -92,4 +92,31 @@ export class ClientAddRentComponent implements OnInit{
         this.imageSrc = reader.result;
         console.log(this.imageSrc);
       }
+
+      clicksub() {
+        console.log(this.cAddRentForm.value);
+        this.cAddRentForm.reset();
+      }
+      get name() {
+        return this.cAddRentForm.get('name');
+      }
+      get email() {
+        return this.cAddRentForm.get('email');
+      }
+      get document() {
+        return this.cAddRentForm.get('document');
+      }
+      get rent() {
+        return this.cAddRentForm.get('rent');
+      }
+      get city() {
+        return this.cAddRentForm.get('city');
+      }
+      get product() {
+        return this.cAddRentForm.get('product');
+      }
+      get price() {
+        return this.cAddRentForm.get('price');
+      }
+
 }

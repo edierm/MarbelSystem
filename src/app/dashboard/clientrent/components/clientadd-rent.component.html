@@ -9,7 +9,9 @@
       id="exampleInputEmail1"
       placeholder="Ingrese nombre completo"
       formControlName="name"
-    />
+    >
+    <small *ngIf="cAddRentForm.get('name').invalid && cAddRentForm.get('name').touched" class="text-danger">El nombre es requerido</small>
+
   </div>
 
   <div class="form-group">
@@ -21,7 +23,9 @@
       aria-describedby="emailHelp"
       placeholder="Ingresar email"
       formControlName="email"
-      />
+      >
+      <small *ngIf="cAddRentForm.get('email').invalid && cAddRentForm.get('email').touched" class="text-danger">El nombre es requerido</small>
+
   </div>
 
   <div class="form-group">
@@ -32,7 +36,9 @@
       id="exampleInputPassword1"
       placeholder="Cedula"
       formControlName="document"
-    />
+    >
+    <small *ngIf="cAddRentForm.get('document').invalid && cAddRentForm.get('document').touched" class="text-danger">El nombre es requerido</small>
+
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado con este numero se consulta esta venta.</small
     >
@@ -46,7 +52,9 @@
       id="exampleInputPassword1"
       placeholder="Abono "
       formControlName="rent"
-    />
+    >
+    <small *ngIf="cAddRentForm.get('rent').invalid && cAddRentForm.get('rent').touched" class="text-danger">El nombre es requerido</small>
+
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado ingrese el valor correcto.</small
     >
@@ -59,7 +67,9 @@
       id="exampleInputPassword1"
       placeholder="Precio total "
       formControlName="price"
-    />
+    >
+    <small *ngIf="cAddRentForm.get('price').invalid && cAddRentForm.get('price').touched" class="text-danger">El nombre es requerido</small>
+
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado ingrese el valor correcto.</small
     >
@@ -74,6 +84,8 @@
       <option>Bogota</option>
       <option>Cali</option>
     </select>
+    <small *ngIf="cAddRentForm.get('city').invalid && cAddRentForm.get('city').touched" class="text-danger">El nombre es requerido</small>
+
   </div>
 
   <div class="form-group">
@@ -85,6 +97,8 @@
       <option>Cocina</option>
       <option>Baño</option>
     </select>
+    <small *ngIf="cAddRentForm.get('product').invalid && cAddRentForm.get('product').touched" class="text-danger">El nombre es requerido</small>
+
   </div>
   <br>
         <a > Agregar factura</a>
@@ -95,8 +109,9 @@
                 
                 <img [src]="imageSrc"  style="max-width:300px;max-height:300px" /> 
               
-                <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
-              
+                <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" formControlName="imageSrc" />
+                <small *ngIf="cAddRentForm.get('imageSrc').invalid && cAddRentForm.get('imageSrc').touched" class="text-danger">El nombre es requerido</small>
+
               </div>
             </div>
           </div>
@@ -109,8 +124,9 @@
       >Rectifique bien los datos antes de registar la venta
     </label>
   </div>
-  <button type="submit" class="btn btn-primary" (click)="saveRent()">{{isUpdate?'Agregar Abono': 'Agregar Credito'}}</button>
-   
+  <button  (click)="clicksub()" [disabled]="cAddRentForm.invalid" type="submit" class="btn btn-primary" (click)="saveRent()">
+    Enviar abono 
+   </button>   
 </form>
 
 <div bsModal #modalSuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
