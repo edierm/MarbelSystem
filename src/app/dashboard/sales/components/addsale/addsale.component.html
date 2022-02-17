@@ -10,6 +10,7 @@
       placeholder="Ingrese nombre completo"
       formControlName="name"
     />
+    <small *ngIf="saleForm.get('name').invalid && saleForm.get('name').touched" class="text-danger">El nombre es requerido</small>
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Producto</label>
@@ -20,6 +21,7 @@
       placeholder="Ingrese nombre completo"
       formControlName="nameproduct"
     />
+    <small *ngIf="saleForm.get('nameproduct').invalid && saleForm.get('nameproduct').touched" class="text-danger">El nombre de producto es requerido</small>
   </div>
 
   <div class="form-group">
@@ -32,6 +34,7 @@
       placeholder="Ingresar email"
       formControlName="email"
     />
+    <small *ngIf="saleForm.get('email').invalid && saleForm.get('email').touched" class="text-danger">El email es requerido</small>
   </div>
 
   <div class="form-group">
@@ -46,6 +49,7 @@
       maxlength="13"
       required
     />
+    <small *ngIf="saleForm.get('document').invalid && saleForm.get('document').touched" class="text-danger">El documento es requerido</small>
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado con este numero se consulta esta venta.</small
     >
@@ -60,6 +64,7 @@
       placeholder="Precio "
       formControlName="price"
     />
+    <small *ngIf="saleForm.get('price').invalid && saleForm.get('price').touched" class="text-danger">El precio es requerido</small>
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado ingrese el valor correcto.</small
     >
@@ -74,6 +79,7 @@
       <option>Bogota</option>
       <option>Cali</option>
     </select>
+    <small *ngIf="saleForm.get('city').invalid && saleForm.get('city').touched" class="text-danger">La ciudad es requerida</small>
   </div>
 
   <div class="form-group">
@@ -85,6 +91,8 @@
       <option>Cocina</option>
       <option>Baño</option>
     </select>
+    <small *ngIf="saleForm.get('product').invalid && saleForm.get('product').touched" class="text-danger">La ciudad es requerida</small>
+
   </div>
 
   <div class="form-check">

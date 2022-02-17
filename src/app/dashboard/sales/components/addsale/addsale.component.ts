@@ -6,7 +6,7 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'addsail-cmp',
+  selector: 'addsale-cmp',
 
   templateUrl: 'addsale.component.html',
   styleUrls: ['./addsale.component.scss'],
@@ -84,4 +84,30 @@ export class AddSaleComponent implements OnInit {
 
     document.body.innerHTML = originalContents;
 }
+clicksub() {
+  console.log(this.saleForm.value);
+  this.saleForm.reset();
+}
+get name() {
+  return this.saleForm.get('name');
+}
+get nameproduct() {
+  return this.saleForm.get('nameproduct');
+}
+get email() {
+  return this.saleForm.get('email');
+}
+get document() {
+  return this.saleForm.get('document');
+}
+get price() {
+  return this.saleForm.get('price');
+}
+get city() {
+  return this.saleForm.get('city');
+}
+get product() {
+  return this.saleForm.get('product');
+}
+
 }

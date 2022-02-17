@@ -38,7 +38,7 @@ export const DashboardRouting: Routes = [
       { path: 'rent/edit/:id', component: AddRentComponent },
       { path: 'user/edit/:id', component: AddUserComponent},
       { path: 'reports', component: ReportsComponent },
-      { path: 'addsail', component: AddSaleComponent },
+      { path: 'addsale', component: AddSaleComponent },
       { path: 'addrent', component: AddRentComponent },
       { path: 'addUser', component: AddUserComponent},
       { path: 'listproduct', component: ListProductComponent },
