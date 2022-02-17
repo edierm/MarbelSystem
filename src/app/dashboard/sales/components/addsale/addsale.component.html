@@ -51,7 +51,7 @@
     />
     <small *ngIf="saleForm.get('document').invalid && saleForm.get('document').touched" class="text-danger">El documento es requerido</small>
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado con este numero se consulta esta venta.</small
+      >Cuidado con este número se consulta esta venta</small
     >
   </div>
 
@@ -66,7 +66,7 @@
     />
     <small *ngIf="saleForm.get('price').invalid && saleForm.get('price').touched" class="text-danger">El precio es requerido</small>
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado ingrese el valor correcto.</small
+      >Cuidado, ingrese el valor correcto.</small
     >
   </div>
 
@@ -74,9 +74,9 @@
     <label for="Ciudad">Seleccione la ciudad </label>
 
     <select id="inputState" class="form-control" formControlName="city">
-      <option selected>Selecciona...</option>
-      <option>Medellin</option>
-      <option>Bogota</option>
+      <option disabled selected>Selecciona una opción</option>
+      <option>Medellín</option>
+      <option>Bogotá</option>
       <option>Cali</option>
     </select>
     <small *ngIf="saleForm.get('city').invalid && saleForm.get('city').touched" class="text-danger">La ciudad es requerida</small>
@@ -86,7 +86,7 @@
     <label for="Ciudad">Seleccione tipo de producto </label>
 
     <select id="inputState" class="form-control" formControlName="product">
-      <option selected>Selecciona...</option>
+      <option disabled selected>Selecciona una opción</option>
       <option>Meson</option>
       <option>Cocina</option>
       <option>Baño</option>
@@ -98,9 +98,9 @@
   <div class="form-check">
     <label class="form-check-label" for="exampleCheck1"
       >Rectifique bien los datos antes de registar la venta
-    </label>
+    </label>  
   </div>
-  <button type="submit" class="btn btn-primary" (click)="saveSale()">
+  <button (click)="clicksub()" [disabled]="saleForm.invalid" type="submit" class="btn btn-primary" (click)="saveSale()">
     {{isUpdate?'EDITAR VENTA': 'AGREGAR VENTA'}}
   </button><br>
   <input type="button" onclick="printDiv('page')" value="Ver factura" />

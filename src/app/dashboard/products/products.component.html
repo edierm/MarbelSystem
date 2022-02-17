@@ -1,134 +1,160 @@
-
 <h1 class="title">AGREGAR PRODUCTOS</h1>
 <div class="container bootdey">
   <div class="col-md-12">
-    
     <section class="panel">
       <div class="panel-body" [formGroup]="productForm">
-        
-        
         <div class="col-md-12">
-        <div class="product_meta">
-          <label>Titulo del producto</label>
-          
-              
-              <input class="form-control"
-                type="text"
-                name="tipro"
-                placeholder="Titulo del producto"
-                formControlName="name"
-              />
-           
-          
-          </div>
-          </div>
-          <br>
-            <div class="col-md-12">
-              <label>Titulo del producto</label>
+          <div class="product_meta">
+            <label>Título del producto</label>
+
             <input
               class="form-control"
               type="text"
-              name="details"
-              size=" 80px"
-              placeholder="descripcion del producto "
-              formControlName="description"
+              name="tipro"
+              placeholder="Título del producto"
+              formControlName="name"
             />
           </div>
-          <div class="col-md-12">
-          <div class="product_meta ">
-            <br />
+        </div>
+      
+        <div class="col-md-12">
+          <label>Descripción del producto</label>
+          <input
+            class="form-control"
+            type="text"
+            name="details"
+            size=" 80px"
+            placeholder="Descripción del producto "
+            formControlName="description"
+          />
+        </div>
+        <div class="col-md-12">
+          <div class="product_meta">
+          
 
-            <div class="form-group ">
-              <label for="Categoria">Seleccione una categoria </label>
-              <select id="inputState" class="form-control" formControlName="category">
-                <option selected>Selecciona...</option>
+            <div class="form-group">
+              <label for="Categoria">Seleccione una categoría </label>
+              <select
+                id="inputState"
+                class="form-control"
+                formControlName="category"
+              >
+                <option disabled selected>Selecciona una opción</option>
                 <option>Mesones</option>
                 <option>Cocinas</option>
                 <option>Baños</option>
               </select>
-              <br />
-              <input class="form-control" type="text" name="otro" placeholder="Otro" />
+              <br>
+              <input
+                class="form-control"
+                type="text"
+                name="otro"
+                placeholder="Otro"
+              />
             </div>
           </div>
         </div>
-            <div class="col-md-12">
-
-            <div class="form-group ">
-              <label for="Categoria">Seleccione un material </label>
-
-              <select id="inputState" class="form-control" formControlName="material">
-                <option selected>Selecciona...</option>
-                <option>Marmol</option>
-                <option>quartzo</option>
-                <option>granito</option>
-              </select>
-              <br />
-              <input class="form-control" type="text" name="otro" placeholder="Otro" />
-            </div>
-          </div>
-
-          <br>
-        
-          <div class="col-md-12">
-
-          <div class="precio">
-            <label>Precio</label>
-            <br>
-            <input class="form-control" type="text" name="precio" placeholder="Ingrese el precio"  formControlName="price"/>
-          </div>
-        </div>
-        <br>
         <div class="col-md-12">
+          <div class="form-group">
+            <label for="Categoria">Seleccione un material </label>
 
-          <div class="form-group ">
-            <label for="Categoria">Seleccione un color </label>
-
-            <select id="inputState" class="form-control" formControlName="color">
-              <option selected>Selecciona...</option>
-              <option>azul</option>
-              <option>blanco chispa</option>
-              <option>hueso</option>
+            <select
+              id="inputState"
+              class="form-control"
+              formControlName="material"
+            >
+              <option disabled selected>Selecciona una opción</option>
+              <option>Marmol</option>
+              <option>Quartzo</option>
+              <option>Granito</option>
             </select>
-           
-          </div>
-        </div>
-         
-              <br />
-            <div class="col-md-12" > 
-            <label>Cantidad</label>
+            <br>
             <input
               class="form-control"
-              type="quantiy"
-              placeholder="1"
-              class="form-control quantity"
-              formControlName="amount"
+              type="text"
+              name="otro"
+              placeholder="Otro"
             />
           </div>
-          <br>
-          <div class="col-md-12">
-            <div class="col-md-6,imagenpro">
-              <div class="pro-img-list-1">
-                <div class="image-upload-1" >
-                  
-                  <img [src]="imageSrc"  style="max-width:300px;max-height:300px" /> 
-                
-                  <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
-                
-                </div>
+        </div>
+
+        <br />
+
+        <div class="col-md-12">
+          <div class="precio">
+            <label>Precio</label>
+            <br />
+            <input
+              class="form-control"
+              type="text"
+              name="precio"
+              placeholder="Ingrese el precio"
+              formControlName="price"
+            />
+          </div>
+        </div>
+        <br />
+        <div class="col-md-12">
+          <div class="form-group">
+            <label for="Categoria">Seleccione un color </label>
+
+            <select
+              id="inputState"
+              class="form-control"
+              formControlName="color"
+            >
+              <option disabled selected>Selecciona una opción</option>
+              <option>Azul</option>
+              <option>Blanco chispa</option>
+              <option>Hueso</option>
+            </select>
+          </div>
+        </div>
+
+        <br />
+        <div class="col-md-12">
+          <label>Cantidad</label>
+          <input
+            class="form-control"
+            type="quantiy"
+            placeholder="1"
+            class="form-control quantity"
+            formControlName="amount"
+          />
+        </div>
+        <br />
+        <div class="col-md-12">
+          <div class="col-md-6,imagenpro">
+            <div class="pro-img-list-1">
+              <div class="image-upload-1">
+                <img
+                  [src]="imageSrc"
+                  style="max-width: 300px; max-height: 300px"
+                />
+
+                <input
+                  name="imageUrl"
+                  type="file"
+                  accept="image/*"
+                  (change)="handleInputChangeImg($event)"
+                />
               </div>
             </div>
-          
           </div>
-          <div class="col-md-12">
+        </div>
+        <div class="col-md-12">
           <p>
-            <button class="btn btn-round btn-danger" type="button" (click)="saveProduct()">
-              <i class="fa fa-shopping-cart"></i> {{isUpdate?'Actualizar': 'Agregar'}}
+            <button
+              class="btn btn-round btn-danger"
+              type="button"
+              (click)="saveProduct()"
+            >
+              <i class="fa fa-shopping-cart"></i>
+              {{ isUpdate ? "Actualizar" : "Agregar" }}
             </button>
           </p>
         </div>
-        </div>
-        
-      
+      </div>
     </section>
   </div>
 </div>
