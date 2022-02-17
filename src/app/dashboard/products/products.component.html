@@ -17,7 +17,9 @@
                 name="tipro"
                 placeholder="Titulo del producto"
                 formControlName="name"
-              />
+              >
+              <small *ngIf="productForm.get('name').invalid && productForm.get('name').touched" class="text-danger">El tipo de material es requerido</small>
+
            
           
           </div>
@@ -32,7 +34,9 @@
               size=" 80px"
               placeholder="descripcion del producto "
               formControlName="description"
-            />
+            >
+            <small *ngIf="productForm.get('description').invalid && productForm.get('description').touched" class="text-danger">El tipo de material es requerido</small>
+
           </div>
           <div class="col-md-12">
           <div class="product_meta ">
@@ -46,6 +50,8 @@
                 <option>Cocinas</option>
                 <option>Baños</option>
               </select>
+              <small *ngIf="productForm.get('category').invalid && productForm.get('category').touched" class="text-danger">El tipo de material es requerido</small>
+
               <br />
               <input class="form-control" type="text" name="otro" placeholder="Otro" />
             </div>
@@ -62,6 +68,8 @@
                 <option>quartzo</option>
                 <option>granito</option>
               </select>
+              <small *ngIf="productForm.get('material').invalid && productForm.get('material').touched" class="text-danger">El tipo de material es requerido</small>
+
               <br />
               <input class="form-control" type="text" name="otro" placeholder="Otro" />
             </div>
@@ -74,7 +82,9 @@
           <div class="precio">
             <label>Precio</label>
             <br>
-            <input class="form-control" type="text" name="precio" placeholder="Ingrese el precio"  formControlName="price"/>
+            <input class="form-control" type="text" name="precio" placeholder="Ingrese el precio"  formControlName="price">
+            <small *ngIf="productForm.get('price').invalid && productForm.get('price').touched" class="text-danger">El tipo de material es requerido</small>
+
           </div>
         </div>
         <br>
@@ -88,6 +98,8 @@
               <option>azul</option>
               <option>blanco chispa</option>
               <option>hueso</option>
+              <small *ngIf="productForm.get('color').invalid && productForm.get('color').touched" class="text-danger">El tipo de material es requerido</small>
+
             </select>
            
           </div>
@@ -102,7 +114,9 @@
               placeholder="1"
               class="form-control quantity"
               formControlName="amount"
-            />
+            >
+            <small *ngIf="productForm.get('amount').invalid && productForm.get('amount').touched" class="text-danger">El tipo de material es requerido</small>
+
           </div>
           <br>
           <div class="col-md-12">
@@ -121,7 +135,7 @@
           </div>
           <div class="col-md-12">
           <p>
-            <button class="btn btn-round btn-danger" type="button" (click)="saveProduct()">
+            <button (click)="clicksub()" [disabled]="productForm.invalid" class="btn btn-round btn-danger" type="button" (click)="saveProduct()">
               <i class="fa fa-shopping-cart"></i> {{isUpdate?'Actualizar': 'Agregar'}}
             </button>
           </p>

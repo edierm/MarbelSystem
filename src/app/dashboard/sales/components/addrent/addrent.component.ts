@@ -43,7 +43,7 @@ export class AddRentComponent implements OnInit{
     document: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
     rent: ['', [Validators.required, Validators.minLength(3)]],
     city: ['', [Validators.required, Validators.maxLength(11)]],
-    product: ['', [Validators.minLength(3)]],
+    product: ['', [Validators.required, Validators.minLength(3)]],
     price: ['', [Validators.required, Validators.minLength(3)]],
 
 
@@ -74,5 +74,31 @@ export class AddRentComponent implements OnInit{
             console.log('Credito  producto', res);
           });
         }
+      }
+
+      clicksub() {
+        console.log(this.rentForm.value);
+        this.rentForm.reset();
+      }
+      get name() {
+        return this.rentForm.get('name');
+      }
+      get email() {
+        return this.rentForm.get('email');
+      }
+      get document() {
+        return this.rentForm.get('document');
+      }
+      get rent() {
+        return this.rentForm.get('rent');
+      }
+      get price() {
+        return this.rentForm.get('price');
+      }
+      get city() {
+        return this.rentForm.get('city');
+      }
+      get product() {
+        return this.rentForm.get('product');
       }
 }

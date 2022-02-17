@@ -25,13 +25,10 @@ export class RegisterComponent {
   RegisterForm = this.fb.group({
     name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],
-    document: [
-      '',
-      [Validators.required, Validators.minLength(5), Validators.maxLength(15)],
-    ],
+    document: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
     password: ['', [Validators.required, Validators.minLength(3)]],
     phone: ['', [Validators.required, Validators.maxLength(11)]],
-    address: ['', [Validators.minLength(3)]],
+    address: ['', [Validators.required, Validators.minLength(3)]],
     role: ['', [Validators.required]],
     city: ['', [Validators.required]],
   });
@@ -60,5 +57,33 @@ export class RegisterComponent {
         this.openModal();
       }
     );
+  }
+  clicksub() {
+    console.log(this.RegisterForm.value);
+    this.RegisterForm.reset();
+  }
+  get name() {
+    return this.RegisterForm.get('name');
+  }
+  get email() {
+    return this.RegisterForm.get('email');
+  }
+  get document() {
+    return this.RegisterForm.get('document');
+  }
+  get password() {
+    return this.RegisterForm.get('password');
+  }
+  get phone() {
+    return this.RegisterForm.get('phone');
+  }
+  get address() {
+    return this.RegisterForm.get('address');
+  }
+  get role() {
+    return this.RegisterForm.get('role');
+  }
+  get city() {
+    return this.RegisterForm.get('city');
   }
 }

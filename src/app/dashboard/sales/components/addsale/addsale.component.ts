@@ -45,7 +45,7 @@ export class AddSaleComponent implements OnInit {
     ],
     price: ['', [Validators.required, Validators.minLength(3)]],
     city: ['', [Validators.required, Validators.maxLength(11)]],
-    product: ['', [Validators.minLength(1)]],
+    product: ['', [Validators.required, Validators.minLength(1)]],
   });
 
   dataModal = {

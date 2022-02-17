@@ -9,7 +9,9 @@
       id="exampleInputEmail1"
       placeholder="Ingrese nombre completo"
       formControlName="name"
-    />
+    >
+    <small *ngIf="rentForm.get('name').invalid && rentForm.get('name').touched" class="text-danger">El tipo de material es requerido</small>
+
   </div>
 
   <div class="form-group">
@@ -21,7 +23,9 @@
       aria-describedby="emailHelp"
       placeholder="Ingresar email"
       formControlName="email"
-      />
+      >
+      <small *ngIf="rentForm.get('email').invalid && rentForm.get('email').touched" class="text-danger">El tipo de material es requerido</small>
+
   </div>
 
   <div class="form-group">
@@ -32,7 +36,9 @@
       id="exampleInputPassword1"
       placeholder="Cedula"
       formControlName="document"
-    />
+    >
+    <small *ngIf="rentForm.get('document').invalid && rentForm.get('document').touched" class="text-danger">El tipo de material es requerido</small>
+
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado con este numero se consulta esta venta.</small
     >
@@ -46,7 +52,9 @@
       id="exampleInputPassword1"
       placeholder="Abono "
       formControlName="rent"
-    />
+    >
+    <small *ngIf="rentForm.get('rent').invalid && rentForm.get('rent').touched" class="text-danger">El tipo de material es requerido</small>
+
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado ingrese el valor correcto.</small
     >
@@ -59,7 +67,9 @@
       id="exampleInputPassword1"
       placeholder="Precio total "
       formControlName="price"
-    />
+    >
+    <small *ngIf="rentForm.get('price').invalid && rentForm.get('price').touched" class="text-danger">El tipo de material es requerido</small>
+
     <small id="emailHelp" class="form-text text-muted"
       >Cuidado ingrese el valor correcto.</small
     >
@@ -74,6 +84,8 @@
       <option>Bogota</option>
       <option>Cali</option>
     </select>
+    <small *ngIf="rentForm.get('city').invalid && rentForm.get('city').touched" class="text-danger">El tipo de material es requerido</small>
+
   </div>
 
   <div class="form-group">
@@ -85,6 +97,8 @@
       <option>Cocina</option>
       <option>Baño</option>
     </select>
+    <small *ngIf="rentForm.get('product').invalid && rentForm.get('product').touched" class="text-danger">El tipo de material es requerido</small>
+
   </div>
 
   <div class="form-check">
@@ -93,7 +107,7 @@
       >Rectifique bien los datos antes de registar la venta
     </label>
   </div>
-  <button type="submit" class="btn btn-primary" (click)="saveRent()">{{isUpdate?'Agregar Abono': 'Agregar Credito'}}</button>
+  <button (click)="clicksub()" [disabled]="rentForm.invalid" type="submit" class="btn btn-primary" (click)="saveRent()">{{isUpdate?'Agregar Abono': 'Agregar Credito'}}</button>
    
 </form>
 

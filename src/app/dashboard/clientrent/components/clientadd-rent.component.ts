@@ -43,7 +43,7 @@ export class ClientAddRentComponent implements OnInit{
     document: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
     rent: ['', [Validators.required, Validators.minLength(3)]],
     city: ['', [Validators.required, Validators.maxLength(11)]],
-    product: ['', [Validators.minLength(3)]],
+    product: ['', [Validators.required, Validators.minLength(3)]],
     price: ['', [Validators.required, Validators.minLength(3)]],
     imageSrc:['',[Validators.required]]
 
