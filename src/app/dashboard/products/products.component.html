@@ -4,6 +4,7 @@
     <section class="panel">
       <div class="panel-body" [formGroup]="productForm">
         <div class="col-md-12">
+<<<<<<< HEAD
           <div class="product_meta">
             <label>Título del producto</label>
 
@@ -14,6 +15,37 @@
               placeholder="Título del producto"
               formControlName="name"
             />
+=======
+        <div class="product_meta">
+          <label>Titulo del producto</label>
+          
+              
+              <input class="form-control"
+                type="text"
+                name="tipro"
+                placeholder="Titulo del producto"
+                formControlName="name"
+              >
+              <small *ngIf="productForm.get('name').invalid && productForm.get('name').touched" class="text-danger">El tipo de material es requerido</small>
+
+           
+          
+          </div>
+          </div>
+          <br>
+            <div class="col-md-12">
+              <label>Titulo del producto</label>
+            <input
+              class="form-control"
+              type="text"
+              name="details"
+              size=" 80px"
+              placeholder="descripcion del producto "
+              formControlName="description"
+            >
+            <small *ngIf="productForm.get('description').invalid && productForm.get('description').touched" class="text-danger">El tipo de material es requerido</small>
+
+>>>>>>> 2600e5406f3b1ac7dca04a3b7e742e3c675bcde2
           </div>
         </div>
       
@@ -44,6 +76,7 @@
                 <option>Cocinas</option>
                 <option>Baños</option>
               </select>
+<<<<<<< HEAD
               <br>
               <input
                 class="form-control"
@@ -51,6 +84,12 @@
                 name="otro"
                 placeholder="Otro"
               />
+=======
+              <small *ngIf="productForm.get('category').invalid && productForm.get('category').touched" class="text-danger">El tipo de material es requerido</small>
+
+              <br />
+              <input class="form-control" type="text" name="otro" placeholder="Otro" />
+>>>>>>> 2600e5406f3b1ac7dca04a3b7e742e3c675bcde2
             </div>
           </div>
         </div>
@@ -58,6 +97,7 @@
           <div class="form-group">
             <label for="Categoria">Seleccione un material </label>
 
+<<<<<<< HEAD
             <select
               id="inputState"
               class="form-control"
@@ -75,6 +115,19 @@
               name="otro"
               placeholder="Otro"
             />
+=======
+              <select id="inputState" class="form-control" formControlName="material">
+                <option selected>Selecciona...</option>
+                <option>Marmol</option>
+                <option>quartzo</option>
+                <option>granito</option>
+              </select>
+              <small *ngIf="productForm.get('material').invalid && productForm.get('material').touched" class="text-danger">El tipo de material es requerido</small>
+
+              <br />
+              <input class="form-control" type="text" name="otro" placeholder="Otro" />
+            </div>
+>>>>>>> 2600e5406f3b1ac7dca04a3b7e742e3c675bcde2
           </div>
         </div>
 
@@ -83,6 +136,7 @@
         <div class="col-md-12">
           <div class="precio">
             <label>Precio</label>
+<<<<<<< HEAD
             <br />
             <input
               class="form-control"
@@ -91,6 +145,12 @@
               placeholder="Ingrese el precio"
               formControlName="price"
             />
+=======
+            <br>
+            <input class="form-control" type="text" name="precio" placeholder="Ingrese el precio"  formControlName="price">
+            <small *ngIf="productForm.get('price').invalid && productForm.get('price').touched" class="text-danger">El tipo de material es requerido</small>
+
+>>>>>>> 2600e5406f3b1ac7dca04a3b7e742e3c675bcde2
           </div>
         </div>
         <br />
@@ -98,6 +158,7 @@
           <div class="form-group">
             <label for="Categoria">Seleccione un color </label>
 
+<<<<<<< HEAD
             <select
               id="inputState"
               class="form-control"
@@ -107,9 +168,19 @@
               <option>Azul</option>
               <option>Blanco chispa</option>
               <option>Hueso</option>
+=======
+            <select id="inputState" class="form-control" formControlName="color">
+              <option selected>Selecciona...</option>
+              <option>azul</option>
+              <option>blanco chispa</option>
+              <option>hueso</option>
+              <small *ngIf="productForm.get('color').invalid && productForm.get('color').touched" class="text-danger">El tipo de material es requerido</small>
+
+>>>>>>> 2600e5406f3b1ac7dca04a3b7e742e3c675bcde2
             </select>
           </div>
         </div>
+<<<<<<< HEAD
 
         <br />
         <div class="col-md-12">
@@ -138,12 +209,40 @@
                   accept="image/*"
                   (change)="handleInputChangeImg($event)"
                 />
+=======
+         
+              <br />
+            <div class="col-md-12" > 
+            <label>Cantidad</label>
+            <input
+              class="form-control"
+              type="quantiy"
+              placeholder="1"
+              class="form-control quantity"
+              formControlName="amount"
+            >
+            <small *ngIf="productForm.get('amount').invalid && productForm.get('amount').touched" class="text-danger">El tipo de material es requerido</small>
+
+          </div>
+          <br>
+          <div class="col-md-12">
+            <div class="col-md-6,imagenpro">
+              <div class="pro-img-list-1">
+                <div class="image-upload-1" >
+                  
+                  <img [src]="imageSrc"  style="max-width:300px;max-height:300px" /> 
+                
+                  <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
+                
+                </div>
+>>>>>>> 2600e5406f3b1ac7dca04a3b7e742e3c675bcde2
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-12">
           <p>
+<<<<<<< HEAD
             <button
               class="btn btn-round btn-danger"
               type="button"
@@ -151,6 +250,10 @@
             >
               <i class="fa fa-shopping-cart"></i>
               {{ isUpdate ? "Actualizar" : "Agregar" }}
+=======
+            <button (click)="clicksub()" [disabled]="productForm.invalid" class="btn btn-round btn-danger" type="button" (click)="saveProduct()">
+              <i class="fa fa-shopping-cart"></i> {{isUpdate?'Actualizar': 'Agregar'}}
+>>>>>>> 2600e5406f3b1ac7dca04a3b7e742e3c675bcde2
             </button>
           </p>
         </div>

@@ -79,6 +79,35 @@ export class ProductsDashComponent implements OnInit {
     }
   }
 
+  clicksub() {
+    console.log(this.productForm.value);
+    this.productForm.reset();
+  }
+  get name() {
+    return this.productForm.get('name');
+  }
+  get image() {
+    return this.productForm.get('image');
+  }
+  get description() {
+    return this.productForm.get('description');
+  }
+  get category() {
+    return this.productForm.get('category');
+  }
+  get material() {
+    return this.productForm.get('material');
+  }
+  get price() {
+    return this.productForm.get('price');
+  }
+  get color() {
+    return this.productForm.get('color');
+  }
+  get amount() {
+    return this.productForm.get('amount');
+  }
+
  /*  sales: any[];
   salesRents: any[]; */
 }

@@ -40,7 +40,7 @@ export class AddUserComponent implements OnInit {
     document: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
     password: ['', [Validators.required, Validators.minLength(3)]],
     phone: ['', [Validators.required, Validators.maxLength(11)]],
-    address: ['', [Validators.minLength(3)]],
+    address: ['', [Validators.required, Validators.minLength(3)]],
     role: ['', [Validators.required]],
     city: ['', [Validators.required]],
   });
@@ -69,5 +69,34 @@ export class AddUserComponent implements OnInit {
         console.log('Usuario creado', res);
       });
     }
+  }
+
+  clicksub() {
+    console.log(this.userForm.value);
+    this.userForm.reset();
+  }
+  get name() {
+    return this.userForm.get('name');
+  }
+  get email() {
+    return this.userForm.get('email');
+  }
+  get document() {
+    return this.userForm.get('document');
+  }
+  get password() {
+    return this.userForm.get('password');
+  }
+  get phone() {
+    return this.userForm.get('phone');
+  }
+  get address() {
+    return this.userForm.get('address');
+  }
+  get role() {
+    return this.userForm.get('role');
+  }
+  get city() {
+    return this.userForm.get('city');
   }
 }

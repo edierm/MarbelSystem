@@ -44,7 +44,7 @@ export class ValueAddComponent implements OnInit{
     phone: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
     addres: ['', [Validators.required, Validators.minLength(3)]],
     city: ['', [Validators.required, Validators.minLength(3)]],
-    product: ['', [Validators.minLength(3)]],
+    product: ['', [Validators.required, Validators.minLength(3)]],
     color: ['', [Validators.required, Validators.minLength(3)]],
     material: ['', [Validators.required, Validators.minLength(3)]],
     size: ['', [Validators.required, Validators.minLength(3)]],
