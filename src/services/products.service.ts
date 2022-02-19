@@ -40,4 +40,12 @@ export class ProductService {
     const url = `${environment.apis.apiProductsCategory}?category=${category}`
     return this.http.get(url, { headers });
   }
+  deleteProduct(product: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8',
+    });
+    return this.http.post(environment.apis.apiProductDelete, {
+      headers,
+    });
+  }
 }

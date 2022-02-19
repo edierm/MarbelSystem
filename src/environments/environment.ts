@@ -22,6 +22,7 @@ export const environment = {
     apiProductsCategory: 'http://localhost:3000/api/products/productsCategory',
     apiValue: 'http://localhost:3000/api/value',
     apiValueByUser: 'http://localhost:3000/api/value/valueByUser',
+    apiProductDelete: 'http://localhost:3000/api/products/deleteProduct',
 
   }
 };

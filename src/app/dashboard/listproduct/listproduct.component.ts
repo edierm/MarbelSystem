@@ -34,4 +34,11 @@ export class ListProductComponent implements OnInit{
             })
         }
     }
+    deleteProduct(){
+        const data = this.products;
+    console.log('Data Producto: ', data);
+      this.productService.deleteProduct(data).subscribe((res) => {
+        console.log('venta  borrada', res);
+      });
+    }
 }
