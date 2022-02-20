@@ -16,9 +16,7 @@ export class ListProductComponent implements OnInit{
     constructor(private productService: ProductService, private router: Router) {
     }
     ngOnInit() {
-        this.productService.getAllProducts().subscribe(({products}) => {            
-            this.products = products;
-        });
+        this.getAllProducts(); 
     }
     editProduct(product) {
         localStorage.setItem('selectProduct', JSON.stringify(product));
@@ -27,18 +25,24 @@ export class ListProductComponent implements OnInit{
 
     Search(){
         if(this.name == ""){
-            this.ngOnInit();
+            this.getAllProducts();
         }else{
             this.products = this.products.filter(res =>{
                 return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
             })
         }
     }
-    deleteProduct(){
-        const data = this.products;
-    console.log('Data Producto: ', data);
-      this.productService.deleteProduct(data).subscribe((res) => {
-        console.log('venta  borrada', res);
-      });
+    deleteProduct(product){
+      this.productService.deleteProduct(product._id).subscribe((res) => {
+        console.log('producto  borrada', res);
+        this.getAllProducts();  
+    });
+
+    }
+
+    getAllProducts(){
+        this.productService.getAllProducts().subscribe(({products}) => {            
+            this.products = products;
+        });
     }
 }
