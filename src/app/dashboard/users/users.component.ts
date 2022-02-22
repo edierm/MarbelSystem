@@ -26,11 +26,8 @@ export class UsersComponent implements OnInit{
     }
     
     ngOnInit() {
-        this.userService.getAllUsers().subscribe(({users}) => {            
-            this.users = users;
-            this.usersClients = users.filter((user) => user.role == 'CLIENT');
-            this.usersAdmin = users.filter((user) => user.role == 'ADMIN');
-        });
+        this.getAllUsers();
+        
 
         this.infiniti();
     }
@@ -60,6 +57,22 @@ export class UsersComponent implements OnInit{
     }
 
     }
+    deleteUser(user){
+        this.userService.deleteUser(user._id).subscribe((res) => {
+          console.log('Usuario borrado', res);
+          this.getAllUsers();  
+      });
+  
+      }
+      getAllUsers(){
+        this.userService.getAllUsers().subscribe(({users}) => {            
+            this.users = users;
+            this.usersClients = users.filter((user) => user.role == 'CLIENT');
+            this.usersAdmin = users.filter((user) => user.role == 'ADMIN');
+        });
+
+      }
+  
 
     infiniti(){
         const user = 'Another new line --' ;

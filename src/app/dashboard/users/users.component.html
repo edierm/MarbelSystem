@@ -29,7 +29,7 @@
       </div>
       <div class="card-body">
         <div class="table">
-          <div class="container" infiniteScroll   (scrolled)="onScroll()">
+         <!--  <div class="container" infiniteScroll   (scrolled)="onScroll()"> -->
 
           <table class="table">
 
@@ -78,6 +78,7 @@
                 </td>
                 <td class="text-right">
                   <span (click)="updateClient(user)"><i class="fas fa-address-card"></i> </span>
+                  <span (click)="deleteUser(user)" > <i class="fas fa-trash" ></i>  </span>
                   
                 </td>
               </tr>
@@ -140,6 +141,9 @@
               <th class="text-right">
                 Rol
               </th>
+              <th class="text-right">
+                Acciones
+              </th>
               
             </thead>
             <tbody>
@@ -162,6 +166,9 @@
                 <td class="text-right">
                   {{user.role}}
                 </td>
+                <td class="text-right">
+                  <span (click)="deleteUser(user)" > <i class="fas fa-trash" ></i>  </span>
+                </td>
                 
               </tr>
             </tbody>
@@ -170,4 +177,4 @@
       </div>
     </div>
   </div>
-</div>
+

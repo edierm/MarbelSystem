@@ -13,13 +13,8 @@ export class ValueComponent implements OnInit {
   constructor(  ) {}
 
   ngOnInit(): void {
-    const user = JSON.parse(localStorage.getItem('userLogin'));
-    this.valueService.salesByUser(user.email).subscribe((res)=>{
-
-      this.value = res.values;
-      
-      console.log (res) 
-    });
+    
+    this.valueByUser();
    
 }
 
@@ -32,6 +27,25 @@ Search(){
           return res.nameproduct.toLocaleLowerCase().match(this.nameproduct.toLocaleLowerCase());
       })
   }
+}
+
+deleteValue(value){
+  this.valueService.deleteUser(value._id).subscribe((res) => {
+    console.log('producto  borrada', res);
+    this.valueByUser();  
+});
+
+}
+
+valueByUser(){
+  const user = JSON.parse(localStorage.getItem('userLogin'));
+  this.valueService.valueByUser(user.email).subscribe((res)=>{
+
+    this.value = res.values;
+    
+    console.log (res) 
+  });
+
 }
 
 

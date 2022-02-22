@@ -36,4 +36,14 @@ export class ValueService {
     const url = `${environment.apis.apiValueByUser}?email=${email}`;
     return this.http.get(url, { headers });
   }
+  deleteValue(valueId: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8',
+    });
+    const url = `${environment.apis.apiValueDelete}/${valueId} `
+    return this.http.get(url, {
+      headers,
+    });
+
+  }
 }

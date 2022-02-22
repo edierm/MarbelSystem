@@ -32,11 +32,21 @@ export class UsersService {
     });
     return this.http.get(environment.apis.apiUsers, { headers });
   }
-  updateClient (user:any) :Observable<any>{
-    const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8'})
-    return this.http.post(environment.apis.apiUsersUpdate , user , {headers} )
-}
-
+  updateClient(user: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8',
+    });
+    return this.http.post(environment.apis.apiUsersUpdate, user, { headers });
+  }
+  deleteUser(userId: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8',
+    });
+    const url = `${environment.apis.apiUsersDelete}/${userId} `;
+    return this.http.get(url, {
+      headers,
+    });
+  }
 }
 
 //si no me suscribo al observable nunca va ir al backend//

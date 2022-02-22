@@ -113,7 +113,23 @@
     </select>
     <small *ngIf="valueAddForm.get('color').invalid && valueAddForm.get('color').touched" class="text-danger">El tipo de tono es requerido</small>
   </div>
-  <br />
+
+  <div class="form-group">
+    <label for="Envio">Precio del envio  </label>
+
+    <input
+    type="text"
+    class="form-control"
+    id="exampleInputPassword1"
+    placeholder="valor"
+    formControlName="shipped"
+  />
+
+  <small id="emailHelp" class="form-text text-muted"
+    >Cuidado, ingrese el valor correcto</small>
+   
+  </div>
+  <br>
   
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" />

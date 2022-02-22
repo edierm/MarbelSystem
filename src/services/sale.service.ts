@@ -38,4 +38,14 @@ export class SaleService {
     const url = `${environment.apis.apiSalesByUser}?email=${email}`;
     return this.http.get(url, { headers });
   }
+  deleteSale(saleId: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8',
+    });
+    const url = `${environment.apis.apiSaleDelete}/${saleId} `
+    return this.http.get(url, {
+      headers,
+    });
+
+  }
 }

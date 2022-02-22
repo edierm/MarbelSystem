@@ -23,6 +23,11 @@ export const environment = {
     apiValue: 'http://localhost:3000/api/value',
     apiValueByUser: 'http://localhost:3000/api/value/valueByUser',
     apiProductDelete: 'http://localhost:3000/api/products/deleteProduct',
+    apiRentDelete: 'http://localhost:3000/api/rents/deleteRent',
+    apiUsersDelete: 'http://localhost:3000/api/usuarios/deleteUsers',
+    apiValueDelete: 'http://localhost:3000/api/value/deleteValue',
+    apiSaleDelete: 'http://localhost:3000/api/sales/deleteSale',
+    
 
   }
 };

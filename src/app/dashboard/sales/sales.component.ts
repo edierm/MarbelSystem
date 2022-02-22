@@ -23,14 +23,8 @@ export class SalesComponent  implements OnInit{
     }
     
     ngOnInit() {
-        this.saleService.getAllSales().subscribe(({sales}) => {            
-            this.sales = sales;
-            
-        
-        });
-        this.rentService.getAllRents().subscribe(({rents}) => {
-            this.rents = rents;
-        });
+        this.getAllSales();
+        this.getAllRents();
     }
 
     editSale(sale) {
@@ -61,6 +55,31 @@ export class SalesComponent  implements OnInit{
                 return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
             })
         }
+    }
+    deleteSale(sale){
+        this.saleService.deleteSale(sale._id).subscribe((res) => {
+          console.log('producto  borrada', res);
+          this.getAllSales();  
+      });
+  
+      }
+      deleteRent(rent){
+        this.rentService.deleteRent(rent._id).subscribe((res) => {
+          console.log('producto  borrada', res);
+          this.getAllRents();  
+      });
+  
+      }
+  
+      getAllSales(){
+          this.saleService.getAllSales().subscribe(({sales}) => {            
+              this.sales = sales;
+          });
+      }
+      getAllRents(){
+        this.rentService.getAllRents().subscribe(({rents}) => {            
+            this.rents = rents;
+        });
     }
     
 }

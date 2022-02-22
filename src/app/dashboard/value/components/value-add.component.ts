@@ -48,8 +48,7 @@ export class ValueAddComponent implements OnInit{
     color: ['', [Validators.required, Validators.minLength(3)]],
     material: ['', [Validators.required, Validators.minLength(3)]],
     size: ['', [Validators.required, Validators.minLength(3)]],
-
-      
+    shipped: ['', [Validators.minLength(3)]],    
 
 
 
