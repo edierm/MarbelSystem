@@ -33,7 +33,7 @@ export const routes: Routes = [
         component: ProductsComponent,
         
       },      
-      { path: 'sale', component: SaleComponent, },
+      { path: 'sale', component: SaleComponent },
       { path: 'quote', component: QuoteComponent },
       
       { path: 'mantenence', component: MantenenceComponent },
@@ -51,7 +51,10 @@ export const routes: Routes = [
       { path: 'list-products', component: ListProductsComponent },
     ],
   },
-  {path: '', redirectTo:'client/home',pathMatch:'full'}
+  // {
+  //   path: 'client/sale', component: SaleComponent, pathMatch:'full'
+  // },
+  {path: '', redirectTo:'client/home', pathMatch:'full'}
 ];
 
 @NgModule({

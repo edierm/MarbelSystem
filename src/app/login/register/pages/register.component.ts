@@ -21,7 +21,8 @@ export class RegisterComponent {
     private usersService: UsersService
   ) {}
 
-  @ViewChild(ModalDirective, { static: false }) modal?: ModalDirective;
+  // @ViewChild(ModalDirective, { static: false }) modal?: ModalDirective;
+  @ViewChild('modalSuccess') public modal: ModalDirective;
   RegisterForm = this.fb.group({
     name: ['', [Validators.required]],
     email: ['', [Validators.required, Validators.email]],

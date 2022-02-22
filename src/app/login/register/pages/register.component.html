@@ -18,8 +18,14 @@
           id="exampleInputEmail1"
           placeholder="Ingrese nombre completo"
           formControlName="name"
+        />
+        <small
+          *ngIf="
+            RegisterForm.get('name').invalid && RegisterForm.get('name').touched
+          "
+          class="text-danger"
+          >El tipo de material es requerido</small
         >
-        <small *ngIf="RegisterForm.get('name').invalid && RegisterForm.get('name').touched" class="text-danger">El tipo de material es requerido</small>
 
         <small id="emailHelp" class="form-text text-muted"
           >Nombre de la empresa o del cliente.</small
@@ -36,9 +42,15 @@
           aria-describedby="emailHelp"
           placeholder="Ingresar email"
           formControlName="email"
+        />
+        <small
+          *ngIf="
+            RegisterForm.get('email').invalid &&
+            RegisterForm.get('email').touched
+          "
+          class="text-danger"
+          >El tipo de material es requerido</small
         >
-        <small *ngIf="RegisterForm.get('email').invalid && RegisterForm.get('email').touched" class="text-danger">El tipo de material es requerido</small>
-
       </div>
 
       <div class="form-group">
@@ -50,8 +62,15 @@
           id="exampleInputPassword1"
           placeholder="Cedula"
           formControlName="document"
+        />
+        <small
+          *ngIf="
+            RegisterForm.get('document').invalid &&
+            RegisterForm.get('document').touched
+          "
+          class="text-danger"
+          >El tipo de material es requerido</small
         >
-        <small *ngIf="RegisterForm.get('docment').invalid && RegisterForm.get('document').touched" class="text-danger">El tipo de material es requerido</small>
 
         <small id="emailHelp" class="form-text text-muted"
           >Cuidado con este numero se consulta esta venta.</small
@@ -67,8 +86,15 @@
           id="exampleInputPassword1"
           placeholder="Ingrese la Contraseña "
           formControlName="password"
+        />
+        <small
+          *ngIf="
+            RegisterForm.get('password').invalid &&
+            RegisterForm.get('password').touched
+          "
+          class="text-danger"
+          >El tipo de material es requerido</small
         >
-        <small *ngIf="RegisterForm.get('password').invalid && RegisterForm.get('password').touched" class="text-danger">El tipo de material es requerido</small>
 
         <small id="emailHelp" class="form-text text-muted"
           >Cuidado ingrese el valor correcto.</small
@@ -84,8 +110,15 @@
           id="exampleInputPassword1"
           placeholder="Ingrese el celular o telefono "
           formControlName="phone"
+        />
+        <small
+          *ngIf="
+            RegisterForm.get('phone').invalid &&
+            RegisterForm.get('phone').touched
+          "
+          class="text-danger"
+          >El tipo de material es requerido</small
         >
-        <small *ngIf="RegisterForm.get('phone').invalid && RegisterForm.get('phone').touched" class="text-danger">El tipo de material es requerido</small>
 
         <small id="emailHelp" class="form-text text-muted"
           >Cuidado ingrese el numero bien
@@ -101,8 +134,15 @@
           id="exampleInputPassword1"
           placeholder="Ingrese la direccion "
           formControlName="address"
+        />
+        <small
+          *ngIf="
+            RegisterForm.get('address').invalid &&
+            RegisterForm.get('address').touched
+          "
+          class="text-danger"
+          >El tipo de material es requerido</small
         >
-        <small *ngIf="RegisterForm.get('address').invalid && RegisterForm.get('address').touched" class="text-danger">El tipo de material es requerido</small>
 
         <small id="emailHelp" class="form-text text-muted"
           >En caso de ser empresa
@@ -116,8 +156,13 @@
         <select id="inputState" class="form-control" formControlName="role">
           <option value="CLIENT" selected>Cliente</option>
         </select>
-        <small *ngIf="RegisterForm.get('role').invalid && RegisterForm.get('role').touched" class="text-danger">El tipo de material es requerido</small>
-
+        <small
+          *ngIf="
+            RegisterForm.get('role').invalid && RegisterForm.get('role').touched
+          "
+          class="text-danger"
+          >El tipo de material es requerido</small
+        >
       </div>
 
       <div class="form-group">
@@ -130,8 +175,13 @@
           <option>Cali</option>
           <option>Bogota</option>
         </select>
-        <small *ngIf="RegisterForm.get('city').invalid && RegisterForm.get('city').touched" class="text-danger">El tipo de material es requerido</small>
-
+        <small
+          *ngIf="
+            RegisterForm.get('city').invalid && RegisterForm.get('city').touched
+          "
+          class="text-danger"
+          >El tipo de material es requerido</small
+        >
       </div>
 
       <div class="form-check">
@@ -139,46 +189,52 @@
           >Rectifique bien los datos antes de agregar el usuario
         </label>
       </div>
-      <button (click)="clicksub()" [disabled]="RegisterForm.invalid" type="submit" class="btn btn-primary" (click)="saveClient()">
+      <button
+        (click)="clicksub()"
+        [disabled]="RegisterForm.invalid"
+        type="submit"
+        class="btn btn-primary"
+        (click)="saveClient()"
+      >
         REGISTRAR
       </button>
     </form>
-    <div
-      class="modal fade"
-      bsModal
-      #modal="bs-modal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="dialog-static-name"
-      [config]="{backdrop: 'static'}"
-    >
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 id="dialog-static-name" class="modal-title pull-left">
-              {{ dataModal.title }}
-            </h4>
-            <button
-              type="button"
-              class="btn-close close pull-right"
-              aria-label="Close"
-              (click)="modal.hide()"
-            >
-              <span aria-hidden="true" class="visually-hidden">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            {{ dataModal.body }}
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
       <a class="underlineHover" routerLink="/login"
         >Tienes una cuenta, Inicia seccion
       </a>
+    </div>
+  </div>
+</div>
+
+<div
+  bsModal
+  #modalSuccess="bs-modal"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="dialog-static-name"
+>
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-static-name" class="modal-title pull-left">
+          {{ dataModal.title }}
+        </h4>
+        <button
+          type="button"
+          class="btn-close close pull-right"
+          aria-label="Close"
+          (click)="modal.hide()"
+        >
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{ dataModal.body }}
+      </div>
     </div>
   </div>
 </div>

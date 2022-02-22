@@ -1,5 +1,5 @@
 import { Validators, FormBuilder } from '@angular/forms';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
     templateUrl: './sale.component.html',
     styleUrls: ['./sale.component.scss']
 })
-export class SaleComponent {
+export class SaleComponent implements OnInit{
+    product: any;
     SaleForm = this.fb.group({
         name:['',[Validators.required, Validators.minLength(3)]],
         email: ['', [Validators.required, Validators.email]],
@@ -21,7 +22,12 @@ export class SaleComponent {
     
     constructor(private fb: FormBuilder) { }
 
+    ngOnInit() {
+        this.product = JSON.parse(localStorage.getItem('selectSale')) || {};
+        console.log(this.product);
+    }
+
     sale(){
-        console.log(this.SaleForm.value);
+        // console.log(this.SaleForm.value);
     }
 }

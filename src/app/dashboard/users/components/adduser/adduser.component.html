@@ -104,7 +104,7 @@
       <option selected value="CLIENT">Cliente</option>
       <option value="ADMIN">Administrador</option>
     </select>
-    <small *ngIf="userForm.get('role').invalid && userForm.get('role').touched" class="text-danger">El tipo de material es requerido</small>
+    <small *ngIf="userForm.get('role') && userForm.get('role').invalid && userForm.get('role') && userForm.get('role').touched" class="text-danger">El tipo de material es requerido</small>
 
   </div>
 
@@ -127,7 +127,7 @@
       >Rectifique bien los datos antes de agregar el usuario
     </label>
   </div>
-  <button (click)="clicksub()" [disabled]="userForm.invalid" type="submit" class="btn btn-primary" (click)="saveUser()">{{isUpdate?'EDITAR USUARIO': 'AGREGAR USUARIO'}}</button>
+  <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary" (click)="saveUser()">{{isUpdate?'EDITAR USUARIO': 'AGREGAR USUARIO'}}</button>
 </form>
 
 <div bsModal #modalSuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">

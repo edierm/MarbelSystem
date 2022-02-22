@@ -52,7 +52,6 @@ export class AddUserComponent implements OnInit {
     this.modalRef.hide();
     this.modalRef.show();
   }
-
   saveUser() {
     console.log(this.userForm.value);
     
@@ -67,6 +66,13 @@ export class AddUserComponent implements OnInit {
       console.log('Data Producto: ', data);
       this.usersService.createUser(data).subscribe((res) => {
         console.log('Usuario creado', res);
+        this.dataModal.title = 'Usuario Creado';
+        this.dataModal.body = 'Exito';
+        this.openModal();
+      }, (error) => {
+        this.dataModal.title = 'Error';
+        this.dataModal.body = 'No se pudo crear el usuario';
+        this.openModal();
       });
     }
   }
