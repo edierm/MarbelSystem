@@ -66,10 +66,13 @@ export class ProductsDashComponent implements OnInit {
   _handleReaderLoaded(e) {
     let reader = e.target;
     this.imageSrc = reader.result;
+    this.productForm.patchValue({
+      image: this.imageSrc,
+    });
     console.log(this.imageSrc);
   }
   saveProduct() {
-    console.log(this.productForm.value);
+    console.log(this.productForm.value, this.imageSrc);
     this.productForm.patchValue({
       image: this.imageSrc,
     });
