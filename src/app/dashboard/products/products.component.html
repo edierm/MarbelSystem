@@ -34,14 +34,14 @@
             <small *ngIf="productForm.get('description').invalid && productForm.get('description').touched" class="text-danger">El tipo de material es requerido</small>
 
           </div>
-        </div>
+        
       
        
         <div class="col-md-12">
           <div class="product_meta">
           
 
-            <div class="form-group">
+            
               <label for="Categoria">Seleccione una categoría </label>
               <select
                 id="inputState"
@@ -57,11 +57,11 @@
 
               <br />
               <input class="form-control" type="text" name="otro" placeholder="Otro" />
-            </div>
+            
           </div>
-        </div>
+        
         <div class="col-md-12">
-          <div class="form-group">
+          
             <label for="Categoria">Seleccione un material </label>
 
               <select id="inputState" class="form-control" formControlName="material">
@@ -75,7 +75,7 @@
               <br />
               <input class="form-control" type="text" name="otro" placeholder="Otro" />
             </div>
-          </div>
+          
       
 
         <br />
@@ -91,7 +91,7 @@
         </div>
         <br />
         <div class="col-md-12">
-          <div class="form-group">
+          
             <label for="Categoria">Seleccione un color </label>
 
             <select id="inputState" class="form-control" formControlName="color">
@@ -103,7 +103,7 @@
 
             </select>
           </div>
-        </div>
+        
          
               <br />
             <div class="col-md-12" > 
@@ -126,8 +126,8 @@
                   
                   <img [src]="imageSrc"  style="max-width:300px;max-height:300px" /> 
                 
-                  <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" />
-                
+                  <input  name="imageUrl" type="file" accept="image/*" (change)="handleInputChangeImg($event)" formControlName="image" />
+                  <small *ngIf="productForm.get('image').invalid && productForm.get('image').touched" class="text-danger">El tipo de material es requerido</small>
                 </div>
               </div>
             </div>
@@ -140,7 +140,23 @@
             </button>
           </p>
         </div>
-      
-    </section>
+
+    
+  </div>
+</div>
+        
+<div bsModal #modalSuccess="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-static-name" class="modal-title pull-left">{{dataModal.title}}</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalSuccess.hide()">
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       {{dataModal.body}}
+      </div>
+    </div>
   </div>
 </div>
