@@ -74,11 +74,25 @@ export class ValueAddComponent implements OnInit{
             console.log(this.route);
             this.valueService.createValue(data).subscribe((res) => {
                 console.log('Actualizado abono', res);
+                this.dataModal.title = 'Cotizacion Actualizada';
+                this.dataModal.body = 'Exito';
+                this.openModal();
+              }, (error) => {
+                this.dataModal.title = 'Error';
+                this.dataModal.body = 'No se pudo actualizar la cotizacion';
+                this.openModal();
             });
         } else {
           console.log('Data Producto: ', data);
           this.valueService.createValue(data).subscribe((res) => {
             console.log('Credito  producto', res);
+            this.dataModal.title = 'Cotizacion Creada';
+            this.dataModal.body = 'Exito';
+            this.openModal();
+          }, (error) => {
+            this.dataModal.title = 'Error';
+            this.dataModal.body = 'No se pudo crear la cotizacion ';
+            this.openModal();
           });
         }
       }

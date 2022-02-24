@@ -67,11 +67,25 @@ export class AddRentComponent implements OnInit{
             console.log(this.route);
             this.rentService.updateRent(data).subscribe((res) => {
                 console.log('Actualizado abono', res);
+                this.dataModal.title = 'Abono Actualizado';
+                this.dataModal.body = 'Exito';
+                this.openModal();
+              }, (error) => {
+                this.dataModal.title = 'Error';
+                this.dataModal.body = 'No se pudo crear el producto';
+                this.openModal();
             });
         } else {
           console.log('Data Producto: ', data);
           this.rentService.createRent(data).subscribe((res) => {
             console.log('Credito  producto', res);
+            this.dataModal.title = 'Abono Creado';
+            this.dataModal.body = 'Exito';
+            this.openModal();
+          }, (error) => {
+            this.dataModal.title = 'Error';
+            this.dataModal.body = 'No se pudo crear el Abono';
+            this.openModal();
           });
         }
       }
