@@ -9,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-    constructor(private productsService: ProductService,
+    constructor(
+      private productsService: ProductService,
       private router: Router,
-      private route: ActivatedRoute) {}
+      private route: ActivatedRoute
+      ) {}
     productos: [];
     ngOnInit() {
       this.productos = JSON.parse(sessionStorage.getItem('dataTable'));
