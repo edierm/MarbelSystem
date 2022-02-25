@@ -25,6 +25,13 @@ export class UsersService {
       'Content-Type': 'application/json; charset=utf-8',
     });
     return this.http.post(environment.apis.apiReg, user, { headers });
+  
+  }
+  sendEmail(user: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8',
+    });
+    return this.http.post(environment.apis.apiUsersEmail, user, { headers });
   }
   getAllUsers(): Observable<any> {
     const headers = new HttpHeaders({

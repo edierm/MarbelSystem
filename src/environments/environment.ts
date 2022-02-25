@@ -27,6 +27,8 @@ export const environment = {
     apiUsersDelete: 'http://localhost:3000/api/usuarios/deleteUsers',
     apiValueDelete: 'http://localhost:3000/api/value/deleteValue',
     apiSaleDelete: 'http://localhost:3000/api/sales/deleteSale',
+    apiUsersEmail: 'http://localhost:3000/api/usuarios/email',
+
     
 
   }
