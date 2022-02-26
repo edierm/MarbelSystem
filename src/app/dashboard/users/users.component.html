@@ -1,180 +1,161 @@
-<h1 class="title" >USUARIOS</h1>
+<h1 class="title">USUARIOS</h1>
 
 <div class="row">
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title"> Clientes</h4>
+        <h4 class="card-title">Clientes</h4>
         <form class="form-inline ml-auto">
-         
           <input
-            class="form-control "
+            class="form-control"
             type="text"
             name="Nombre"
             [(ngModel)]="name"
-            (ngModelChange)="SearchClient()" 
+            (ngModelChange)="SearchClient()"
             placeholder="Buscar"
             aria-label="Buscar"
           />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Buscar
           </button>
-      
-          <button class="btn btn-outline-success my-2 my-sm-0 agregar" type="submit" routerLink="/dashboard/addUser"  >
-             +
-          </button>
-          
 
+          <button
+            class="btn btn-outline-success my-2 my-sm-0 agregar"
+            type="submit"
+            routerLink="/dashboard/addUser"
+          >
+            +
+          </button>
         </form>
       </div>
       <div class="card-body">
         <div class="table">
-         <!--  <div class="container" infiniteScroll   (scrolled)="onScroll()"> -->
-
           <table class="table">
-
-            <thead class=" text-primary">
-              <th>
-                Nombre
-              </th>
-              <th>
-                Email
-              </th>
-              <th>
-                Documento
-              </th>
-              <th class="text-right">
-                Cuidad
-              </th>
-              <th class="text-right">
-                Dirección
-              </th>
-              <th class="text-right">
-                Rol
-              </th>
-              <th>
-                Acciones
-              </th>
+            <thead class="text-primary">
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Documento</th>
+              <th class="text-right">Cuidad</th>
+              <th class="text-right">Dirección</th>
+              <th class="text-right">Rol</th>
+              <th>Acciones</th>
             </thead>
             <tbody>
               <tr *ngFor="let user of usersClients; index as i">
                 <td>
-                  {{user.name}}
+                  {{ user.name }}
                 </td>
                 <td>
-                  {{user.email}}
+                  {{ user.email }}
                 </td>
                 <td>
-                  {{user.document}}
+                  {{ user.document }}
                 </td>
                 <td class="text-right">
-                  {{user.city}}
+                  {{ user.city }}
                 </td>
                 <td class="text-right">
-                  {{user.address}}
+                  {{ user.address }}
                 </td>
                 <td class="text-right">
-                  {{user.role}}
+                  {{ user.role }}
                 </td>
                 <td class="text-right">
-                  <span (click)="updateClient(user)"><i class="fas fa-address-card"></i> </span>
-                  <span (click)="deleteUser(user)" > <i class="fas fa-trash" ></i>  </span>
-                  
+                  <label class="switch">
+                    <input type="checkbox" [checked]="user.active" (change)="activeChange(user, $event)">
+                    <span class="slider round"></span>
+                  </label>
+                  <span (click)="updateClient(user)"
+                    ><i class="fas fa-address-card"></i>
+                  </span>
+                  <span (click)="deleteUser(user)">
+                    <i class="fas fa-trash"></i>
+                  </span>
                 </td>
               </tr>
             </tbody>
-
           </table>
         </div>
-
       </div>
     </div>
   </div>
 </div>
 
-  <div class="col-md-12">
-    <div class="card card-plain">
-      <div class="card-header">
-        <h4 class="card-title"> Administradores</h4>
-        <div>
-          <form class="form-inline ml-auto">
-            <input
-            class="form-control "
+<div class="col-md-12">
+  <div class="card card-plain">
+    <div class="card-header">
+      <h4 class="card-title">Administradores</h4>
+      <div>
+        <form class="form-inline ml-auto">
+          <input
+            class="form-control"
             type="text"
             name="Nombre"
             [(ngModel)]="name"
-            (ngModelChange)="SearchAdmin()" 
-              placeholder="Buscar"
-              aria-label="Buscar"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Consultar
-            </button>
-            <button class="btn btn-outline-success my-2 my-sm-0 agregar" type="submit" routerLink="/dashboard/addUser"  >
-              +
-           </button>
-          </form>
-        </div>
-        <p class="card-category"> Administradores creados </p>
-        
+            (ngModelChange)="SearchAdmin()"
+            placeholder="Buscar"
+            aria-label="Buscar"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Consultar
+          </button>
+          <button
+            class="btn btn-outline-success my-2 my-sm-0 agregar"
+            type="submit"
+            routerLink="/dashboard/addUser"
+          >
+            +
+          </button>
+        </form>
       </div>
-      
-      <div class="card-body">
-        <div class="table">
-          <table class="table table-bordered">
-            <thead class=" text-primary">
-              <th>
-                Nombre
-              </th>
-              <th>
-                Email
-              </th>
-              <th>
-                Documento
-              </th>
-              <th class="text-right">
-                Cuidad
-              </th>
-              <th class="text-right">
-                Dirección
-              </th>
-              <th class="text-right">
-                Rol
-              </th>
-              <th class="text-right">
-                Acciones
-              </th>
-              
-            </thead>
-            <tbody>
-              <tr *ngFor="let user of usersAdmin">
-                <td>
-                  {{user.name}}
-                </td>
-                <td>
-                  {{user.email}}
-                </td>
-                <td>
-                  {{user.document}}
-                </td>
-                <td class="text-right">
-                  {{user.city}}
-                </td>
-                <td class="text-right">
-                  {{user.address}}
-                </td>
-                <td class="text-right">
-                  {{user.role}}
-                </td>
-                <td class="text-right">
-                  <span (click)="deleteUser(user)" > <i class="fas fa-trash" ></i>  </span>
-                </td>
-                
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <p class="card-category">Administradores creados</p>
+    </div>
+
+    <div class="card-body">
+      <div class="table">
+        <table class="table table-bordered">
+          <thead class="text-primary">
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Documento</th>
+            <th class="text-right">Cuidad</th>
+            <th class="text-right">Dirección</th>
+            <th class="text-right">Rol</th>
+            <th class="text-right">Acciones</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of usersAdmin">
+              <td>
+                {{ user.name }}
+              </td>
+              <td>
+                {{ user.email }}
+              </td>
+              <td>
+                {{ user.document }}
+              </td>
+              <td class="text-right">
+                {{ user.city }}
+              </td>
+              <td class="text-right">
+                {{ user.address }}
+              </td>
+              <td class="text-right">
+                {{ user.role }}
+              </td>
+              <td class="text-right">
+                <label class="switch">
+                  <input type="checkbox" [checked]="user.active" (change)="activeChange(user, $event)">
+                  <span class="slider round"></span>
+                </label>
+                <span (click)="deleteUser(user)">
+                  <i class="fas fa-trash"></i>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-
+</div>

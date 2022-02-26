@@ -59,10 +59,6 @@ export class RegisterComponent {
       }
     );
   }
-  clicksub() {
-    console.log(this.RegisterForm.value);
-    this.RegisterForm.reset();
-  }
   get name() {
     return this.RegisterForm.get('name');
   }
