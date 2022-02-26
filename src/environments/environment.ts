@@ -7,10 +7,10 @@ export const environment = {
   production: false,
   urlDashborad: 'http://localhost:4200/dashboard',
   apis: {
-    userLogin: 'http://localhost:3000/api/usuarios/login',
-    apiUsers: 'http://localhost:3000/api/usuarios',
-    apiUsersUpdate: 'http://localhost:3000/api/usuarios/update',
-    apiReg: 'http://localhost:3000/api/usuarios',
+    userLogin: 'http://localhost:3000/api/users/login',
+    apiUsers: 'http://localhost:3000/api/users',
+    apiUsersUpdate: 'http://localhost:3000/api/users/update',
+    apiReg: 'http://localhost:3000/api/users',
     apiSale: 'http://localhost:3000/api/sales',
     apiSalesByUser: 'http://localhost:3000/api/sales/salesByUser',
     apiRentsByUser: 'http://localhost:3000/api/rents/rentsByUser',
@@ -24,10 +24,10 @@ export const environment = {
     apiValueByUser: 'http://localhost:3000/api/value/valueByUser',
     apiProductDelete: 'http://localhost:3000/api/products/deleteProduct',
     apiRentDelete: 'http://localhost:3000/api/rents/deleteRent',
-    apiUsersDelete: 'http://localhost:3000/api/usuarios/deleteUsers',
+    apiUsersDelete: 'http://localhost:3000/api/users/deleteUsers',
     apiValueDelete: 'http://localhost:3000/api/value/deleteValue',
     apiSaleDelete: 'http://localhost:3000/api/sales/deleteSale',
-    apiUsersEmail: 'http://localhost:3000/api/usuarios/email',
+    apiUsersEmail: 'http://localhost:3000/api/users/email',
 
     
 
