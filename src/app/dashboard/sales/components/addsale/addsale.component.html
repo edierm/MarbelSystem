@@ -100,7 +100,7 @@
       >Rectifique bien los datos antes de registar la venta
     </label>  
   </div>
-  <button (click)="clicksub()" [disabled]="saleForm.invalid" type="submit" class="btn btn-primary" (click)="saveSale()">
+  <button  [disabled]="saleForm.invalid" type="submit" class="btn btn-primary" (click)="saveSale()">
     {{isUpdate?'EDITAR VENTA': 'AGREGAR VENTA'}}
   </button><br>
   <input type="button" onclick="printDiv('page')" value="Ver factura" />

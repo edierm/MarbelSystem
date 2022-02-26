@@ -2,6 +2,8 @@
 import { SaleService } from './../../../services/sale.service';
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'clientSale-cmp',
 

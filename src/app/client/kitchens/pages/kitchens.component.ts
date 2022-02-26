@@ -21,8 +21,9 @@ export class KitchensComponent implements OnInit {
     });
   }
 
-  selectProduct(product) {
+  
+  redirect(product: any) {
     localStorage.setItem('selectSale', JSON.stringify(product));
-    this.router.navigate(['/client'], { relativeTo: this.route });
+    this.router.navigate(['/client/sale'], { relativeTo: this.route });
   }
 }

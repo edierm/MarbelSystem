@@ -107,7 +107,7 @@
       >Rectifique bien los datos antes de registar la venta
     </label>
   </div>
-  <button (click)="clicksub()" [disabled]="rentForm.invalid" type="submit" class="btn btn-primary" (click)="saveRent()">{{isUpdate?'Agregar Abono': 'Agregar Credito'}}</button>
+  <button  [disabled]="rentForm.invalid" type="submit" class="btn btn-primary" (click)="saveRent()">{{isUpdate?'Agregar Abono': 'Agregar Credito'}}</button>
    
 </form>
 

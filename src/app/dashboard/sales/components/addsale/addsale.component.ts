@@ -66,11 +66,25 @@ export class AddSaleComponent implements OnInit {
         console.log(this.route);
         this.saleService.updateSales(data).subscribe((res) => {
             console.log('Actualizada venta', res);
+            this.dataModal.title = 'Venta Actualizada';
+        this.dataModal.body = 'Exito';
+        this.openModal();
+      }, (error) => {
+        this.dataModal.title = 'Error';
+        this.dataModal.body = 'No se pudo actualizar la venta';
+        this.openModal();
         });
     } else {
       console.log('Data Producto: ', data);
       this.saleService.createSale(data).subscribe((res) => {
         console.log('venta  creada', res);
+        this.dataModal.title = 'Venta Añadida';
+        this.dataModal.body = 'Exito';
+        this.openModal();
+      }, (error) => {
+        this.dataModal.title = 'Error';
+        this.dataModal.body = 'No se pudo crear añadir la venta';
+        this.openModal();
       });
     }
   }

@@ -34,7 +34,7 @@ export class DashboardAdminComponent implements OnInit{
               pointRadius: 0,
               pointHoverRadius: 0,
               borderWidth: 3,
-              data: [300, 310, 316, 322, 330, 326, 333, 345, 338, 354]
+              data: [255, 310, 316, 322, 330, 326, 333, 345, 338, 354]
             },
             {
               borderColor: "#f17e5d",

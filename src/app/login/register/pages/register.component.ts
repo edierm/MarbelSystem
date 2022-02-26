@@ -41,6 +41,23 @@ export class RegisterComponent {
     this.modal.hide();
     this.modal.show();
   }
+  sendEmail() {
+    let user = {
+      name:'',
+      email:'',
+    }
+    this.usersService.sendEmail(user).subscribe(
+      data => {
+        let res:any = data;
+        
+      },
+      err => {
+        console.log(err);
+        
+      }
+
+    )
+  }
 
   saveClient() {
     console.log(this.RegisterForm);
@@ -49,6 +66,7 @@ export class RegisterComponent {
         console.log('Respuesta del back: ', res);
         this.dataModal.title = 'Usuario agregado';
         this.dataModal.body = 'El usuario ha sido agregado con exito.';
+        this.sendEmail();
         this.openModal();
       },
       ({ error }) => {
@@ -57,7 +75,8 @@ export class RegisterComponent {
         this.dataModal.body = error.errorMessage;
         this.openModal();
       }
-    );
+    ) ;
+
   }
   get name() {
     return this.RegisterForm.get('name');
