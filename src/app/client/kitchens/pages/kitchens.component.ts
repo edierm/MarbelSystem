@@ -9,11 +9,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class KitchensComponent implements OnInit {
   constructor(private productsService: ProductService, private router: Router, private route: ActivatedRoute) {}
-  productos = [];
+  product = [];
   ngOnInit() {
-    this.productos = JSON.parse(sessionStorage.getItem('dataKitchen'));
+    this.product = JSON.parse(sessionStorage.getItem('dataKitchen'));
     this.productsService.getProductsCategory('Cocinas').subscribe((res) => {
-      this.productos = res.productsCategory;
+      this.product = res.productsCategory;
       sessionStorage.setItem(
         'dataKitchen',
         JSON.stringify(res.productsCategory)

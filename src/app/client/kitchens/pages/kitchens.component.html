@@ -1,6 +1,6 @@
 
 <div class="row bg-white">
-  <div class="col-12 d-flex justify-content-center my-5" *ngIf="!productos">
+  <div class="col-12 d-flex justify-content-center my-5" *ngIf="!product">
     <app-spinner size="100"></app-spinner>
   </div>
 </div>
@@ -12,10 +12,10 @@
     width: 300;
     height: 100;
   "
-  *ngIf="productos"
+  *ngIf="product"
 > 
   <div class="row">
-    <div class="col-md-6" *ngFor="let product of productos">
+    <div class="col-md-6" *ngFor="let product of product">
       <div class="product-wrapper mb-45 text-center">
         <div class="product-img">
           <a data-abc="true" (click)="redirect(product)">

@@ -45,4 +45,18 @@ export class ListProductComponent implements OnInit{
             this.products = products;
         });
     }
+
+ 
+
+    
+
+    activeChange(product, e) {
+        console.log(product, e.target.checked);
+        const auxProduct = { ...product, active: e.target.checked };
+        this.productService.updateProduct(auxProduct).subscribe((res) => {
+          if (res.ok) {
+            this.getAllProducts();
+          }
+        });
+      }
 }
