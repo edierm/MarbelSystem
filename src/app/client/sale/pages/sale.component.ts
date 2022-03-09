@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./sale.component.scss']
 })
 export class SaleComponent implements OnInit{
+    myThumbnail="https://wittlock.github.io/ngx-image-zoom/assets/thumb.jpg";
+  myFullresImage="https://wittlock.github.io/ngx-image-zoom/assets/fullres.jpg";
     product: any;
     SaleForm = this.fb.group({
         name:['',[Validators.required, Validators.minLength(3)]],

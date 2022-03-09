@@ -5,7 +5,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HeaderComponent } from './core/header/header.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -25,6 +25,7 @@ import { ListProductsComponent } from './list-products/pages/list-products.compo
 import { HomeComponent } from './home/pages/home/home.component';
 import { ClientRoutingModule } from './client-routing.module';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 @NgModule({
   declarations: [
@@ -46,9 +47,10 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     CommonModule,
     ClientRoutingModule,
     CarouselModule.forRoot(),
-  
+    FormsModule,
     BsDropdownModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxImageZoomModule,
   ],
 })
 export class ClientModule {}

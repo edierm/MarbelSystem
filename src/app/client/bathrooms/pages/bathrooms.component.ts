@@ -13,7 +13,9 @@ export class BathroomsComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) {}
-  productos: [];
+  
+  productos: any  [];
+  name : any ;
   ngOnInit() {
     this.productos = JSON.parse(sessionStorage.getItem('dataBathrooms'));
     this.productsService.getProductsCategory('Baños').subscribe((res) => {
@@ -29,4 +31,13 @@ export class BathroomsComponent implements OnInit {
     localStorage.setItem('selectSale', JSON.stringify(product));
     this.router.navigate(['/client/sale'], { relativeTo: this.route });
   }
+  SearchBathrooms(){
+    if(this.name == ""){
+        this.ngOnInit();
+    }else{
+        this.productos = this.productos.filter(res =>{
+            return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+        })
+    }
+}
 }

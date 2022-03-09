@@ -14,7 +14,8 @@ export class TableComponent implements OnInit {
       private router: Router,
       private route: ActivatedRoute
       ) {}
-    productos: [];
+    productos:any [];
+    name:any ;
     ngOnInit() {
       this.productos = JSON.parse(sessionStorage.getItem('dataTable'));
       this.productsService.getProductsCategory('Mesones').subscribe((res) => {
@@ -29,4 +30,14 @@ export class TableComponent implements OnInit {
       localStorage.setItem('selectSale', JSON.stringify(product));
       this.router.navigate(['/client/sale'], { relativeTo: this.route });
     }
+
+    SearchTables(){
+      if(this.name == ""){
+          this.ngOnInit();
+      }else{
+          this.productos = this.productos.filter(res =>{
+              return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+          })
+      }
+  }
   }

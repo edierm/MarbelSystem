@@ -1,4 +1,15 @@
 
+<div class="col-md-3">
+  <input
+  class="form-control mr-sm-2"
+  type="text"
+  [(ngModel)]="name"
+  (ngModelChange)="SearchKitchens()"
+  placeholder="Buscar"
+  aria-label="Buscar"
+  />
+  </div>
+
 <div class="row bg-white">
   <div class="col-12 d-flex justify-content-center my-5" *ngIf="!product">
     <app-spinner size="100"></app-spinner>

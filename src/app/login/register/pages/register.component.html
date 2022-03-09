@@ -24,7 +24,7 @@
             RegisterForm.get('name').invalid && RegisterForm.get('name').touched
           "
           class="text-danger"
-          >El tipo de material es requerido</small
+          >El nombre requerido</small
         >
 
         <small id="emailHelp" class="form-text text-muted"
@@ -49,7 +49,7 @@
             RegisterForm.get('email').touched
           "
           class="text-danger"
-          >El tipo de material es requerido</small
+          >El correo es requerido</small
         >
       </div>
 
@@ -69,7 +69,7 @@
             RegisterForm.get('document').touched
           "
           class="text-danger"
-          >El tipo de material es requerido</small
+          >El numero de documento es  requerido</small
         >
 
         <small id="emailHelp" class="form-text text-muted"
@@ -93,7 +93,7 @@
             RegisterForm.get('password').touched
           "
           class="text-danger"
-          >El tipo de material es requerido</small
+          >La contraseña es requerida</small
         >
 
         <small id="emailHelp" class="form-text text-muted"
@@ -117,7 +117,7 @@
             RegisterForm.get('phone').touched
           "
           class="text-danger"
-          >El tipo de material es requerido</small
+          >El celular es requerido</small
         >
 
         <small id="emailHelp" class="form-text text-muted"
@@ -141,7 +141,7 @@
             RegisterForm.get('address').touched
           "
           class="text-danger"
-          >El tipo de material es requerido</small
+          >La direccion es requerida</small
         >
 
         <small id="emailHelp" class="form-text text-muted"
@@ -150,18 +150,23 @@
       </div>
 
       <div class="form-group">
-        <label for="Ciudad">Tipo de usuario </label>
+        
         <br />
 
-        <select id="inputState" class="form-control" formControlName="role">
-          <option value="CLIENT" selected>Cliente</option>
-        </select>
+        <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        
+        formControlName="role"
+        value="CLIENT"
+      />
         <small
           *ngIf="
             RegisterForm.get('role').invalid && RegisterForm.get('role').touched
           "
-          class="text-danger"
-          >El tipo de material es requerido</small
+         
+          ></small
         >
       </div>
 
@@ -180,7 +185,7 @@
             RegisterForm.get('city').invalid && RegisterForm.get('city').touched
           "
           class="text-danger"
-          >El tipo de material es requerido</small
+          >La ciudad es requerida</small
         >
       </div>
 
