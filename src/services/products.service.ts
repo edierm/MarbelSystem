@@ -1,7 +1,5 @@
 import { environment } from '../environments/environment';
 import { Observable } from 'rxjs';
-
-/* aca no se que hacer mani */
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
