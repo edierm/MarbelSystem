@@ -1,3 +1,4 @@
+import { HelpComponent } from './help/help.component';
 import { HomeComponent } from './home/pages/home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { NgModule } from '@angular/core';
@@ -49,6 +50,7 @@ export const routes: Routes = [
       { path: 'info', component: InfoComponent },
       { path: 'lost', component: LostComponent },
       { path: 'list-products', component: ListProductsComponent },
+      { path: 'help', component: HelpComponent }
     ],
   },
   // {

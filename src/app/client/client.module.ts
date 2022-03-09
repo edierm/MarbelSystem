@@ -1,3 +1,4 @@
+import { HelpComponent } from './help/help.component';
 import { SaleComponent } from './sale/pages/sale.component';
 import { LayoutComponent } from './layout/layout.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -38,7 +39,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     BathroomsComponent,
     TableComponent,
     InfoComponent,
-    LayoutComponent
+    LayoutComponent,
+    HelpComponent
   ],
   imports: [
     CommonModule,
