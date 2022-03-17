@@ -8,6 +8,19 @@ placeholder="Buscar"
 aria-label="Buscar"
 />
 </div>
+<div class="col-md-3">
+  <input
+  class="form-control mr-sm-2"
+  type="checkbox"
+  [(ngModel)]="promo"
+  (ngModelChange)="SearchBathroomsPromo()"
+  value="Promocion"
+  aria-label="Buscar"
+  name = "Promocion"
+
+  />
+  <label for="Promocion"> Promocion </label><br>
+  </div>
 <div
   class="container  mt-100"
   style="
@@ -27,6 +40,10 @@ aria-label="Buscar"
           <span class="text-center">
             <img src="assets/img/MarmolMendoza.png" width="50px" />
           </span>
+          <div class="product-promo">
+            <div >{{product.promo}} </div>
+          </div>
+
           <div class="product-action" >
             <div
              

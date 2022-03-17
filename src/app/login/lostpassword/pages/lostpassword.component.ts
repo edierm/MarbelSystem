@@ -20,9 +20,22 @@ export class LostComponent {
 
     lost(){
         console.log(this.lostForm.value);
-        this.userservices.login(this.lostForm.value).subscribe((res)=>{
+        this.userservices.forgot(this.lostForm.value).subscribe((res)=>{
             console.log (res)
         })
     }
-    
+
+
+   /*  forgot(){
+    this.userservices.forgot(data).subscribe((res) => {
+        console.log('Credito  producto', res);
+        this.dataModal.title = 'Credito Creado';
+        this.dataModal.body = 'Exito';
+        this.openModal();
+      }, (error) => {
+        this.dataModal.title = 'Error';
+        this.dataModal.body = 'No se pudo crear el Credito';
+        this.openModal();
+      });
+    }    */
 }

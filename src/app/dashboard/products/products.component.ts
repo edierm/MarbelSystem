@@ -21,6 +21,7 @@ export class ProductsDashComponent implements OnInit {
     price: ['', [Validators.required]],
     color: ['', [Validators.required]],
     amount: ['', [Validators.required]],
+    promo: ['',[]]
   });
   selectProduct = localStorage.getItem('selectProduct');
   dataLocal: any;

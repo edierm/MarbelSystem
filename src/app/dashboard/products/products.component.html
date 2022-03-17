@@ -110,6 +110,30 @@
           <br />
 
           <div class="col-md-12">
+            <div class="pomociones">
+              <label>Promocion</label>
+              <br />
+              <input
+                class="form-control"
+                type="text"
+                name="promo"
+                placeholder="Ingrese eel precio en promocion si no es promocion "
+                formControlName="promo"
+                value="Promocion"
+              />
+              <small
+                *ngIf="
+                  productForm.get('promo').invalid &&
+                  productForm.get('promo').touched
+                "
+                class="text-danger"
+                >El tipo de material es requerido</small
+              >
+            </div>
+          </div>
+          <br />
+          
+          <div class="col-md-12">
             <div class="precio">
               <label>Precio</label>
               <br />

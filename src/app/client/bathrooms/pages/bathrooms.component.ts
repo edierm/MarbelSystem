@@ -16,6 +16,7 @@ export class BathroomsComponent implements OnInit {
   
   productos: any  [];
   name : any ;
+  promo: any ;
   ngOnInit() {
     this.productos = JSON.parse(sessionStorage.getItem('dataBathrooms'));
     this.productsService.getProductsCategory('Baños').subscribe((res) => {
@@ -32,7 +33,7 @@ export class BathroomsComponent implements OnInit {
     this.router.navigate(['/client/sale'], { relativeTo: this.route });
   }
   SearchBathrooms(){
-    if(this.name == ""){
+    if(this.name == "" ){
         this.ngOnInit();
     }else{
         this.productos = this.productos.filter(res =>{
@@ -40,4 +41,16 @@ export class BathroomsComponent implements OnInit {
         })
     }
 }
+
+
+SearchBathroomsPromo(){
+  if(this.promo == "" ){
+      this.ngOnInit();
+  }else{
+      this.productos = this.productos.filter(res =>{
+        return res.promo.match(this.promo);
+      })
+  }
+}
+
 }

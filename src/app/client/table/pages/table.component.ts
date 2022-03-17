@@ -16,6 +16,7 @@ export class TableComponent implements OnInit {
       ) {}
     productos:any [];
     name:any ;
+    promo: any;
     ngOnInit() {
       this.productos = JSON.parse(sessionStorage.getItem('dataTable'));
       this.productsService.getProductsCategory('Mesones').subscribe((res) => {
@@ -39,5 +40,16 @@ export class TableComponent implements OnInit {
               return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
           })
       }
+  }
+
+  SearchTablesPromo(){
+    if(this.promo == "" ){
+        this.ngOnInit();
+    }else{
+        this.productos = this.productos.filter(res =>{
+          return res.promo.match(this.promo);
+
+        })
+    }
   }
   }

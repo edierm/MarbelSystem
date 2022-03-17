@@ -154,13 +154,13 @@
         <br />
 
         <input
-        type="text"
+        type="hidden"
         class="form-control"
         id="exampleInputPassword1"
         
         formControlName="role"
         value="CLIENT"
-      />
+      /> 
         <small
           *ngIf="
             RegisterForm.get('role').invalid && RegisterForm.get('role').touched

@@ -7,6 +7,7 @@
         id="exampleInputEmail1"
         placeholder="Ingrese nombre completo"
         formControlName="name"
+        
       />
       <small id="emailHelp" class="form-text text-muted"
         >Nombre de la empresa o del cliente.</small
@@ -22,6 +23,7 @@
         aria-describedby="emailHelp"
         placeholder="Ingresar email"
         formControlName="email"
+        [readonly]="true"
       />
     </div>
   
@@ -33,6 +35,7 @@
         id="exampleInputPassword1"
         placeholder="Cedula"
         formControlName="document"
+        [readonly]="true"
       />
       <small id="emailHelp" class="form-text text-muted"
         >Cuidado con este numero se consulta esta venta.</small
@@ -47,6 +50,7 @@
         id="exampleInputPassword1"
         placeholder="Ingrese la Contraseña "
         formControlName="password"
+        [readonly]="true"
       />
       <small id="emailHelp" class="form-text text-muted"
         >Cuidado ingrese el valor correcto.</small
@@ -81,12 +85,10 @@
       </small>
     </div>
     
-  
+ 
     <div class="form-group">
       <label for="Ciudad">Tipo de usuario </label>
-  
-      <select id="inputState" class="form-control"  formControlName="role">
-  
+      <select id="inputState" class="form-control"  formControlName="role"  disabled readonly="true" >
         <option selected value="CLIENT">Cliente</option>
         <option value="ADMIN">Administrador</option>
       </select>

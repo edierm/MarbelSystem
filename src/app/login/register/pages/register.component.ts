@@ -30,7 +30,7 @@ export class RegisterComponent {
     password: ['', [Validators.required, Validators.minLength(3)]],
     phone: ['', [Validators.required, Validators.maxLength(11)]],
     address: ['', [Validators.required, Validators.minLength(3)]],
-    role: ['', [Validators.required]],
+    role: ['CLIENT', [Validators.required]],
     city: ['', [Validators.required]],
   });
   dataModal = {

@@ -10,6 +10,16 @@
   aria-label="Buscar"
   />
   </div>
+  <br>
+  <div class="col-md-3">
+    <input
+    class="form-control mr-sm-2"
+    type="checkbox"
+    [(ngModel)]="promo"
+    (ngModelChange)="SearchTablesPromo()"
+      >Promocion
+    
+    </div>
 <div
   class="container mt-100"
   style="
@@ -33,6 +43,9 @@
           </span>
           <div class="product-action">
             <div class="product-action-style">{{ product.name }}</div>
+          </div>
+          <div class="text-center">
+            <p>{{product.promo}}</p>
           </div>
         </div>
       </div>

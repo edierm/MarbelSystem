@@ -69,6 +69,23 @@ body {
     
 }
 
+.product-promo {
+
+    box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    right: 20px;
+    letter-spacing: 1px;
+    padding: 3px 12px;
+    position: absolute;
+    text-align: right;
+    text-transform: uppercase;
+    top: 20px;
+    
+}
+
 .product-action-style {
     background-color: #fff;
     box-shadow: 0 0 8px 1.7px rgba(0, 0, 0, 0.06);
