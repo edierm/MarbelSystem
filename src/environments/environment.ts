@@ -10,7 +10,7 @@ export const environment = {
     userLogin: 'http://localhost:3000/api/users/login',
     apiUsers: 'http://localhost:3000/api/users',
     userReset: 'http://localhost:3000/api/users/reset',
-    userForgot: 'http://localhost:3000/api/users/forgot',
+    userForgot: 'http://localhost:3000/api/password-reset',
     apiUsersUpdate: 'http://localhost:3000/api/users/update',
     apiReg: 'http://localhost:3000/api/users',
     apiSale: 'http://localhost:3000/api/sales',
