@@ -30,7 +30,8 @@ export const environment = {
     apiValueDelete: 'http://localhost:3000/api/value/deleteValue',
     apiSaleDelete: 'http://localhost:3000/api/sales/deleteSale',
     apiUsersEmail: 'http://localhost:3000/api/users/email',
-    apiReports: 'http://localhost:3000/api/reports'    
+    apiReports: 'http://localhost:3000/api/reports',    
+    apiReportsByUser: 'http://localhost:3000/api/reports/byUser'    
 
   }
 };

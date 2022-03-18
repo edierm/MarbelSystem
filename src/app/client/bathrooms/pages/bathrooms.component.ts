@@ -48,7 +48,7 @@ SearchBathroomsPromo(){
       this.ngOnInit();
   }else{
       this.productos = this.productos.filter(res =>{
-        return res.promo.match(this.promo);
+        return res.promo,(this.promo);
       })
   }
 }

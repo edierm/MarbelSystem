@@ -11,20 +11,18 @@ import { Injectable } from '@angular/core';
 export class ValueService {
   constructor(private http: HttpClient) {}
   
-  createValue(ventas: any): Observable<any> {
+  createValue(value: any): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
     });
-    return this.http.post(environment.apis.apiValue , { headers });
+    return this.http.post(environment.apis.apiValue ,value, { headers });
   }
 
-  getAllValue(): Observable<any> {
+  getValue(): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
     });
-    return this.http.get(environment.apis.apiValue,  { headers });
-
-    
+    return this.http.get(environment.apis.apiValue, { headers });
   }
 
   

@@ -1,3 +1,4 @@
+import { DashboardClientComponent } from './dashboardclient/dashboard-client.component';
 import { ValueComponent } from './value/value.component';
 import { ClientAddRentComponent } from './clientrent/components/clientadd-rent.component';
 import { ClientRentComponent } from './clientrent/client-rent.component';
@@ -30,6 +31,7 @@ export const DashboardRouting: Routes = [
     component: DashboardComponent,
     children: [
       { path: 'dashadmin', component: DashboardAdminComponent },
+      { path: 'dashaclient', component: DashboardClientComponent },
       { path: 'user', component: UsersComponent },
       { path: 'product', component: ProductsDashComponent },
       { path: 'product/edit/:id', component: ProductsDashComponent },

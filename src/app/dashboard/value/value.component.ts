@@ -1,3 +1,4 @@
+import { ValueService } from './../../../services/value.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class ValueComponent implements OnInit {
   value: any[];
   nameproduct : any
-    valueService: any;
-  constructor(  ) {}
+    
+  constructor(private valueService:ValueService  ) {}
 
   ngOnInit(): void {
     
@@ -30,7 +31,7 @@ Search(){
 }
 
 deleteValue(value){
-  this.valueService.deleteUser(value._id).subscribe((res) => {
+  this.valueService.deleteValue(value._id).subscribe((res) => {
     console.log('producto  borrada', res);
     this.valueByUser();  
 });

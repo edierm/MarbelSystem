@@ -8,19 +8,19 @@ placeholder="Buscar"
 aria-label="Buscar"
 />
 </div>
-<div class="col-md-3">
-  <input
+  <div class="col-md-3">
+  <label > Promociones</label>
+    <input
   class="form-control mr-sm-2"
   type="checkbox"
   [(ngModel)]="promo"
   (ngModelChange)="SearchBathroomsPromo()"
-  value="Promocion"
   aria-label="Buscar"
-  name = "Promocion"
-
+  name="promocion"
   />
-  <label for="Promocion"> Promocion </label><br>
-  </div>
+</div>
+  
+  
 <div
   class="container  mt-100"
   style="

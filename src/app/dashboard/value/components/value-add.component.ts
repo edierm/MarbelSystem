@@ -113,10 +113,7 @@ export class ValueAddComponent implements OnInit{
         this.imageSrc = reader.result;
         console.log(this.imageSrc);
       }
-      clicksub() {
-        console.log(this.valueAddForm.value);
-        this.valueAddForm.reset();
-      }
+      clicksub() {}
       get name() {
         return this.valueAddForm.get('name');
       }

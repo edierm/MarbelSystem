@@ -14,4 +14,10 @@ export class ReportsService {
     });
     return this.http.get(environment.apis.apiReports, { headers });
   }
+  getReportsByUser(): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8',
+    });
+    return this.http.get(environment.apis.apiReportsByUser, { headers });
+  }
 }
