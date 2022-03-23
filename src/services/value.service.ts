@@ -17,8 +17,7 @@ export class ValueService {
     });
     return this.http.post(environment.apis.apiValue ,value, { headers });
   }
-
-  getValue(): Observable<any> {
+  getAllValues(): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
     });

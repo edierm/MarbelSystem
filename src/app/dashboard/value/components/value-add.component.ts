@@ -39,9 +39,10 @@ export class ValueAddComponent implements OnInit{
     @ViewChild('modalSuccess') public modalRef: ModalDirective;
     imageSrc: string = '';
     valueAddForm = this.fb.group({
-        name: ['', [Validators.required]],
+        
     email: ['', [Validators.required, Validators.email]],
     phone: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
+    name: ['', [Validators.required]],
     addres: ['', [Validators.required, Validators.minLength(3)]],
     city: ['', [Validators.required, Validators.minLength(3)]],
     product: ['', [Validators.required, Validators.minLength(3)]],
@@ -54,6 +55,8 @@ export class ValueAddComponent implements OnInit{
 
 
     });
+
+
     
 
 

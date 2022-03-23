@@ -15,6 +15,15 @@
               placeholder="Buscar"
               aria-label="Buscar"
             />
+            <input
+              class="form-control mr-sm-2"
+              type="text" type="checkbox" 
+              name="Promocion"
+              [(ngModel)]="promo"
+              (ngModelChange)="SearchPromo()"
+            
+          
+            />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
               Buscar
             </button>

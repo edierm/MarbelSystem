@@ -19,7 +19,7 @@ export class ReportsComponent implements OnInit {
     const user = JSON.parse(localStorage.getItem('userLogin'));
     this.valueService.valueByUser(user.email).subscribe((res)=>{
 
-      this.value = res.values;
+      this.value = res.value;
       
       console.log (res) 
 });

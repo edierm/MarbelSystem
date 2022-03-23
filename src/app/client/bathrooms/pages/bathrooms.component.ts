@@ -44,7 +44,7 @@ export class BathroomsComponent implements OnInit {
 
 
 SearchBathroomsPromo(){
-  if(this.promo == "" ){
+  if(this.promo == ''  ){
       this.ngOnInit();
   }else{
       this.productos = this.productos.filter(res =>{

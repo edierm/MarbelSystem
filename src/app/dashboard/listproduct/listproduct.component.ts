@@ -13,6 +13,7 @@ export class ListProductComponent implements OnInit{
     
     products: any[];
     name: any
+    promo:any
     constructor(private productService: ProductService, private router: Router) {
     }
     ngOnInit() {
@@ -29,7 +30,8 @@ export class ListProductComponent implements OnInit{
         }else{
             this.products = this.products.filter(res =>{
                 return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
-            })
+            }
+            )
         }
     }
     deleteProduct(product){
@@ -46,6 +48,15 @@ export class ListProductComponent implements OnInit{
         });
     }
 
+    SearchPromo(){
+        if(this.promo == ""  ){
+            this.getAllProducts();
+        }else{
+            this.products = this.products.filter(res =>{
+                return res.promo(this.promo);
+            })
+        }
+      }
  
 
     
