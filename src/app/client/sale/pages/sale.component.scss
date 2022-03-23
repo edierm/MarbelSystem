@@ -23,7 +23,7 @@ body{
 }
   .container{
     margin: auto;
-    
+    position: relative;
     width: 800px;
     padding: 30px;
   }
@@ -102,6 +102,10 @@ body{
     h1{
       text-align: center;
     }
+    border: 3px solid #555; 
+    position: relative;
+    border-top: -10px;
+    margin-bottom: 50px;
   }
   .title{
       font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;

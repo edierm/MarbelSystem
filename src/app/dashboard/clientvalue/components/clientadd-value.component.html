@@ -1,0 +1,174 @@
+<h1 class="h1">COTIZACIONES</h1>
+
+<form [formGroup]="valueAddForm" >
+  <div class="form-group">
+    <label for="validationDefault01" class="form-label">Nombre</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputEmail1"
+      placeholder="Ingrese nombre completo"
+      formControlName="name"
+      required="true"
+      maxlength="15"
+      minlength="5"
+    
+    >
+    <small *ngIf="valueAddForm.get('name').invalid && valueAddForm.get('name').touched" class="text-danger">El nombre es requerido</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Ingresar email"
+      formControlName="email"
+    />
+    <small *ngIf="valueAddForm.get('email').invalid && valueAddForm.get('email').touched" class="text-danger">El email es requerido</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Teléfono</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Teléfono o celular"
+      formControlName="phone"
+    />
+    <small *ngIf="valueAddForm.get('phone').invalid && valueAddForm.get('phone').touched" class="text-danger">El telefono es requerido</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Dirección</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Dirección "
+      formControlName="addres"
+    />
+    <small *ngIf="valueAddForm.get('addres').invalid && valueAddForm.get('addres').touched" class="text-danger">La direccion es obligatorio</small>
+  </div>
+
+    <small id="emailHelp" class="form-text text-muted"
+      >Cuidado, ingrese el valor correcto</small>
+
+    <div class="form-group">
+      <label for="Ciudad">Ciudad </label>
+      <select id="inputState" class="form-control" formControlName="city" >
+        <option disabled selected>Selecciona una opción</option>
+        <option>Medellín</option>
+        <option>Cali</option>
+        <option>Bogotá</option>
+      </select>
+      <small *ngIf="valueAddForm.get('city').invalid && valueAddForm.get('city').touched" class="text-danger">La ciudad es requerida</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Medidas</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Largo-ancho"
+      formControlName="size"
+    />
+    <small *ngIf="valueAddForm.get('size').invalid && valueAddForm.get('size').touched" class="text-danger">Las medidas son requeridas</small>
+    <small id="emailHelp" class="form-text text-muted"
+      >Cuidado, ingrese el valor correcto</small>
+  </div>
+  
+  <div class="form-group">
+    <label for="Ciudad">Seleccione tipo de producto </label>
+
+    <select id="inputState" class="form-control" formControlName="product">
+      <option disabled selected>Selecciona una opción</option>
+      <option>Meson</option>
+      <option>Cocina</option>
+      <option>Baño</option>
+    </select>
+    <small *ngIf="valueAddForm.get('product').invalid && valueAddForm.get('product').touched" class="text-danger">El tipo de producto es requerido</small>
+  </div>
+
+  <div class="form-group">
+    <label for="Ciudad">Seleccione tipo de material </label>
+
+    <select id="inputState" class="form-control" formControlName="material">
+      <option disabled selected>Selecciona una opción</option>
+      <option>Granito</option>
+      <option>Marmol</option>
+      <option>Cuarstone</option>
+    </select>
+    <small *ngIf="valueAddForm.get('material').invalid && valueAddForm.get('material').touched" class="text-danger">El tipo de material es requerido</small>
+  </div>
+  
+  
+  <div class="form-group">
+    <label for="Ciudad">Seleccione el tono </label>
+
+    <select id="inputState" class="form-control" formControlName="color">
+      <option disabled selected>Selecciona una opción</option>
+      <option>Blanco</option>
+      <option>Negro</option>
+      <option>Verdoso</option>
+    </select>
+    <small *ngIf="valueAddForm.get('color').invalid && valueAddForm.get('color').touched" class="text-danger">El tipo de tono es requerido</small>
+  </div>
+
+  <div class="form-group">
+    <label for="Envio">Precio del envio  </label>
+
+    <input
+    type="text"
+    class="form-control"
+    id="exampleInputPassword1"
+    placeholder="valor"
+    formControlName="shipped"
+  />
+
+  <small id="emailHelp" class="form-text text-muted"
+    >Cuidado, ingrese el valor correcto</small>
+   
+  </div>
+  <br>
+  
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1"
+      >Rectifique bien los datos antes de registar la venta
+    </label>
+  </div>
+  <button   [disabled]="valueAddForm.invalid" type="submit" class="btn btn-primary" (click)="saveValue()">
+   Enviar cotizacion 
+  </button>
+</form>
+
+<div
+  bsModal
+  #modalSuccess="bs-modal"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="dialog-static-name"
+>
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-static-name" class="modal-title pull-left">
+          {{ dataModal.title }}
+        </h4>
+        <button
+          type="button"
+          class="btn-close close pull-right"
+          aria-label="Close"
+          (click)="modalSuccess.hide()"
+        >
+          <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{ dataModal.body }}
+      </div>
+    </div>
+  </div>
+</div>

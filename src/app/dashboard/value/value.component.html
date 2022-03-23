@@ -1,4 +1,4 @@
-<h1 class="h1">COTIZACIONES</h1>
+
 
 <div class="row">
   <div class="col-md-12">
@@ -37,6 +37,7 @@
               <th>Material</th>
               <th >Direccion</th>
               <th class="text-right">Ciudad</th>
+              <th class="text-right">Ver o editar</th>
             </thead>
             <tbody>
               <tr *ngFor="let value of value">
@@ -56,6 +57,11 @@
 
                 <td class="text-right">
                   {{ value.city }}
+                </td>
+                <td class="text-right">
+                  <span (click)="editValue(value)"><i class="fas fa-donate"></i> </span>
+                  <span (click)="deleteValue(value)" > <i class="fas fa-trash" ></i>  </span>
+                  
                 </td>
               </tr>
             </tbody>

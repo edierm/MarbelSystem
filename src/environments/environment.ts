@@ -23,6 +23,7 @@ export const environment = {
     apiRentUpdate: 'http://localhost:3000/api/rents/update',
     apiProductsCategory: 'http://localhost:3000/api/products/productsCategory',
     apiValue: 'http://localhost:3000/api/value',
+    apiValueUpdate: 'http://localhost:3000/api/value/updateValue',
     apiValueByUser: 'http://localhost:3000/api/value/valueByUser',
     apiProductDelete: 'http://localhost:3000/api/products/deleteProduct',
     apiRentDelete: 'http://localhost:3000/api/rents/deleteRent',

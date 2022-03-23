@@ -17,11 +17,11 @@ export class ClientRentComponent implements OnInit {
   ngOnInit(): void {
     const userRent = JSON.parse(localStorage.getItem('userLogin'));
     
-    this.rentService.rentsByUser(userRent.email).subscribe((rents)=>{
+    this.rentService.rentsByUser(userRent.email).subscribe((res)=>{
 
-      this.rent = rents.rents;
+      this.rent = res.rents;
       
-      console.log (rents) 
+      console.log (res) 
     })
 }
 

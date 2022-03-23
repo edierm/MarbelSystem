@@ -1,3 +1,4 @@
+import { ClientValueAddComponent } from './clientvalue/components/clientadd-value.component';
 import { DashboardClientComponent } from './dashboardclient/dashboard-client.component';
 import { ValueComponent } from './value/value.component';
 import { ClientAddRentComponent } from './clientrent/components/clientadd-rent.component';
@@ -11,7 +12,6 @@ import { AddRentComponent } from './sales/components/addrent/addrent.component';
 
 import { DashboardAdminComponent } from './dashboard/dashboard-admin.component';
 import { ProductsDashComponent } from './products/products.component';
-import { ReportsComponent } from './reports/reports.component';
 
 import { SalesComponent } from './sales/sales.component';
 import { DashboardComponent } from './dashboard.component';
@@ -21,6 +21,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './users/components/adduser/adduser.component';
 import { ValueAddComponent } from './value/components/value-add.component';
+import { ClientValueComponent } from './clientvalue/client-value.component';
 
 
 
@@ -39,7 +40,8 @@ export const DashboardRouting: Routes = [
       { path: 'sales/edit/:id', component: AddSaleComponent },
       { path: 'rent/edit/:id', component: AddRentComponent },
       { path: 'user/edit/:id', component: AddUserComponent},
-      { path: 'reports', component: ReportsComponent },
+      { path: 'value/edit/:id', component: ValueAddComponent},
+      { path: 'valueclient', component: ClientValueComponent },
       { path: 'addsale', component: AddSaleComponent },
       { path: 'addrent', component: AddRentComponent },
       { path: 'addUser', component: AddUserComponent},
@@ -50,6 +52,7 @@ export const DashboardRouting: Routes = [
       { path: 'clientaddrent', component: ClientAddRentComponent },
       { path: 'value', component: ValueComponent },
       { path: 'value-add', component: ValueAddComponent },
+      { path: 'clientaddvalue', component: ClientValueAddComponent },
       
       
     
