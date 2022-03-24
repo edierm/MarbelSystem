@@ -1,3 +1,4 @@
+import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { RegisterComponent } from './register/pages/register.component';
 
 import { NgModule } from '@angular/core';
@@ -21,6 +22,10 @@ export const routes: Routes = [
   {
     path:'register',
     component: RegisterComponent
+  },
+  {
+    path:'password-reset/:userId',
+    component: PasswordResetComponent
   }
 ];
 

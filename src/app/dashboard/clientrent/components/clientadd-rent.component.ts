@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { BsModalService, ModalDirective } from 'ngx-bootstrap/modal';
 
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Component, ViewChild, OnInit } from '@angular/core';
 
 @Component({
@@ -21,44 +21,50 @@ export class ClientAddRentComponent implements OnInit{
         private modalService: BsModalService
     ){}
     selectRent = localStorage.getItem('selectRent');
-  dataLocal: any;
-  isUpdate = false;
-  
-  ngOnInit(): void {
-    if (this.router.url.includes('edit')) {
-      this.dataLocal = JSON.parse(localStorage.getItem('selectRent'));
-      if (this.dataLocal) {
-        this.cAddRentForm.patchValue(this.dataLocal);
-        this.isUpdate = true;
-      }
-    }
-    console.log(this.router.url);
-  }
+    
+    isUpdate = false;
+    rent: any ;
 
     @ViewChild('modalSuccess') public modalRef: ModalDirective;
     imageSrc: string = '';
-    cAddRentForm = this.fb.group({
-        name: ['', [Validators.required]],
-    email: ['', [Validators.required, Validators.email]],
-    document: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
-    rent: ['', [Validators.required, Validators.minLength(3)]],
-    city: ['', [Validators.required, Validators.maxLength(11)]],
-    product: ['', [Validators.required, Validators.minLength(3)]],
-    price: ['', [Validators.required, Validators.minLength(3)]],
-    imageSrc:['',[Validators.required]]
-
-    });
-
+    cAddRentForm: FormGroup;
 
     dataModal = {
-        title: '',
-        body: ''
-    };
-    openModal() {
-      this.modalRef.hide();
-      this.modalRef.show();
+      title: '',
+      body: ''
+  };
+
+  
+  ngOnInit(): void {
+      let dataLocal = JSON.parse(localStorage.getItem('userLogin'));
+      this.cAddRentForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      name: ['', [Validators.required]],
+      document: ['',[Validators.required, Validators.minLength(5), Validators.maxLength(15)],],
+      rent: ['', [Validators.required, Validators.minLength(3)]],
+      city: ['', [Validators.required, Validators.maxLength(11)]],
+      product: ['', [Validators.required, Validators.minLength(3)]],
+      price: ['', [Validators.required, Validators.minLength(3)]],
+      imageSrc:['',[Validators.required]],
+
+    });
+    if (dataLocal){
+      this.cAddRentForm.patchValue(dataLocal);
     }
-    saveRent() {
+    if (this.router.url.includes('edit')){
+      dataLocal = JSON.parse(localStorage.getItem('selectRent'));
+      if(dataLocal){
+        this.cAddRentForm.patchValue(dataLocal);
+        this.isUpdate = true;
+      }
+    }
+  }
+        
+  openModal() {
+  this.modalRef.hide();
+  this.modalRef.show();
+  }
+  saveRent() {
         console.log(this.cAddRentForm.value);
         
         const data = this.cAddRentForm.value;
@@ -86,6 +92,7 @@ export class ClientAddRentComponent implements OnInit{
             this.dataModal.title = 'Error';
             this.dataModal.body = 'No se pudo crear el Credito';
             this.openModal();
+          
           });
         }
       }
@@ -120,9 +127,7 @@ export class ClientAddRentComponent implements OnInit{
       get document() {
         return this.cAddRentForm.get('document');
       }
-      get rent() {
-        return this.cAddRentForm.get('rent');
-      }
+   
       get city() {
         return this.cAddRentForm.get('city');
       }

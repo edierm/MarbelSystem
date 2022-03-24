@@ -8,9 +8,10 @@ import { CommonModule } from '@angular/common';
 import { LostComponent } from '../login/lostpassword/pages/lostpassword.component';
 import { LoginComponent } from './login/pages/login.component';
 import { LoginRoutingModule } from './login.routes';
+import { PasswordResetComponent } from './password-reset/password-reset.component';
 
 @NgModule({
-  declarations: [LostComponent, LoginComponent , RegisterComponent ],
+  declarations: [LostComponent, LoginComponent , RegisterComponent , PasswordResetComponent],
   imports: [LoginRoutingModule, CommonModule, ReactiveFormsModule,ModalModule.forRoot()],
 
   exports: [
