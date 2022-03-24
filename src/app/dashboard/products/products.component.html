@@ -5,13 +5,13 @@
       <div class="panel-body" [formGroup]="productForm">
         <div class="col-md-12">
           <div class="product_meta">
-            <label>Titulo del producto</label>
+            <label>TÍTULO DE PRODUCTO</label>
 
             <input
               class="form-control"
               type="text"
               name="tipro"
-              placeholder="Titulo del producto"
+              placeholder="Título del producto"
               formControlName="name"
             />
             <small
@@ -26,13 +26,13 @@
         </div>
         <br />
         <div class="col-md-12">
-          <label>Descripccion del producto</label>
+          <label>DESCRIPCIÓN DE PRODUCTO</label>
           <input
             class="form-control"
             type="text"
             name="details"
             size=" 80px"
-            placeholder="descripcion del producto "
+            placeholder="Descripcion del producto "
             formControlName="description"
           />
           <small
@@ -47,16 +47,16 @@
 
         <div class="col-md-12">
           <div class="product_meta">
-            <label for="Categoria">Seleccione una categoría </label>
+            <label for="Categoria">SELECCIONE UNA CATEGORÍA </label>
             <select
               id="inputState"
               class="form-control"
               formControlName="category"
             >
-              <option disabled selected>Selecciona una opción</option>
-              <option>Mesones</option>
-              <option>Cocinas</option>
-              <option>Baños</option>
+              <option disabled selected>SELECCIONE UNA OPCIÓN</option>
+              <option>MESONES</option>
+              <option>COCINAS</option>
+              <option>BAÑOS</option>
             </select>
             <small
               *ngIf="
@@ -77,17 +77,17 @@
           </div>
 
           <div class="col-md-12">
-            <label for="Categoria">Seleccione un material </label>
+            <label for="Categoria">SELECCIONE EL MATERIAL  </label>
 
             <select
               id="inputState"
               class="form-control"
               formControlName="material"
             >
-              <option selected>Selecciona...</option>
-              <option>Marmol</option>
-              <option>quartzo</option>
-              <option>granito</option>
+              <option selected>SELECCIONA...</option>
+              <option>MAMOL</option>
+              <option>QUARTZO</option>
+              <option>GRANITO</option>
             </select>
             <small
               *ngIf="
@@ -111,7 +111,7 @@
 
           <div class="col-md-12">
             <div class="pomociones">
-              <label>Promocion</label>
+              <label>PROMOCIÓN</label>
               <br />
               <input
                 class="form-control"
@@ -135,7 +135,7 @@
           
           <div class="col-md-12">
             <div class="precio">
-              <label>Precio</label>
+              <label>PRECIO</label>
               <br />
               <input
                 class="form-control"
@@ -156,17 +156,17 @@
           </div>
           <br />
           <div class="col-md-12">
-            <label for="Categoria">Seleccione un color </label>
+            <label for="Categoria">SELECCIONE UN COLOR </label>
 
             <select
               id="inputState"
               class="form-control"
               formControlName="color"
             >
-              <option selected>Selecciona...</option>
-              <option>azul</option>
-              <option>blanco chispa</option>
-              <option>hueso</option>
+              <option selected>SELECCIONA...</option>
+              <option>AZUL</option>
+              <option>BLANCO CHISPA</option>
+              <option>HUESO</option>
               <small
                 *ngIf="
                   productForm.get('color').invalid &&
@@ -180,7 +180,7 @@
 
           <br />
           <div class="col-md-12">
-            <label>Cantidad</label>
+            <label>CANTIDAD</label>
             <input
               class="form-control"
               type="quantiy"

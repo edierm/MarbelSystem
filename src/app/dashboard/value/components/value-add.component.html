@@ -2,7 +2,7 @@
 
 <form [formGroup]="valueAddForm" >
   <div class="form-group">
-    <label for="validationDefault01" class="form-label">Nombre</label>
+    <label for="validationDefault01" class="form-label">NOMBRE</label>
     <input
       type="text"
       class="form-control"
@@ -17,7 +17,7 @@
     <small *ngIf="valueAddForm.get('name').invalid && valueAddForm.get('name').touched" class="text-danger">El nombre es requerido</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
+    <label for="exampleInputEmail1">EMAIL</label>
     <input
       type="email"
       class="form-control"
@@ -29,7 +29,7 @@
     <small *ngIf="valueAddForm.get('email').invalid && valueAddForm.get('email').touched" class="text-danger">El email es requerido</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Teléfono</label>
+    <label for="exampleInputPassword1">TELÉFONO</label>
     <input
       type="text"
       class="form-control"
@@ -37,10 +37,10 @@
       placeholder="Teléfono o celular"
       formControlName="phone"
     />
-    <small *ngIf="valueAddForm.get('phone').invalid && valueAddForm.get('phone').touched" class="text-danger">El telefono es requerido</small>
+    <small *ngIf="valueAddForm.get('phone').invalid && valueAddForm.get('phone').touched" class="text-danger">El teléfono es requerido</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Dirección</label>
+    <label for="exampleInputPassword1">DIRECCIÓN</label>
     <input
       type="text"
       class="form-control"
@@ -48,24 +48,24 @@
       placeholder="Dirección "
       formControlName="addres"
     />
-    <small *ngIf="valueAddForm.get('addres').invalid && valueAddForm.get('addres').touched" class="text-danger">La direccion es obligatorio</small>
+    <small *ngIf="valueAddForm.get('addres').invalid && valueAddForm.get('addres').touched" class="text-danger">La dirección es obligatorio</small>
   </div>
 
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado, ingrese el valor correcto</small>
+      >CUIDADO, INGRESE EL VALOR CORRECTO</small><br>
 
     <div class="form-group">
-      <label for="Ciudad">Ciudad </label>
+      <label for="Ciudad">CIUDAD </label>
       <select id="inputState" class="form-control" formControlName="city" >
-        <option disabled selected>Selecciona una opción</option>
-        <option>Medellín</option>
-        <option>Cali</option>
-        <option>Bogotá</option>
+        <option disabled selected>SELECCIONA UNA OPCIÓN</option>
+        <option>MEDELLÍN/option>
+        <option>CALI</option>
+        <option>BOGOTÁ</option>
       </select>
       <small *ngIf="valueAddForm.get('city').invalid && valueAddForm.get('city').touched" class="text-danger">La ciudad es requerida</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Medidas</label>
+    <label for="exampleInputPassword1">MEDIDAD</label>
     <input
       type="text"
       class="form-control"
@@ -75,48 +75,48 @@
     />
     <small *ngIf="valueAddForm.get('size').invalid && valueAddForm.get('size').touched" class="text-danger">Las medidas son requeridas</small>
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado, ingrese el valor correcto</small>
+      >CUIDADO, INGRESE EL VALOR CORRECTO</small><br>
   </div>
   
   <div class="form-group">
-    <label for="Ciudad">Seleccione tipo de producto </label>
+    <label for="Ciudad">SELECCIONE TIPO DE PRODUCTO </label>
 
     <select id="inputState" class="form-control" formControlName="product">
-      <option disabled selected>Selecciona una opción</option>
-      <option>Meson</option>
-      <option>Cocina</option>
-      <option>Baño</option>
+      <option disabled selected>SELECCIONA UNA OPCIÓN</option>
+      <option>MESON</option>
+      <option>COCINA</option>
+      <option>BAÑO</option>
     </select>
     <small *ngIf="valueAddForm.get('product').invalid && valueAddForm.get('product').touched" class="text-danger">El tipo de producto es requerido</small>
   </div>
 
   <div class="form-group">
-    <label for="Ciudad">Seleccione tipo de material </label>
+    <label for="Ciudad">SELECCIONE TIPO DE MATERIAL </label>
 
     <select id="inputState" class="form-control" formControlName="material">
-      <option disabled selected>Selecciona una opción</option>
-      <option>Granito</option>
-      <option>Marmol</option>
-      <option>Cuarstone</option>
+      <option disabled selected>SELECCIONA UNA OPCIÓN</option>
+      <option>GRANITO</option>
+      <option>MARMOL</option>
+      <option>CUARSTONE</option>
     </select>
     <small *ngIf="valueAddForm.get('material').invalid && valueAddForm.get('material').touched" class="text-danger">El tipo de material es requerido</small>
   </div>
   
   
   <div class="form-group">
-    <label for="Ciudad">Seleccione el tono </label>
+    <label for="Ciudad">SELECCIONE EL TONO </label>
 
     <select id="inputState" class="form-control" formControlName="color">
-      <option disabled selected>Selecciona una opción</option>
-      <option>Blanco</option>
-      <option>Negro</option>
-      <option>Verdoso</option>
+      <option disabled selected>SELECCIONA UNA OPCIÓN</option>
+      <option>BLANCO</option>
+      <option>NEGRO</option>
+      <option>VERDOSO</option>
     </select>
-    <small *ngIf="valueAddForm.get('color').invalid && valueAddForm.get('color').touched" class="text-danger">El tipo de tono es requerido</small>
+    <small *ngIf="valueAddForm.get('color').invalid && valueAddForm.get('color').touched" class="text-danger">El tipo de tono es requerido </small>
   </div>
 
   <div class="form-group">
-    <label for="Envio">Precio del envio  </label>
+    <label for="Envio">PRECIO DEL ENVIO</label>
 
     <input
     type="text"
@@ -127,7 +127,7 @@
   />
 
   <small id="emailHelp" class="form-text text-muted"
-    >Cuidado, ingrese el valor correcto</small>
+    >CUIDADO, INGRESE EL VALOR CORRECTO</small>
    
   </div>
   <br>
@@ -135,11 +135,11 @@
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
     <label class="form-check-label" for="exampleCheck1"
-      >Rectifique bien los datos antes de registar la venta
+      >RECTIFIQUE BIEN LOS DATOS ANTES DE REGISTRAR LA VENTA
     </label>
   </div>
   <button   [disabled]="valueAddForm.invalid" type="submit" class="btn btn-primary" (click)="saveValue()">
-   Enviar cotizacion 
+   ENVIAR COTIZACIÓN
   </button>
 </form>
 

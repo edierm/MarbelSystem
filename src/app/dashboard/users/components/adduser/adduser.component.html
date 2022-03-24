@@ -2,7 +2,7 @@
 
 <form [formGroup]="userForm">
   <div class="form-group">
-    <label for="exampleInputEmail1">Nombre</label>
+    <label for="exampleInputEmail1">NOMBRE</label>
     <input
       type="text"
       class="form-control"
@@ -13,12 +13,12 @@
     <small *ngIf="userForm.get('name').invalid && userForm.get('name').touched" class="text-danger">El tipo de material es requerido</small>
 
     <small id="emailHelp" class="form-text text-muted"
-      >Nombre de la empresa o del cliente.</small
-    >
+      >NOMBRE DE LA EMPRESA O DEL CLIENTE.</small
+    ><br>
   </div>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
+    <label for="exampleInputEmail1">EMAIL</label>
     <input
       type="email"
       class="form-control"
@@ -32,7 +32,7 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Cedula</label>
+    <label for="exampleInputPassword1">CEDULA</label>
     <input
       type="text"
       class="form-control"
@@ -43,12 +43,12 @@
     <small *ngIf="userForm.get('document').invalid && userForm.get('document').touched" class="text-danger">El tipo de material es requerido</small>
 
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado con este número se consulta esta venta.</small
-    >
+      >CUIDADO CON ESTE NÚMERO SE CONSULTA ESTA VENTA</small
+    ><br>
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Contraseña</label>
+    <label for="exampleInputPassword1">CONTRASEÑA</label>
     <input
       type="password"
       class="form-control"
@@ -59,12 +59,12 @@
     <small *ngIf="userForm.get('password').invalid && userForm.get('password').touched" class="text-danger">El tipo de material es requerido</small>
 
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado, ingrese el valor correcto.</small
-    >
+      >CUIDADO, INGRESE EL VALOR CORRECTO.</small
+    ><br>
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Celular</label>
+    <label for="exampleInputPassword1">CELULAR</label>
     <input
       type="text"
       class="form-control"
@@ -75,12 +75,12 @@
     <small *ngIf="userForm.get('phone').invalid && userForm.get('phone').touched" class="text-danger">El tipo de material es requerido</small>
 
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado, ingrese el número bien
-    </small>
+      >CUIDADO, INGRESE EL NÚMERO CORRRECTO
+    </small><br>
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Dirección</label>
+    <label for="exampleInputPassword1">DIRECCIÓN</label>
     <input
       type="text"
       class="form-control"
@@ -91,31 +91,31 @@
     <small *ngIf="userForm.get('address').invalid && userForm.get('address').touched" class="text-danger">El tipo de material es requerido</small>
 
     <small id="emailHelp" class="form-text text-muted"
-      >En caso de ser empresa
-    </small>
+      >EN CASO DE SER EMPRESA
+    </small><br>
   </div>
   
 
   <div class="form-group">
-    <label for="Ciudad">Tipo de usuario </label>
+    <label for="Ciudad">TIPO DE USUARIO </label>
 
     <select id="inputState" class="form-control"  formControlName="role">
-      <option disabled selected>Selecciona una opción</option>
-      <option selected value="CLIENT">Cliente</option>
-      <option value="ADMIN">Administrador</option>
+      <option disabled selected>SELECCIONE UNA OPCIÓN</option>
+      <option selected value="CLIENT">CLEINTE</option>
+      <option value="ADMIN">ADMINISTRADOR</option>
     </select>
     <small *ngIf="userForm.get('role') && userForm.get('role').invalid && userForm.get('role') && userForm.get('role').touched" class="text-danger">El tipo de material es requerido</small>
 
   </div>
 
   <div class="form-group">
-    <label for="Ciudad">Ciudad </label>
+    <label for="Ciudad">CIUDAD </label>
 
     <select id="inputState" class="form-control"  formControlName="city">
-      <option disabled selected>Selecciona una opción</option>
-      <option>Medellín</option>
-      <option>Cali</option>
-      <option>Bogotá</option>
+      <option disabled selected>SELECCIONE UNA OPCIÓN</option>
+      <option>MEDELLÍN</option>
+      <option>CALI</option>
+      <option>BOGOTÁ</option>
     </select>
     <small *ngIf="userForm.get('city').invalid && userForm.get('city').touched" class="text-danger">El tipo de material es requerido</small>
 
@@ -124,7 +124,7 @@
   <div class="form-check">
     
     <label class="form-check-label" for="exampleCheck1"
-      >Rectifique bien los datos antes de agregar el usuario
+      >RECTIFIQUE BIEN LOS DATOS ANTES DE AGREGAR AL USUARIO
     </label>
   </div>
   <button [disabled]="userForm.invalid" type="submit" class="btn btn-primary" (click)="saveUser()">{{isUpdate?'EDITAR USUARIO': 'AGREGAR USUARIO'}}</button>

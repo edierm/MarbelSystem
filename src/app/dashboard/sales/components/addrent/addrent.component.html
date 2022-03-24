@@ -2,7 +2,7 @@
 
 <form [formGroup]="rentForm" >
   <div class="form-group">
-    <label for="exampleInputEmail1">Nombre</label>
+    <label for="exampleInputEmail1">NOMBRE</label>
     <input
       type="text"
       class="form-control"
@@ -15,7 +15,7 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
+    <label for="exampleInputEmail1">EMAIL</label>
     <input
       type="email"
       class="form-control"
@@ -29,7 +29,7 @@
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Cedula</label>
+    <label for="exampleInputPassword1">CEDULA</label>
     <input
       type="text"
       class="form-control"
@@ -40,12 +40,12 @@
     <small *ngIf="rentForm.get('document').invalid && rentForm.get('document').touched" class="text-danger">El tipo de material es requerido</small>
 
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado con este número se consulta esta venta</small
-    >
+      >CUIDADO CON ESTE NÚMERO SE CONSULTA ESTA VENTA</small
+    ><br>
   </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Abono</label>
+    <label for="exampleInputPassword1">ABONO</label>
     <input
       type="text"
       class="form-control"
@@ -56,11 +56,11 @@
     <small *ngIf="rentForm.get('rent').invalid && rentForm.get('rent').touched" class="text-danger">El tipo de material es requerido</small>
 
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado, ingrese el valor correcto</small
-    >
+      >CUIDADO, INGRESE EL VALOR CORRECTO</small
+    ><br>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Precio</label>
+    <label for="exampleInputPassword1">PRECIO</label>
     <input
       type="text"
       class="form-control"
@@ -71,31 +71,31 @@
     <small *ngIf="rentForm.get('price').invalid && rentForm.get('price').touched" class="text-danger">El tipo de material es requerido</small>
 
     <small id="emailHelp" class="form-text text-muted"
-      >Cuidado, ingrese el valor correcto</small
-    >
+      >CUIDADO, INGRESE EL VALOR CORRECTO</small
+    ><br>
   </div>
 
   <div class="form-group">
-    <label for="Ciudad">Seleccione la ciudad </label>
+    <label for="Ciudad">SELECCIONE LA CIUDAD</label>
 
     <select id="inputState" class="form-control" formControlName="city">
-      <option disabled selected>Selecciona una opción</option>
-      <option>Medellin</option>
-      <option>Bogota</option>
-      <option>Cali</option>
+      <option disabled selected>SELECCIONNA UNA OPCIÓN</option>
+      <option>MEDELLÍN</option>
+      <option>BOGOTÁ</option>
+      <option>CALI</option>
     </select>
     <small *ngIf="rentForm.get('city').invalid && rentForm.get('city').touched" class="text-danger">El tipo de material es requerido</small>
 
   </div>
 
   <div class="form-group">
-    <label for="Ciudad">Seleccione tipo de producto </label>
+    <label for="Ciudad">SELECCIONE TIPO DE PRODCUCTO </label>
 
     <select id="inputState" class="form-control" formControlName="product" >
-      <option disabled selected>Selecciona una opción</option>
-      <option>Meson</option>
-      <option>Cocina</option>
-      <option>Baño</option>
+      <option disabled selected>SELECCIONA UNA OPCIÓN</option>
+      <option>MESON</option>
+      <option>COCINA</option>
+      <option>BAÑO</option>
     </select>
     <small *ngIf="rentForm.get('product').invalid && rentForm.get('product').touched" class="text-danger">El tipo de material es requerido</small>
 
@@ -104,7 +104,7 @@
   <div class="form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
     <label class="form-check-label" for="exampleCheck1"
-      >Rectifique bien los datos antes de registar la venta
+      >RECTIFIQUE BIEN LOS DATOS ANTES DE REGISTRAR LA VENTA
     </label>
   </div>
   <button  [disabled]="rentForm.invalid" type="submit" class="btn btn-primary" (click)="saveRent()">{{isUpdate?'Agregar Abono': 'Agregar Credito'}}</button>
