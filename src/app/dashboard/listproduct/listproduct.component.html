@@ -84,7 +84,7 @@
                   </td>
                   <td class="text-right">
                     <label class="switch">
-                      <input type="checkbox" [checked]="product.active" (change)="activeChange(product, $event)">
+                      <input type="checkbox" ng-model="Promocion" ng-true-value="true">
                       <span class="slider round"></span>
                     </label>
                     <span (click)="editProduct(product)"><i class="fas fa-edit"></i> </span>
