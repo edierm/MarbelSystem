@@ -1,14 +1,5 @@
 
-<div class="col-md-3">
-  <input
-  class="form-control mr-sm-2"
-  type="text"
-  [(ngModel)]="name"
-  (ngModelChange)="SearchKitchens()"
-  placeholder="Buscar"
-  aria-label="Buscar"
-  />
-  </div>
+
 
 <div class="row bg-white">
   <div class="col-12 d-flex justify-content-center my-5" *ngIf="!product">
@@ -16,17 +7,40 @@
   </div>
 </div>
 
-<div
-  class="container mt-100"
-  style="
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIrQ2aL4X0nXsGhj5mucEeAsMEAMqEfQXXfQ&usqp=CAU');
-    width: 300;
-    height: 100;
-  "
-  *ngIf="product"
-> 
-  <div class="row">
-    <div class="col-md-6" *ngFor="let product of product">
+
+  
+  
+
+<div class="row">
+  <div class="col-md-1 text-center">
+
+    <a class="text-center" routerLink="/client/home"  > 
+    <img src="assets/img/flechatras.png" width="30%" height="60%"  >
+  </a>
+</div> 
+</div> 
+
+<div class="title">
+  <h1>COCINAS A TU MEDIDA</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-2 text-center" >
+
+    <input
+    class="form-control mr-sm-2 text-center"
+    type="text"
+    [(ngModel)]="name"
+    (ngModelChange)="SearchKitchens()"
+    placeholder="Buscar"
+    aria-label="Buscar"
+    width="80%"
+    height="80%"
+    />
+    </div>
+    <div class="container ">
+      
+    <div class="col-md-4" *ngFor="let product of product">
       <div class="product-wrapper mb-45 text-center">
         <div class="product-img">
           <a data-abc="true" (click)="redirect(product)">
@@ -42,4 +56,5 @@
       </div>
     </div>
   </div>
-</div>
+
+

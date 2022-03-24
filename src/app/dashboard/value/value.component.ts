@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ValueService } from './../../../services/value.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,7 +12,7 @@ export class ValueComponent implements OnInit {
   value: any[];
   nameproduct : any
     
-  constructor(private valueService:ValueService  ) {}
+  constructor(private valueService:ValueService, private router: Router  ) {}
 
   ngOnInit(): void {
     
@@ -47,6 +48,14 @@ getValue(){
   });
 
 }
+editValue(value) {
+  localStorage.setItem('selectValue', JSON.stringify(value));
+  this.router.navigate([`/dashboard/value/edit/${value._id}`]);
+}
+
+
+
+
 
 
 }

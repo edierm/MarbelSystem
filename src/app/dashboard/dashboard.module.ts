@@ -1,3 +1,5 @@
+import { ClientValueAddComponent } from './clientvalue/components/clientadd-value.component';
+import { ClientValueComponent } from './clientvalue/client-value.component';
 import { DashboardClientComponent } from './dashboardclient/dashboard-client.component';
 import { ValueAddComponent } from './value/components/value-add.component';
 import { ValueComponent } from './value/value.component';
@@ -21,7 +23,6 @@ import { DashboardComponent } from './dashboard.component';
 
 import { DashboardAdminComponent } from './dashboard/dashboard-admin.component';
 import { ProductsDashComponent } from './products/products.component';
-import { ReportsComponent } from './reports/reports.component';
 import { SalesComponent } from './sales/sales.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -39,7 +40,6 @@ import { ClientAddRentComponent } from './clientrent/components/clientadd-rent.c
     UsersComponent,
     ProductsDashComponent,
     SalesComponent,
-    ReportsComponent,
     DashboardComponent,
     AddRentComponent,
     ListProductComponent,
@@ -51,7 +51,9 @@ import { ClientAddRentComponent } from './clientrent/components/clientadd-rent.c
     ClientAddRentComponent,
     ValueComponent,
     ValueAddComponent,
-    DashboardClientComponent
+    ClientValueAddComponent,
+    DashboardClientComponent,
+    ClientValueComponent
 
     
   

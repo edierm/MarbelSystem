@@ -24,7 +24,12 @@ export class ValueService {
     return this.http.get(environment.apis.apiValue, { headers });
   }
 
-  
+  updateValue(rent: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8',
+    });
+    return this.http.post(environment.apis.apiValueUpdate, rent, { headers });
+  }
 
   valueByUser(email: string): Observable<any> {
     const headers = new HttpHeaders({

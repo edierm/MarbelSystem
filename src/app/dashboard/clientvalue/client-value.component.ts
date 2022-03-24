@@ -1,18 +1,19 @@
+import { Router } from '@angular/router';
 import { ValueService } from './../../../services/value.service';
 
   import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'reports-cmp',
+  selector: 'clientValue-cmp',
 
-  templateUrl: 'reports.component.html',
-  styleUrls: ['./reports.component.scss'],
+  templateUrl: 'client-value.component.html',
+  styleUrls: ['./client-value.component.scss'],
 })
-export class ReportsComponent implements OnInit {
+export class ClientValueComponent implements OnInit {
   value: any[];
   product : any
     
-  constructor(private valueService:ValueService  ) {}
+  constructor(private valueService:ValueService, private router: Router  ) {}
 
   ngOnInit(): void {
     
@@ -32,7 +33,7 @@ Search(){
       this.ngOnInit();
   }else{
       this.value = this.value.filter(res =>{
-          return res.nameproduct.toLocaleLowerCase().match(this.product.toLocaleLowerCase());
+          return res.pruduct.toLocaleLowerCase().match(this.product.toLocaleLowerCase());
       })
   }
 }
@@ -44,6 +45,10 @@ deleteValue(value){
 });
 
 }
+editValue(value) {
+    localStorage.setItem('selectValue', JSON.stringify(value));
+    this.router.navigate([`/dashboard/value/edit/${value._id}`]);
+  }
 }
 
 
