@@ -60,11 +60,12 @@ export class UsersService {
     });
     return this.http.post(environment.apis.userForgot, user, { headers });
   }
-  reset(user: any): Observable<any> {
+  reset(userId: any, token: string, body: {}): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json; charset=utf-8',
     });
-    return this.http.patch(environment.apis.userReset, user, { headers });
+    const url = `${environment.apis.userReset}/${userId}/${token}`
+    return this.http.post(url, body, { headers });
   }
 }
 

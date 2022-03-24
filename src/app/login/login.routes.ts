@@ -24,7 +24,7 @@ export const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path:'password-reset/:userId',
+    path:'password-reset/:userId/:token',
     component: PasswordResetComponent
   }
 ];
