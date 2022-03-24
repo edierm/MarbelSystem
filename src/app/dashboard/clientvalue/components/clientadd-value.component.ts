@@ -24,8 +24,13 @@ export class ClientValueAddComponent implements OnInit{
     selectValue = localStorage.getItem('selectValue');
   dataLocal: any;
   isUpdate = false;
-  
+  value : any;
   ngOnInit(): void {
+   
+    this.dataLocal = JSON.parse(localStorage.getItem('userLogin'));
+    if (this.dataLocal) {
+      this.valueAddForm.patchValue(this.dataLocal);
+    }
     if (this.router.url.includes('edit')) {
       this.dataLocal = JSON.parse(localStorage.getItem('selectValue'));
       if (this.dataLocal) {
@@ -34,6 +39,8 @@ export class ClientValueAddComponent implements OnInit{
       }
     }
     console.log(this.router.url);
+
+   
   }
 
     @ViewChild('modalSuccess') public modalRef: ModalDirective;

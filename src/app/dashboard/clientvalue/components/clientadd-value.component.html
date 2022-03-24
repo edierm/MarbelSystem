@@ -1,6 +1,6 @@
 <h1 class="h1">COTIZACIONES</h1>
 
-<form [formGroup]="valueAddForm" >
+<form [formGroup]="valueAddForm" *ngFor="let value of value" >
   <div class="form-group">
     <label for="validationDefault01" class="form-label">Nombre</label>
     <input
@@ -13,7 +13,7 @@
       maxlength="15"
       minlength="5"
     
-    >
+    > {{value.name}}
     <small *ngIf="valueAddForm.get('name').invalid && valueAddForm.get('name').touched" class="text-danger">El nombre es requerido</small>
   </div>
   <div class="form-group">
