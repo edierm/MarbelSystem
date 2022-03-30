@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { Component, NgModule } from '@angular/core';
 
 
 @Component({

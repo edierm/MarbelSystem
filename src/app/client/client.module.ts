@@ -1,3 +1,4 @@
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HelpComponent } from './help/help.component';
 import { SaleComponent } from './sale/pages/sale.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -51,6 +52,7 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
     BsDropdownModule,
     ReactiveFormsModule,
     NgxImageZoomModule,
+    NgbModule
   ],
 })
 export class ClientModule {}

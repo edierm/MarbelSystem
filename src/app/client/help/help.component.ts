@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { NavbarComponent } from './../../dashboard/shared/navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { Component, NgModule } from '@angular/core';
 
 
 @Component({
@@ -6,6 +10,8 @@ import { Component } from '@angular/core';
     templateUrl: './help.component.html',
     styleUrls: ['./help.component.scss']
 })
-export class HelpComponent {
+
+export class HelpComponent   {
     
 }
+
