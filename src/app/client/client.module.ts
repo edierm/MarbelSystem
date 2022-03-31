@@ -27,6 +27,8 @@ import { HomeComponent } from './home/pages/home/home.component';
 import { ClientRoutingModule } from './client-routing.module';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { JoinComponent } from './join/join.component';
+import { BuyComponent } from './buy/buy.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
     TableComponent,
     InfoComponent,
     LayoutComponent,
-    HelpComponent
+    HelpComponent,
+    JoinComponent,
+    BuyComponent
   ],
   imports: [
     CommonModule,

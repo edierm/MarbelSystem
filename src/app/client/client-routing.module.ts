@@ -18,6 +18,8 @@ import { ListProductsComponent } from './list-products/pages/list-products.compo
 
 
 import { KitchensComponent } from './kitchens/pages/kitchens.component';
+import { JoinComponent } from './join/join.component';
+import { BuyComponent } from './buy/buy.component';
 
 export const routes: Routes = [
   {
@@ -50,7 +52,9 @@ export const routes: Routes = [
       { path: 'info', component: InfoComponent },
       { path: 'lost', component: LostComponent },
       { path: 'list-products', component: ListProductsComponent },
-      { path: 'help', component: HelpComponent }
+      { path: 'help', component: HelpComponent },
+      { path: 'join', component: JoinComponent},
+      { path: 'buy', component: BuyComponent}
     ],
   },
   // {
