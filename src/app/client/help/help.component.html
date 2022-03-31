@@ -5,10 +5,24 @@
         <div class="product-wrapper  text-center">
           <div class="product-img">
             
+            <div class="col-md-2 text-center" >
+
+              <input
+              class="form-control mr-sm-2 text-center"
+              type="text"
+              [(ngModel)]="name"
+              (ngModelChange)="SearchHelp()"
+              placeholder="Buscar"
+              aria-label="Buscar"
+              width="80%"
+              height="80%"
+              />
+              </div>
+
             <span class="text-center">
               <img src="assets/img/MarmolMendoza.png" width="50px" />
             </span>
-          <h2>Como inicia secccion </h2> 
+          <h2 class="name">Como inicia secccion </h2> 
           <P>para iniciar seccion darle clic en el icono de la presona al lado izquierdo</P>         
         </div>
         </div>
