@@ -225,7 +225,33 @@
               </div>
             </div>
           </div>
+          <div class="col-md-12">
+            <div class="col-md-6,imagenpro">
+              <div class="pro-img-list-1">
+                <div class="image-upload-1">
+                  <img
+                    [src]="imageSrc"
+                    style="max-width: 300px; max-height: 300px"
+                  />
 
+                  <input
+                    name="imageUrl"
+                    type="file"
+                    accept="image/*"
+                    (change)="handleInputChangeImg($event)"
+                  />
+                  <small
+                    *ngIf="
+                      productForm.get('image2').invalid &&
+                      productForm.get('image2').touched
+                    "
+                    class="text-danger"
+                    >El tipo de material es requerido</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-md-12">
             <p>
               <button

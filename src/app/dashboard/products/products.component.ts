@@ -15,6 +15,7 @@ export class ProductsDashComponent implements OnInit {
   productForm = this.fb.group({
     name: ['', [Validators.required]],
     image: ['', [Validators.required]],
+    image2: ['', [Validators.required]],
     description: ['', [Validators.required]],
     category: ['', [Validators.required]],
     material: ['', [Validators.required]],
