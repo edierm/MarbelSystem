@@ -19,17 +19,15 @@ export class HelpComponent implements OnInit  {
     ){}
     name : any ;
     login: any;
-    ngOnInit(): void {
-        throw new Error('Method not implemented.');
+    ngOnInit() {
+        this.login= this.login
     }
 
     SearchHelp(){
         if(this.name == "" ){
-            this.ngOnInit();
+            
         }else{
-            this.login = this.login.filter(res =>{
-                return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
-            })
+            console.log , 'res'
         }
     }
     
