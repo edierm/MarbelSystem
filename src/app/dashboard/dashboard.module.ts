@@ -1,3 +1,4 @@
+import { HsaleComponent } from './helpsale/hsale.component';
 import { ClientValueAddComponent } from './clientvalue/components/clientadd-value.component';
 import { ClientValueComponent } from './clientvalue/client-value.component';
 import { DashboardClientComponent } from './dashboardclient/dashboard-client.component';
@@ -30,6 +31,15 @@ import { UsersComponent } from './users/users.component';
 import { AddRentComponent } from './sales/components/addrent/addrent.component';
 import { AddUserComponent } from './users/components/adduser/adduser.component';
 import { ClientAddRentComponent } from './clientrent/components/clientadd-rent.component';
+import { HproductComponent } from './helpproduct/hproduct.component';
+import { HvalueComponent } from './helpvalue/hvalue.component';
+import { HpaymentComponent } from './helppayment/hpayment.component';
+import { HadminComponent } from './helpadmin/hadmin.component';
+import { HuserComponent } from './helpuser/huser.component';
+import { ClientHsaleComponent } from './clienthelpsale/clienthsale.component';
+import { ClientHrentComponent } from './clienthrent/clienthrent.component';
+import { ClientHvalueComponent } from './clienthvalue/clienthvalue.component';
+
 
 
 
@@ -53,8 +63,17 @@ import { ClientAddRentComponent } from './clientrent/components/clientadd-rent.c
     ValueAddComponent,
     ClientValueAddComponent,
     DashboardClientComponent,
-    ClientValueComponent
-
+    ClientValueComponent,
+    HproductComponent,
+    HvalueComponent,
+    HpaymentComponent,
+    HsaleComponent,
+    HadminComponent,
+    HuserComponent,
+    ClientHsaleComponent,
+    ClientHrentComponent,
+    ClientHvalueComponent
+    
     
   
   ],

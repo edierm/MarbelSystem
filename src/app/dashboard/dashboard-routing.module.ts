@@ -1,3 +1,4 @@
+import { HsaleComponent } from './helpsale/hsale.component';
 import { ClientValueAddComponent } from './clientvalue/components/clientadd-value.component';
 import { DashboardClientComponent } from './dashboardclient/dashboard-client.component';
 import { ValueComponent } from './value/value.component';
@@ -22,6 +23,15 @@ import { UsersComponent } from './users/users.component';
 import { AddUserComponent } from './users/components/adduser/adduser.component';
 import { ValueAddComponent } from './value/components/value-add.component';
 import { ClientValueComponent } from './clientvalue/client-value.component';
+import { HproductComponent } from './helpproduct/hproduct.component';
+import { HvalueComponent } from './helpvalue/hvalue.component';
+import { HpaymentComponent } from './helppayment/hpayment.component';
+import { HadminComponent } from './helpadmin/hadmin.component';
+import { HuserComponent } from './helpuser/huser.component';
+import { ClientHsaleComponent } from './clienthelpsale/clienthsale.component';
+import { ClientHrentComponent } from './clienthrent/clienthrent.component';
+import { ClientHvalueComponent } from './clienthvalue/clienthvalue.component';
+
 
 
 
@@ -53,8 +63,15 @@ export const DashboardRouting: Routes = [
       { path: 'value', component: ValueComponent },
       { path: 'value-add', component: ValueAddComponent },
       { path: 'clientaddvalue', component: ClientValueAddComponent },
-      
-      
+      { path: 'hproduct', component: HproductComponent},
+      { path: 'hvalue', component: HvalueComponent},
+      { path: 'hpayment', component: HpaymentComponent},
+      { path: 'hsale', component: HsaleComponent},
+      { path: 'hadmin', component: HadminComponent},
+      { path: 'huser', component: HuserComponent},
+      { path: 'clienthsale', component: ClientHsaleComponent},
+      { path: 'clienthrent', component: ClientHrentComponent},
+      { path: 'clienthvalue', component: ClientHvalueComponent}
     
 
     ],
