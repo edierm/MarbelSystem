@@ -11,11 +11,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductsDashComponent implements OnInit {
   imageSrc: string = '';
+  imageSrc2: string = '';
+
   @ViewChild('modalSuccess') public modalRef: ModalDirective;
   productForm = this.fb.group({
-    name: ['', [Validators.required]],
+    name: ['', [Validators.required],],
     image: ['', [Validators.required]],
-    image2: ['', [Validators.required]],
+    image2: ['', []],
     description: ['', [Validators.required]],
     category: ['', [Validators.required]],
     material: ['', [Validators.required]],
@@ -40,6 +42,8 @@ export class ProductsDashComponent implements OnInit {
       if (this.dataLocal) {
         this.productForm.patchValue(this.dataLocal);
         this.imageSrc = this.dataLocal.image;
+        this.imageSrc2 = this.dataLocal.image2;
+
         this.isUpdate = true;
       }
     }
@@ -65,16 +69,40 @@ export class ProductsDashComponent implements OnInit {
     reader.readAsDataURL(file);
   }
 
+  handleInputChangeImg2(e) {
+    var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
+    var pattern = /image-*/;
+    var reader = new FileReader();
+    if (!file.type.match(pattern)) {
+      alert('invalid format');
+      return;
+    }
+    reader.onload = this._handleReaderLoaded2.bind(this);
+    reader.readAsDataURL(file);
+  }
   _handleReaderLoaded(e) {
     let reader = e.target;
     this.imageSrc = reader.result;
+
     this.productForm.patchValue({
       image: this.imageSrc,
     });
     console.log(this.imageSrc);
+
+  }
+  
+  _handleReaderLoaded2(e) {
+    let reader2 = e.target;
+    this.imageSrc2 = reader2.result;
+
+    this.productForm.patchValue({
+      image2: this.imageSrc2,
+    });
+    console.log(this.imageSrc2);
+
   }
   saveProduct() {
-    console.log(this.productForm.value, this.imageSrc);
+    console.log(this.productForm.value, this.imageSrc , this.imageSrc2);
     this.productForm.patchValue({
       image: this.imageSrc,
     });

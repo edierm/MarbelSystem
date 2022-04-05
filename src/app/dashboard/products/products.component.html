@@ -1,3 +1,10 @@
+
+  <div class="col-1 text-center">
+
+    <a class="text-center" routerLink="/dashboard/listproduct"  > 
+    <img src="assets/img/flechatras.png" width="30%" height="60%"  >
+  </a>
+</div> 
 <h1 class="title">AGREGAR PRODUCTOS</h1>
 <div class="container bootdey">
   <div class="col-md-12">
@@ -225,20 +232,21 @@
               </div>
             </div>
           </div>
+          <br>
           <div class="col-md-12">
-            <div class="col-md-6,imagenpro">
-              <div class="pro-img-list-1">
-                <div class="image-upload-1">
+            <div class="col-md-6,imagenpro2">
+              <div class="pro-img-list-2">
+                <div class="image-upload-2">
                   <img
-                    [src]="imageSrc"
+                    [src]="imageSrc2"
                     style="max-width: 300px; max-height: 300px"
                   />
 
                   <input
                     name="imageUrl"
                     type="file"
-                    accept="image/*"
-                    (change)="handleInputChangeImg($event)"
+                    accept="image2/*"
+                    (change)="handleInputChangeImg2($event)"
                   />
                   <small
                     *ngIf="
