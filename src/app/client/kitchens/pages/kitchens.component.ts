@@ -14,13 +14,15 @@ export class KitchensComponent implements OnInit {
   name : any ;
   ngOnInit() {
     this.product = JSON.parse(sessionStorage.getItem('dataKitchen'));
-    this.productsService.getProductsCategory('Cocinas').subscribe((res) => {
+    this.productsService.getProductsCategory('COCINAS').subscribe((res) => {
       this.product = res.productsCategory;
       sessionStorage.setItem(
         'dataKitchen',
         JSON.stringify(res.productsCategory)
       );
+      console.log('Llego la peticion');
     });
+    console.log('Llegue aqui');
   }
 
   

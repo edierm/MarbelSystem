@@ -5,7 +5,6 @@
 
 export const environment = {
   production: false,
-  urlDashborad: 'http://localhost:4200/dashboard',
   apis: {
     userLogin: 'http://localhost:3000/api/users/login',
     apiUsers: 'http://localhost:3000/api/users',

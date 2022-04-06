@@ -1,6 +1,5 @@
 import { UsersService } from './../../../../services/users.service';
 import { Router } from '@angular/router';
-import { environment } from './../../../../environments/environment';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 
@@ -32,7 +31,7 @@ export class LoginComponent {
         console.log(res);
       },
       (error) => {
-        window.location.href = environment.urlDashborad;
+        this.router.navigate(['/dashboard']);
         localStorage.setItem('userLogin', null);
       }
     );
