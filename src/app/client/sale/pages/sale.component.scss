@@ -6,12 +6,17 @@ body{
     text-align: center;
     align-items:center;
     font-family: 'Courier New', Courier, monospace;
-    padding: 20px ;
+    padding: 0px ;
     
+  }
+  .image{
+    padding-bottom: 5px;
   }
   .img.zoom{
     width: 600px;
     height: 300px;
+    border: 5px solid #555;
+    
     
   }
 

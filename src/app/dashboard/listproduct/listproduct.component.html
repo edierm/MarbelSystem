@@ -15,15 +15,7 @@
               placeholder="Buscar"
               aria-label="Buscar"
             />
-            <input
-              class="form-control mr-sm-2"
-              type="text" type="checkbox" 
-              name="Promocion"
-              [(ngModel)]="promo"
-              (ngModelChange)="SearchPromo()"
             
-          
-            />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
               Buscar
             </button>
@@ -84,7 +76,7 @@
                   </td>
                   <td class="text-right">
                     <label class="switch">
-                      <input type="checkbox" ng-model="Promocion" ng-true-value="true">
+                      <input type="checkbox" [checked]="product.active"   (change)="activechange(product,$event)">
                       <span class="slider round"></span>
                     </label>
                     <span (click)="editProduct(product)"><i class="fas fa-edit"></i> </span>
@@ -93,6 +85,8 @@
                   </td>
                 </tr>
               </tbody>
+              <br>
+              <a  routerLink="/dashboard/hproduct">Ayuda</a> 
             </table>
           </div>
         </div>

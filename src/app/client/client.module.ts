@@ -1,3 +1,4 @@
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HelpComponent } from './help/help.component';
 import { SaleComponent } from './sale/pages/sale.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -26,6 +27,8 @@ import { HomeComponent } from './home/pages/home/home.component';
 import { ClientRoutingModule } from './client-routing.module';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { JoinComponent } from './join/join.component';
+import { BuyComponent } from './buy/buy.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
     TableComponent,
     InfoComponent,
     LayoutComponent,
-    HelpComponent
+    HelpComponent,
+    JoinComponent,
+    BuyComponent
   ],
   imports: [
     CommonModule,
@@ -51,6 +56,7 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
     BsDropdownModule,
     ReactiveFormsModule,
     NgxImageZoomModule,
+    NgbModule
   ],
 })
 export class ClientModule {}

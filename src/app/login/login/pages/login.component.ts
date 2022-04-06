@@ -1,7 +1,8 @@
+import { ModalDirective } from 'ngx-bootstrap/modal';
 import { UsersService } from './../../../../services/users.service';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -9,10 +10,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
+
+  @ViewChild('modalSuccess') public modal: ModalDirective;
   loginForm = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(3)]],
   });
+  dataModal = {
+    title: '',
+    body: '',
+  };
+  openModal() {
+    this.modal.hide();
+    this.modal.show();
+  }
+
   constructor(
     private fb: FormBuilder,
     private userservices: UsersService,
@@ -28,11 +40,15 @@ export class LoginComponent {
             localStorage.setItem('userLogin', JSON.stringify(user));
             this.router.navigate(['/dashboard']);
         }
-        console.log(res);
+        console.log('Respuesta del back',res);
+
       },
       (error) => {
-        this.router.navigate(['/dashboard']);
         localStorage.setItem('userLogin', null);
+      
+        this.dataModal.title = 'ERROR';
+        this.dataModal.body = 'Correo o contraseña invalidos';
+        this.openModal();
       }
     );
   }
