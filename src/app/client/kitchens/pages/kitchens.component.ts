@@ -14,7 +14,7 @@ export class KitchensComponent implements OnInit {
   name : any ;
   ngOnInit() {
     this.product = JSON.parse(sessionStorage.getItem('dataKitchen'));
-    this.productsService.getProductsCategory('COCINAS').subscribe((res) => {
+    this.productsService.getProductsCategory('TOURS').subscribe((res) => {
       this.product = res.productsCategory;
       sessionStorage.setItem(
         'dataKitchen',

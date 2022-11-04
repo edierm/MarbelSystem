@@ -19,7 +19,7 @@ export class BathroomsComponent implements OnInit {
   promo: any ;
   ngOnInit() {
     this.productos = JSON.parse(sessionStorage.getItem('dataBathrooms'));
-    this.productsService.getProductsCategory('Baños').subscribe((res) => {
+    this.productsService.getProductsCategory('TRANSPORTE').subscribe((res) => {
       this.productos = res.productsCategory;
       sessionStorage.setItem(
         'dataBathrooms',

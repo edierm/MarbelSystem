@@ -19,7 +19,7 @@ export class TableComponent implements OnInit {
     promo: any;
     ngOnInit() {
       this.productos = JSON.parse(sessionStorage.getItem('dataTable'));
-      this.productsService.getProductsCategory('Mesones').subscribe((res) => {
+      this.productsService.getProductsCategory('HOSPEDAJE').subscribe((res) => {
         this.productos = res.productsCategory;
         sessionStorage.setItem(
           'dataTable',
